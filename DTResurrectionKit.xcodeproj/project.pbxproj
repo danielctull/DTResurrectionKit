@@ -33,7 +33,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* DTResurrectionKitAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionKitAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* DTResurrectionKitAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrectionKitAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* DTResurrectionKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTResurrectionKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* SpringBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		240FA77510A74EFC00476708 /* DTOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTOrderedDictionary.h; sourceTree = "<group>"; };
 		240FA77610A74EFC00476708 /* DTOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTOrderedDictionary.m; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* DTResurrectionKit.app */,
+				1D6058910D05DD3D006BFB54 /* SpringBack.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			);
 			name = DTResurrectionKit;
 			productName = DTResurrectionKit;
-			productReference = 1D6058910D05DD3D006BFB54 /* DTResurrectionKit.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* SpringBack.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +273,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DTResurrectionKit_Prefix.pch;
 				INFOPLIST_FILE = "DTResurrectionKit-Info.plist";
-				PRODUCT_NAME = DTResurrectionKit;
+				PRODUCT_NAME = SpringBack;
 			};
 			name = Debug;
 		};
@@ -289,7 +289,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DTResurrectionKit_Prefix.pch;
 				INFOPLIST_FILE = "DTResurrectionKit-Info.plist";
-				PRODUCT_NAME = DTResurrectionKit;
+				PRODUCT_NAME = SpringBack;
 			};
 			name = Release;
 		};

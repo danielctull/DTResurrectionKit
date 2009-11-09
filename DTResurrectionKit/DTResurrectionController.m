@@ -37,6 +37,7 @@
 }
 
 - (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[viewController release];
 	[archivePath release];
 	[super dealloc];
@@ -45,6 +46,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+	self.viewController.view.frame = self.view.bounds;
 	[self.view addSubview:self.viewController.view];
 }
 
