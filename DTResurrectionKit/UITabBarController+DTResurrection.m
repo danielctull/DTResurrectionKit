@@ -14,11 +14,13 @@
 	if (!(self = [self init])) return nil;
 	
 	self.viewControllers = [resurrector objectForKey:@"viewControllers"];
+	self.selectedViewController = [resurrector objectForKey:@"selectedViewController"];
 	
 	return self;
 }
 
 - (void)encodeToResurrector:(DTResurrector *)resurrector {
 	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
+	[resurrector setObject:self.selectedViewController forKey:@"selectedViewController"];
 }
 @end
