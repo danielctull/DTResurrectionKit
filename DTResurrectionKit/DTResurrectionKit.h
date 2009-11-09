@@ -13,6 +13,7 @@
 #import "UINavigationController+DTResurrectionKit.h"
 #import "UITabBarController+DTResurrection.h"
 #import "NSArray+DTResurrection.h"
+#import "NSDictionary+DTResurrection.h"
 
 @interface DTResurrectionKit : NSObject {
 

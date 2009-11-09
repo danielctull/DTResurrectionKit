@@ -79,6 +79,8 @@
 	
 	if ([anObject isKindOfClass:[NSArray class]])
 		[objectDict setObject:@"NSArray" forKey:@"class"];
+	else if ([anObject isKindOfClass:[NSDictionary class]])
+		[objectDict setObject:@"NSDictionary" forKey:@"class"];
 	else
 		[objectDict setObject:NSStringFromClass([anObject class]) forKey:@"class"];
 	

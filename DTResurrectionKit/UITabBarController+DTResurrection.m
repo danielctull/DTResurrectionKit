@@ -22,5 +22,18 @@
 - (void)encodeToResurrector:(DTResurrector *)resurrector {
 	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
 	[resurrector setObject:self.selectedViewController forKey:@"selectedViewController"];
+	
+	
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+	
+	[dict setObject:@"01243 821032" forKey:@"phone"];
+	[dict setObject:@"Daniel Tull" forKey:@"name"];
+	[dict setObject:@"PO22 9HZ" forKey:@"postcode"];
+	
+	[resurrector setObject:dict forKey:@"dict"];
+	
+	[dict release];
+	
+	
 }
 @end
