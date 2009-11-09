@@ -1,6 +1,6 @@
 //
-//  DTResurrectionController.m
-//  DTResurrectionKit
+//  DTSpringBackController.m
+//  DTSpringBack
 //
 //  Created by Daniel Tull on 03.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
@@ -56,6 +56,9 @@
 	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:archivePath];
 	UIViewController<DTSpringBack> *vc = [resurrector resurrect:dict];
 	[resurrector release];
+	
+	if (!vc) hasSprungBack = NO;
+	
 	self.viewController = vc;
 	NSLog(@"%@:%s Finish", self, _cmd);
 }

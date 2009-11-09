@@ -20,12 +20,6 @@
 	NSDictionary *currentlyEncodingObject;
 	NSString *currentlyEncodingObjectsKey;
 	NSMutableDictionary *objectDictionary;
-	
-	
-	
-	
-	
-	
 }
 
 - (NSDictionary *)deconstructWithRootObject:(NSObject<DTSpringBack> *)object;
@@ -33,6 +27,7 @@
 
 - (void)setObject:(id)anObject forKey:(NSString *)aKey;
 - (id)objectForKey:(NSString *)key;
+
 - (BOOL)objectIsCoreObject:(id)object;
 
 @end

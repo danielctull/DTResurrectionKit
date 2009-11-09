@@ -8,6 +8,8 @@
 
 #import "DTSpringBack.h"
 
+@class DTSpringBackController;
+
 @interface UIViewController (DTSpringBack) <DTSpringBack>
 
 @property (readonly) DTSpringBackController *springBackController;

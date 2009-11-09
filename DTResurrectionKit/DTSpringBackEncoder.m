@@ -9,10 +9,14 @@
 #import "DTSpringBackEncoder.h"
 #import "DTSpringBackController.h"
 
+NSString *const DTSpringBackObjectString = @"DTSpringBackObject";
+NSString *const DTSpringBackRootObjectString = @"DTSpringBackRootObject";
+
+NSString *const DTSpringBackPropertyClass = @"class";
+
 @interface DTSpringBackEncoder ()
-
-- (NSString *)uniqueToken;
-
+- (NSString *)generateToken;
+- (NSString *)uniqueString;
 @end
 
 
@@ -24,15 +28,14 @@
 	encodingStack = [[DTStack alloc] init];
 	objectDictionary = [[NSMutableDictionary alloc] init];
 	
-	NSString *token = [NSString stringWithFormat:@"DTResurectionRelatedObject:%@", [self uniqueToken]];
-	
+	NSString *token = [self generateToken];
 	
 	[objectDictionary setObject:object forKey:token];
 	
-	[mainDictionary setObject:token forKey:@"DTResurectionRootObject"];
+	[mainDictionary setObject:token forKey:DTSpringBackRootObjectString];
 	
 	NSMutableDictionary *objectDict = [[NSMutableDictionary alloc] init];
-	[objectDict setObject:NSStringFromClass([object class]) forKey:@"class"];
+	[objectDict setObject:NSStringFromClass([object class]) forKey:DTSpringBackPropertyClass];
 	[encodingStack push:objectDict];
 	
 	[mainDictionary setObject:objectDict forKey:token];
@@ -47,49 +50,49 @@
 	return [mainDictionary autorelease];
 }
 
-- (void)setObject:(id)anObject forKey:(NSString *)aKey {
+- (void)setObject:(id)object forKey:(NSString *)aKey {
 	
 	NSMutableDictionary *parentObject = [encodingStack topObject];
 	
-	if ([[objectDictionary allValues] containsObject:anObject]) { // To prevent infinite loop by two objects referencing each other.
+	if ([[objectDictionary allValues] containsObject:object]) { // To prevent infinite loop by two objects referencing each other.
 		
 		NSEnumerator *enumerator = [objectDictionary keyEnumerator];
 		NSString *testToken;
 		
 		while (testToken = [enumerator nextObject])
-			if ([[objectDictionary objectForKey:testToken] isEqual:anObject])
+			if ([[objectDictionary objectForKey:testToken] isEqual:object])
 				break;
 		
 		[parentObject setObject:testToken forKey:aKey];
 		return;
 	}
 	
-	if ([self objectIsCoreObject:anObject]) { // If the object is a NSString, NSNumber, NSData
-		[parentObject setObject:anObject forKey:aKey];
+	if ([self objectIsCoreObject:object]) { // If the object is a NSString, NSNumber, NSData
+		[parentObject setObject:object forKey:aKey];
 		return;
 	}
 	
-	NSString *token = [NSString stringWithFormat:@"DTResurectionRelatedObject:%@", [self uniqueToken]];
+	NSString *token = [self generateToken];
 	
-	[objectDictionary setObject:anObject forKey:token];
+	[objectDictionary setObject:object forKey:token];
 	
 	NSMutableDictionary *objectDict = [[NSMutableDictionary alloc] init];
 	
 	[mainDictionary setObject:objectDict forKey:token];
 	
-	if ([anObject isKindOfClass:[NSArray class]])
-		[objectDict setObject:@"NSArray" forKey:@"class"];
-	else if ([anObject isKindOfClass:[NSDictionary class]])
-		[objectDict setObject:@"NSDictionary" forKey:@"class"];
+	if ([object isKindOfClass:[NSArray class]])
+		[objectDict setObject:@"NSArray" forKey:DTSpringBackPropertyClass];
+	else if ([object isKindOfClass:[NSDictionary class]])
+		[objectDict setObject:@"NSDictionary" forKey:DTSpringBackPropertyClass];
 	else
-		[objectDict setObject:NSStringFromClass([anObject class]) forKey:@"class"];
+		[objectDict setObject:NSStringFromClass([object class]) forKey:DTSpringBackPropertyClass];
 	
 	[encodingStack push:objectDict];
 	[objectDict release];
 	
-	if ([anObject respondsToSelector:@selector(encodeToResurrector:)]) {
+	if ([object respondsToSelector:@selector(encodeToResurrector:)]) {
 		[parentObject setObject:token forKey:aKey];
-		[anObject encodeToResurrector:self];
+		[object encodeToResurrector:self];
 	}
 	
 	[encodingStack pop];
@@ -97,18 +100,20 @@
 
 
 - (id)resurrect:(NSDictionary *)aDictionary {
+		
+	NSString *token = [aDictionary objectForKey:DTSpringBackRootObjectString];
+	
+	if (!token) return nil;	
 	
 	mainDictionary = [aDictionary retain];
 	encodingStack = [[DTStack alloc] init];
 	objectDictionary = [[NSMutableDictionary alloc] init];
 	
-	NSString *token = [mainDictionary objectForKey:@"DTResurectionRootObject"];
-	
 	NSMutableDictionary *objectDict = [mainDictionary objectForKey:token];
-	
+		
 	[encodingStack push:objectDict];
 	
-	Class objectClass = NSClassFromString([objectDict objectForKey:@"class"]);
+	Class objectClass = NSClassFromString([objectDict objectForKey:DTSpringBackPropertyClass]);
 	
 	
 	[encodingStack push:objectDict];
@@ -133,7 +138,7 @@
 	if ([self objectIsCoreObject:object]) {
 		if ([object isKindOfClass:[NSString class]]) {
 			NSString *string = (NSString *)object;
-			if (![string hasPrefix:@"DTResurectionRelatedObject:"])
+			if (![string hasPrefix:DTSpringBackObjectString])
 				return string;
 		} else {
 			return object;
@@ -149,7 +154,7 @@
 		
 	NSDictionary *objectDict = [mainDictionary objectForKey:token];
 	
-	Class objectClass = NSClassFromString([objectDict objectForKey:@"class"]);
+	Class objectClass = NSClassFromString([objectDict objectForKey:DTSpringBackPropertyClass]);
 	
 	[encodingStack push:objectDict];
 	
@@ -172,11 +177,15 @@
 	return NO;
 }
 
-- (NSString *)uniqueToken {
+- (NSString *)generateToken {
+	return [NSString stringWithFormat:@"%@:%@", DTSpringBackObjectString, [self uniqueString]];
+}
+
+- (NSString *)uniqueString {
 	CFUUIDRef uuidObj = CFUUIDCreate(nil);
-	NSString *token = (NSString *)CFUUIDCreateString(nil, uuidObj);
+	NSString *string = (NSString *)CFUUIDCreateString(nil, uuidObj);	
 	CFRelease(uuidObj);
-	return token;
+	return string;
 }
 
 @end

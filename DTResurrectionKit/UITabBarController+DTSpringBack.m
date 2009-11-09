@@ -14,13 +14,13 @@
 	if (!(self = [self init])) return nil;
 	
 	self.viewControllers = [resurrector objectForKey:@"viewControllers"];
-	self.selectedViewController = [resurrector objectForKey:@"selectedViewController"];
+	self.selectedIndex = [[resurrector objectForKey:@"selectedIndex"] integerValue];
 	
 	return self;
 }
 
 - (void)encodeToResurrector:(DTSpringBackEncoder *)resurrector {
 	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
-	[resurrector setObject:self.selectedViewController forKey:@"selectedViewController"];
+	[resurrector setObject:[NSNumber numberWithInteger:self.selectedIndex] forKey:@"selectedIndex"];
 }
 @end
