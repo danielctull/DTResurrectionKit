@@ -55,6 +55,7 @@
 }
 
 - (BOOL)canResurrect {
+	//return NO;
 	return [[NSFileManager defaultManager] fileExistsAtPath:archivePath];
 }
 

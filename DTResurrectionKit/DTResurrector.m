@@ -9,6 +9,13 @@
 #import "DTResurrector.h"
 #import "DTResurrectionController.h"
 
+@interface DTResurrector ()
+
+- (NSString *)uniqueToken;
+
+@end
+
+
 @implementation DTResurrector
 
 - (NSDictionary *)deconstructWithRootObject:(NSObject<DTResurrection> *)object {
@@ -20,7 +27,7 @@
 	NSString *token = [NSString stringWithFormat:@"DTResurectionRelatedObject:", @""];
 	
 	
-	[objectDictionary setObject:token forKey:object];
+	[objectDictionary setObject:object forKey:token];
 	
 	[mainDictionary setObject:token forKey:@"DTResurectionRootObject"];
 	
@@ -49,8 +56,16 @@
 	
 	NSMutableDictionary *parentObject = [encodingStack topObject];
 	
-	if ([[objectDictionary allKeys] containsObject:anObject]) { // To prevent infinite loop by two objects referencing each other.
-		[parentObject setObject:[objectDictionary objectForKey:anObject] forKey:aKey];
+	if ([[objectDictionary allValues] containsObject:anObject]) { // To prevent infinite loop by two objects referencing each other.
+		
+		NSEnumerator *enumerator = [objectDictionary keyEnumerator];
+		NSString *testToken;
+		
+		while (testToken = [enumerator nextObject])
+			if ([[objectDictionary objectForKey:testToken] isEqual:anObject])
+				break;
+		
+		[parentObject setObject:testToken forKey:aKey];
 		return;
 	}
 		
@@ -59,9 +74,9 @@
 		return;
 	}
 	
-	NSString *token = [NSString stringWithFormat:@"DTResurectionRelatedObject:", @""];
+	NSString *token = [NSString stringWithFormat:@"DTResurectionRelatedObject:%@", [self uniqueToken]];
 	
-	[objectDictionary setObject:token forKey:anObject];
+	[objectDictionary setObject:anObject forKey:token];
 	
 	NSMutableDictionary *objectDict = [[NSMutableDictionary alloc] init];
 	
@@ -83,7 +98,7 @@
 
 - (id)resurrect:(NSDictionary *)aDictionary {
 	
-	NSLog(@"%@:%s", self, _cmd);
+	NSLog(@"%@:%s %@", self, _cmd, aDictionary);
 	
 	mainDictionary = [aDictionary retain];
 	encodingStack = [[DTStack alloc] init];
@@ -162,5 +177,11 @@
 	return NO;
 }
 
+- (NSString *)uniqueToken {
+	CFUUIDRef uuidObj = CFUUIDCreate(nil);
+	NSString *token = (NSString *)CFUUIDCreateString(nil, uuidObj);
+	CFRelease(uuidObj);
+	return token;
+}
 
 @end
