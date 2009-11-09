@@ -1,24 +1,24 @@
 //
-//  DTResurrector.m
-//  DTResurrectionKit
+//  DTSpringBackEncoder.m
+//  DTSpringBack
 //
 //  Created by Daniel Tull on 06.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "DTResurrector.h"
-#import "DTResurrectionController.h"
+#import "DTSpringBackEncoder.h"
+#import "DTSpringBackController.h"
 
-@interface DTResurrector ()
+@interface DTSpringBackEncoder ()
 
 - (NSString *)uniqueToken;
 
 @end
 
 
-@implementation DTResurrector
+@implementation DTSpringBackEncoder
 
-- (NSDictionary *)deconstructWithRootObject:(NSObject<DTResurrection> *)object {
+- (NSDictionary *)deconstructWithRootObject:(NSObject<DTSpringBack> *)object {
 	
 	mainDictionary = [[NSMutableDictionary alloc] init];
 	encodingStack = [[DTStack alloc] init];
@@ -113,7 +113,7 @@
 	
 	[encodingStack push:objectDict];
 	
-	NSObject<DTResurrection> *returnObject = [[objectClass alloc] initWithResurrector:self];	
+	NSObject<DTSpringBack> *returnObject = [[objectClass alloc] initWithResurrector:self];	
 	
 	[encodingStack pop];
 	
@@ -142,7 +142,7 @@
 	
 	NSString *token = (NSString *)object;
 	
-	NSObject<DTResurrection> *returnObject;
+	NSObject<DTSpringBack> *returnObject;
 	
 	if (returnObject = [objectDictionary objectForKey:token])
 		return returnObject;

@@ -7,7 +7,7 @@
 //
 
 #import "DTResurrectionKitAppDelegate.h"
-#import "DTResurrectionController.h"
+#import "DTSpringBack.h"
 
 @implementation DTResurrectionKitAppDelegate
 
@@ -20,9 +20,9 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 	
 	
-	DTResurrectionController *resController = [[DTResurrectionController alloc] init];
+	DTSpringBackController *resController = [[DTSpringBackController alloc] init];
 	
-	if (!resController.hasResurrected) {
+	if (!resController.hasSprungBack) {
 		
 		NSLog(@"MANUAL SETUP");
 		

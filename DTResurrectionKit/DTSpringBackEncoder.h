@@ -6,12 +6,11 @@
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "DTStack.h"
 
-@protocol DTResurrection;
+@protocol DTSpringBack;
 
-@interface DTResurrector : NSObject {
+@interface DTSpringBackEncoder : NSObject {
 
 	NSMutableDictionary *mainDictionary;
 	
@@ -29,7 +28,7 @@
 	
 }
 
-- (NSDictionary *)deconstructWithRootObject:(NSObject<DTResurrection> *)object;
+- (NSDictionary *)deconstructWithRootObject:(NSObject<DTSpringBack> *)object;
 - (id)resurrect:(NSDictionary *)aDictionary;
 
 - (void)setObject:(id)anObject forKey:(NSString *)aKey;

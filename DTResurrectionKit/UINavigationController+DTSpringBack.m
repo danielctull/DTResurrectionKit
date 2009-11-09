@@ -1,17 +1,17 @@
 //
-//  UINavigationController+DTResurrectionKit.m
+//  UINavigationController+DTSpringBack.m
 //  DTResurrectionKit
 //
 //  Created by Daniel Tull on 03.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "UINavigationController+DTResurrectionKit.h"
+#import "UINavigationController+DTSpringBack.h"
 
 
-@implementation UINavigationController (DTResurrectionKit)
+@implementation UINavigationController (DTSpringBack)
 
-- (id)initWithResurrector:(DTResurrector *)resurrector {
+- (id)initWithResurrector:(DTSpringBackEncoder *)resurrector {
 	
 	NSArray *vcs = [resurrector objectForKey:@"viewControllers"];
 	
@@ -23,7 +23,7 @@
 	return self;
 }
 
-- (void)encodeToResurrector:(DTResurrector *)resurrector {
+- (void)encodeToResurrector:(DTSpringBackEncoder *)resurrector {
 	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
 }
 

@@ -6,18 +6,18 @@
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "DTResurrectionController.h"
+#import "DTSpringBackController.h"
 
-@interface DTResurrectionController ()
+@interface DTSpringBackController ()
 - (BOOL)canResurrect;
 - (void)deconstructStack;
 - (void)resurrectStack;
 @end
 
 
-@implementation DTResurrectionController
+@implementation DTSpringBackController
 
-@synthesize hasResurrected, viewController;
+@synthesize hasSprungBack, viewController;
 
 - (id)init {
 	
@@ -29,7 +29,7 @@
 	archivePath = [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:pathComponent] retain];
 	
 	if ([self canResurrect]) { // ACCESS FILE SYSTEM TO LOOK FOR STORED PLIST FOR RESURRECTION
-		hasResurrected = YES;
+		hasSprungBack = YES;
 		[self resurrectStack];
 	}
 	
@@ -52,9 +52,9 @@
 
 - (void)resurrectStack {
 	NSLog(@"%@:%s Start", self, _cmd);
-	DTResurrector *resurrector = [[DTResurrector alloc] init];
+	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
 	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:archivePath];
-	UIViewController<DTResurrection> *vc = [resurrector resurrect:dict];
+	UIViewController<DTSpringBack> *vc = [resurrector resurrect:dict];
 	[resurrector release];
 	self.viewController = vc;
 	NSLog(@"%@:%s Finish", self, _cmd);
@@ -67,7 +67,7 @@
 
 - (void)deconstructStack {
 	NSLog(@"%@:%s Start", self, _cmd);
-	DTResurrector *resurrector = [[DTResurrector alloc] init];
+	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
 	NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
 	[resurrector release];
 	[dict writeToFile:archivePath atomically:NO];

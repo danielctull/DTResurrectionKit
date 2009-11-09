@@ -1,17 +1,17 @@
 //
-//  NSArray+DTResurrection.m
+//  NSArray+DTSpringBack.m
 //  DTResurrectionKit
 //
 //  Created by Daniel Tull on 09.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "NSArray+DTResurrection.h"
+#import "NSArray+DTSpringBack.h"
 
 
-@implementation NSArray (DTResurrection)
+@implementation NSArray (DTSpringBack)
 
-- (id)initWithResurrector:(DTResurrector *)resurrector {
+- (id)initWithResurrector:(DTSpringBackEncoder *)resurrector {
 	
 	NSInteger amount = [[resurrector objectForKey:@"amount"] integerValue];
 	
@@ -27,7 +27,7 @@
 	return self;
 }
 
-- (void)encodeToResurrector:(DTResurrector *)resurrector {
+- (void)encodeToResurrector:(DTSpringBackEncoder *)resurrector {
 	
 	[resurrector setObject:[NSNumber numberWithInt:[self count]] forKey:@"amount"];
 	

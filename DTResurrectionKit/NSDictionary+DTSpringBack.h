@@ -1,5 +1,5 @@
 //
-//  UITabBarController+DTResurrection.h
+//  NSDictionary+DTSpringBack.h
 //  DTResurrectionKit
 //
 //  Created by Daniel Tull on 09.11.2009.
@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DTResurrectionController.h"
+#import "DTSpringBack.h"
 
-@interface UITabBarController (DTResurrection) <DTResurrection>
+@interface NSDictionary (DTSpringBack) <DTSpringBack>
+
+
 @end
