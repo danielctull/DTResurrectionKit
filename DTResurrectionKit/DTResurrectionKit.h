@@ -11,6 +11,7 @@
 #import "DTResurrectionController.h"
 #import "UIViewController+DTResurrectionKit.h"
 #import "UINavigationController+DTResurrectionKit.h"
+#import "NSArray+DTResurrection.h"
 
 @interface DTResurrectionKit : NSObject {
 

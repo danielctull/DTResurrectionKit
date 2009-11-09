@@ -60,9 +60,13 @@
 }
 
 - (void)applicationWillTerminate:(id)sender {
+	NSLog(@"%@:%s%@ ---- START", self, _cmd);
 	DTResurrector *resurrector = [[DTResurrector alloc] init];
 	NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
 	[resurrector release];
+	
+	NSLog(@"%@:%s%@", self, _cmd, dict);
+	
 	[dict writeToFile:archivePath atomically:NO];
 }
 

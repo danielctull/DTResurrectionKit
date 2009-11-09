@@ -21,7 +21,7 @@
 }
 
 - (id)initWithResurrector:(DTResurrector *)resurrector {
-	
+	NSLog(@"%@:%s", self, _cmd);
 	if (!(self = [self init])) return nil;
 	
 	self.title = [resurrector objectForKey:@"title"];
@@ -30,6 +30,7 @@
 }
 
 - (void)encodeToResurrector:(DTResurrector *)resurrector {
+	NSLog(@"%@:%s", self, _cmd);
 	[resurrector setObject:self.title forKey:@"title"];
 }
 

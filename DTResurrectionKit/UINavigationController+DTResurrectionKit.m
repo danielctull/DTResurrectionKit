@@ -13,6 +13,8 @@
 
 - (id)initWithResurrector:(DTResurrector *)resurrector {
 	
+	
+	
 	if (!(self = [self initWithRootViewController:nil])) return nil;
 	
 	self.viewControllers = [resurrector objectForKey:@"viewControllers"];
@@ -21,6 +23,8 @@
 }
 
 - (void)encodeToResurrector:(DTResurrector *)resurrector {
+	
+	
 	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
 }
 

@@ -19,12 +19,12 @@
 @implementation DTResurrector
 
 - (NSDictionary *)deconstructWithRootObject:(NSObject<DTResurrection> *)object {
-	NSLog(@"%@:%s", self, _cmd);
+	NSLog(@"%@:%s:%@", self, _cmd, object);
 	mainDictionary = [[NSMutableDictionary alloc] init];
 	encodingStack = [[DTStack alloc] init];
 	objectDictionary = [[NSMutableDictionary alloc] init];
 	
-	NSString *token = [NSString stringWithFormat:@"DTResurectionRelatedObject:", @""];
+	NSString *token = [NSString stringWithFormat:@"DTResurectionRelatedObject:%@", [self uniqueToken]];
 	
 	
 	[objectDictionary setObject:object forKey:token];
@@ -34,6 +34,7 @@
 	
 	NSLog(@"%@:%s 1", self, _cmd);
 	NSMutableDictionary *objectDict = [[NSMutableDictionary alloc] init];
+	[objectDict setObject:NSStringFromClass([object class]) forKey:@"class"];
 	[encodingStack push:objectDict];
 	
 	NSLog(@"%@:%s 2", self, _cmd);
@@ -52,9 +53,12 @@
 
 - (void)setObject:(id)anObject forKey:(NSString *)aKey {
 	
-	NSLog(@"%@:%s%@", self, _cmd, aKey);
+	NSLog(@"%@:%s :%@ :%@ %@", self, _cmd, anObject, aKey, [anObject class]);
 	
 	NSMutableDictionary *parentObject = [encodingStack topObject];
+	
+	
+	NSLog(@"Parent Dict: %@", parentObject);
 	
 	if ([[objectDictionary allValues] containsObject:anObject]) { // To prevent infinite loop by two objects referencing each other.
 		
@@ -68,8 +72,28 @@
 		[parentObject setObject:testToken forKey:aKey];
 		return;
 	}
+/*
+	if ([anObject isKindOfClass:[NSArray class]]) {
 		
+		NSMutableArray *mutarray = [[NSMutableArray alloc] init];
+		for (NSObject<DTResurrection> *o in anObject) {
+			
+			[o encodeToResurrector:self]
+			[mutarray addObject:];
+			
+		
+		}
+			
+			
+		[parentObject setObject:mutarray forKey:aKey];
+	
+	}*/
+	
 	if ([self objectIsCoreObject:anObject]) { // If the object is a NSString, NSNumber, NSData
+		
+		NSLog(@"%@:%s CORE CORE CORE", self, _cmd);
+		
+		
 		[parentObject setObject:anObject forKey:aKey];
 		return;
 	}
@@ -82,7 +106,10 @@
 	
 	[mainDictionary setObject:objectDict forKey:token];
 	
-	[objectDict setObject:NSStringFromClass([objectDict class]) forKey:@"class"];
+	if ([anObject isKindOfClass:[NSArray class]])
+		[objectDict setObject:@"NSArray" forKey:@"class"];
+	else
+		[objectDict setObject:NSStringFromClass([anObject class]) forKey:@"class"];
 	
 	[encodingStack push:objectDict];
 	[objectDict release];
@@ -170,8 +197,7 @@
 
 - (BOOL)objectIsCoreObject:(id)object {
 	
-	Class theClass = [object class];
-	if (theClass == [NSNumber class] || theClass == [NSString class] || theClass == [NSData class])
+	if ([object isKindOfClass:[NSNumber class]] || [object isKindOfClass:[NSString class]] || [object isKindOfClass:[NSData class]])
 		return YES;
 	
 	return NO;
