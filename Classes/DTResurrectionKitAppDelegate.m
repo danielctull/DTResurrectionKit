@@ -23,15 +23,32 @@
 	DTResurrectionController *resController = [[DTResurrectionController alloc] init];
 	
 	if (!resController.hasResurrected) {
-	
-		UIViewController *vc = [[UIViewController alloc] init];
-	
-		vc.title = @"Test";
 		
-		UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-	
+		NSLog(@"MANUAL SETUP");
 		
-		resController.viewController = nav;
+		UIViewController *vc1 = [[UIViewController alloc] init];
+		vc1.title = @"Test1";
+		UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:vc1];
+		[vc1 release];
+		
+		UIViewController *vc2 = [[UIViewController alloc] init];
+		vc2.title = @"Test2";
+		UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:vc2];
+		[vc2 release];
+		
+		UIViewController *vc3 = [[UIViewController alloc] init];
+		vc3.title = @"Test3";
+		UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:vc3];
+		[vc3 release];
+		
+		UITabBarController *tabs = [[UITabBarController alloc] init];
+		tabs.viewControllers = [NSArray arrayWithObjects:nav1, nav2, nav3, nil];
+		
+		[nav1 release];
+		[nav2 release];
+		[nav3 release];
+		
+		resController.viewController = tabs;
 		
 	}
 	

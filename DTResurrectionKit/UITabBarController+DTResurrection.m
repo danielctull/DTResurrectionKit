@@ -1,16 +1,14 @@
 //
-//  UINavigationController+DTResurrectionKit.m
+//  UITabBarController+DTResurrection.m
 //  DTResurrectionKit
 //
-//  Created by Daniel Tull on 03.11.2009.
+//  Created by Daniel Tull on 09.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "UINavigationController+DTResurrectionKit.h"
+#import "UITabBarController+DTResurrection.h"
 
-
-@implementation UINavigationController (DTResurrectionKit)
-
+@implementation UITabBarController (DTResurrection)
 - (id)initWithResurrector:(DTResurrector *)resurrector {
 	
 	if (!(self = [self init])) return nil;
@@ -23,5 +21,4 @@
 - (void)encodeToResurrector:(DTResurrector *)resurrector {
 	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
 }
-
 @end

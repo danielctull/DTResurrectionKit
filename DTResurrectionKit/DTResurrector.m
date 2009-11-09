@@ -19,7 +19,7 @@
 @implementation DTResurrector
 
 - (NSDictionary *)deconstructWithRootObject:(NSObject<DTResurrection> *)object {
-	NSLog(@"%@:%s:%@", self, _cmd, object);
+	
 	mainDictionary = [[NSMutableDictionary alloc] init];
 	encodingStack = [[DTStack alloc] init];
 	objectDictionary = [[NSMutableDictionary alloc] init];
@@ -31,17 +31,13 @@
 	
 	[mainDictionary setObject:token forKey:@"DTResurectionRootObject"];
 	
-	
-	NSLog(@"%@:%s 1", self, _cmd);
 	NSMutableDictionary *objectDict = [[NSMutableDictionary alloc] init];
 	[objectDict setObject:NSStringFromClass([object class]) forKey:@"class"];
 	[encodingStack push:objectDict];
 	
-	NSLog(@"%@:%s 2", self, _cmd);
 	[mainDictionary setObject:objectDict forKey:token];
 	[objectDict release];
 	
-	NSLog(@"%@:%s 3", self, _cmd);
 	[object encodeToResurrector:self];
 	
 	[encodingStack pop];
@@ -53,12 +49,7 @@
 
 - (void)setObject:(id)anObject forKey:(NSString *)aKey {
 	
-	NSLog(@"%@:%s :%@ :%@ %@", self, _cmd, anObject, aKey, [anObject class]);
-	
 	NSMutableDictionary *parentObject = [encodingStack topObject];
-	
-	
-	NSLog(@"Parent Dict: %@", parentObject);
 	
 	if ([[objectDictionary allValues] containsObject:anObject]) { // To prevent infinite loop by two objects referencing each other.
 		
@@ -72,28 +63,8 @@
 		[parentObject setObject:testToken forKey:aKey];
 		return;
 	}
-/*
-	if ([anObject isKindOfClass:[NSArray class]]) {
-		
-		NSMutableArray *mutarray = [[NSMutableArray alloc] init];
-		for (NSObject<DTResurrection> *o in anObject) {
-			
-			[o encodeToResurrector:self]
-			[mutarray addObject:];
-			
-		
-		}
-			
-			
-		[parentObject setObject:mutarray forKey:aKey];
-	
-	}*/
 	
 	if ([self objectIsCoreObject:anObject]) { // If the object is a NSString, NSNumber, NSData
-		
-		NSLog(@"%@:%s CORE CORE CORE", self, _cmd);
-		
-		
 		[parentObject setObject:anObject forKey:aKey];
 		return;
 	}
@@ -125,8 +96,6 @@
 
 - (id)resurrect:(NSDictionary *)aDictionary {
 	
-	NSLog(@"%@:%s %@", self, _cmd, aDictionary);
-	
 	mainDictionary = [aDictionary retain];
 	encodingStack = [[DTStack alloc] init];
 	objectDictionary = [[NSMutableDictionary alloc] init];
@@ -154,8 +123,6 @@
 }
 
 - (id)objectForKey:(NSString *)key {
-	
-	NSLog(@"%@:%s%@", self, _cmd, key);
 	
 	NSMutableDictionary *parentObject = [encodingStack topObject];
 	

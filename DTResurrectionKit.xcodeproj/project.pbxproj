@@ -17,6 +17,7 @@
 		240FA78210A74EFC00476708 /* DTStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FA77C10A74EFC00476708 /* DTStack.m */; };
 		240FA78310A74EFC00476708 /* DTTraversableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FA77E10A74EFC00476708 /* DTTraversableDictionary.m */; };
 		240FA91E10A8622000476708 /* NSArray+DTResurrection.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FA91D10A8622000476708 /* NSArray+DTResurrection.m */; };
+		240FA98310A8681D00476708 /* UITabBarController+DTResurrection.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FA98210A8681D00476708 /* UITabBarController+DTResurrection.m */; };
 		24596F3B10A46B56006BC789 /* DTResurrector.m in Sources */ = {isa = PBXBuildFile; fileRef = 24596F3A10A46B56006BC789 /* DTResurrector.m */; };
 		24B93DAE10A1AB4300ABF25D /* DTResurrectionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B93DAD10A1AB4300ABF25D /* DTResurrectionKit.m */; };
 		24D3FE7110A0D05600BECE54 /* UIViewController+DTResurrectionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D3FE7010A0D05600BECE54 /* UIViewController+DTResurrectionKit.m */; };
@@ -47,6 +48,8 @@
 		240FA81210A8456A00476708 /* DTResurrection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrection.h; sourceTree = "<group>"; };
 		240FA91C10A8622000476708 /* NSArray+DTResurrection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DTResurrection.h"; sourceTree = "<group>"; };
 		240FA91D10A8622000476708 /* NSArray+DTResurrection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DTResurrection.m"; sourceTree = "<group>"; };
+		240FA98110A8681D00476708 /* UITabBarController+DTResurrection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+DTResurrection.h"; sourceTree = "<group>"; };
+		240FA98210A8681D00476708 /* UITabBarController+DTResurrection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+DTResurrection.m"; sourceTree = "<group>"; };
 		24596F3910A46B56006BC789 /* DTResurrector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrector.h; sourceTree = "<group>"; };
 		24596F3A10A46B56006BC789 /* DTResurrector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrector.m; sourceTree = "<group>"; };
 		24B93DAC10A1AB4300ABF25D /* DTResurrectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionKit.h; sourceTree = "<group>"; };
@@ -119,14 +122,16 @@
 		24D3FE6A10A0D03A00BECE54 /* DTResurrectionKit */ = {
 			isa = PBXGroup;
 			children = (
-				24D3FE7410A0D0C300BECE54 /* DTResurrectionController.h */,
-				24D3FE7510A0D0C300BECE54 /* DTResurrectionController.m */,
 				24D3FE6F10A0D05600BECE54 /* UIViewController+DTResurrectionKit.h */,
 				24D3FE7010A0D05600BECE54 /* UIViewController+DTResurrectionKit.m */,
 				24D3FEF610A0ECA600BECE54 /* UINavigationController+DTResurrectionKit.h */,
 				24D3FEF710A0ECA600BECE54 /* UINavigationController+DTResurrectionKit.m */,
+				240FA98110A8681D00476708 /* UITabBarController+DTResurrection.h */,
+				240FA98210A8681D00476708 /* UITabBarController+DTResurrection.m */,
 				240FA91C10A8622000476708 /* NSArray+DTResurrection.h */,
 				240FA91D10A8622000476708 /* NSArray+DTResurrection.m */,
+				24D3FE7410A0D0C300BECE54 /* DTResurrectionController.h */,
+				24D3FE7510A0D0C300BECE54 /* DTResurrectionController.m */,
 				24B93DAC10A1AB4300ABF25D /* DTResurrectionKit.h */,
 				24B93DAD10A1AB4300ABF25D /* DTResurrectionKit.m */,
 				24596F3910A46B56006BC789 /* DTResurrector.h */,
@@ -247,6 +252,7 @@
 				240FA78210A74EFC00476708 /* DTStack.m in Sources */,
 				240FA78310A74EFC00476708 /* DTTraversableDictionary.m in Sources */,
 				240FA91E10A8622000476708 /* NSArray+DTResurrection.m in Sources */,
+				240FA98310A8681D00476708 /* UITabBarController+DTResurrection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

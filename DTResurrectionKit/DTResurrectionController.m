@@ -10,6 +10,7 @@
 
 @interface DTResurrectionController ()
 - (BOOL)canResurrect;
+- (void)deconstructStack;
 - (void)resurrectStack;
 @end
 
@@ -43,15 +44,18 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 	[self.view addSubview:self.viewController.view];
 }
 
 - (void)resurrectStack {
+	NSLog(@"%@:%s Start", self, _cmd);
 	DTResurrector *resurrector = [[DTResurrector alloc] init];
 	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:archivePath];
 	UIViewController<DTResurrection> *vc = [resurrector resurrect:dict];
 	[resurrector release];
 	self.viewController = vc;
+	NSLog(@"%@:%s Finish", self, _cmd);
 }
 
 - (BOOL)canResurrect {
@@ -59,15 +63,17 @@
 	return [[NSFileManager defaultManager] fileExistsAtPath:archivePath];
 }
 
-- (void)applicationWillTerminate:(id)sender {
-	NSLog(@"%@:%s%@ ---- START", self, _cmd);
+- (void)deconstructStack {
+	NSLog(@"%@:%s Start", self, _cmd);
 	DTResurrector *resurrector = [[DTResurrector alloc] init];
 	NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
 	[resurrector release];
-	
-	NSLog(@"%@:%s%@", self, _cmd, dict);
-	
 	[dict writeToFile:archivePath atomically:NO];
+	NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
+}
+
+- (void)applicationWillTerminate:(id)sender {
+	[self deconstructStack];
 }
 
 @end
