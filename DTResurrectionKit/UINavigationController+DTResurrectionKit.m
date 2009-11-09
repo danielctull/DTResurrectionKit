@@ -13,9 +13,12 @@
 
 - (id)initWithResurrector:(DTResurrector *)resurrector {
 	
-	if (!(self = [self init])) return nil;
+	NSArray *vcs = [resurrector objectForKey:@"viewControllers"];
 	
-	self.viewControllers = [resurrector objectForKey:@"viewControllers"];
+	if (!(self = [self initWithRootViewController:[vcs objectAtIndex:0]])) return nil;
+	
+	for (NSInteger i = 1; i < [vcs count]; i++)	
+		[self pushViewController:[vcs objectAtIndex:1] animated:NO];
 	
 	return self;
 }
