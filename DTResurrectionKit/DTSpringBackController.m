@@ -8,6 +8,9 @@
 
 #import "DTSpringBackController.h"
 
+NSString *const DTSpringBackPathBase = @"DTSpringBack";
+NSString *const DTSpringBackPathVersion = @"Version";
+
 @interface DTSpringBackController ()
 - (BOOL)canResurrect;
 - (void)deconstructStack;
@@ -25,8 +28,8 @@
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate:) name:UIApplicationWillTerminateNotification object:nil];
 	
-	NSString *pathComponent = [NSString stringWithFormat:@"DTResurrection_%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
-	archivePath = [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:pathComponent] retain];
+	NSString *pathComponent = [NSString stringWithFormat:@"%@%@", DTSpringBackPathVersion, [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
+	archivePath = [[[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DTSpringBackPathBase] stringByAppendingPathComponent:pathComponent] retain];
 	
 	if ([self canResurrect]) { // ACCESS FILE SYSTEM TO LOOK FOR STORED PLIST FOR RESURRECTION
 		hasSprungBack = YES;
