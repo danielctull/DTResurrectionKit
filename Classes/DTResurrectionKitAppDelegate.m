@@ -7,7 +7,7 @@
 //
 
 #import "DTResurrectionKitAppDelegate.h"
-
+#import "DTResurrectionController.h"
 
 @implementation DTResurrectionKitAppDelegate
 
@@ -18,7 +18,24 @@
 #pragma mark Application lifecycle
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
-    
+	
+	
+	DTResurrectionController *resController = [[DTResurrectionController alloc] init];
+	
+	if (!resController.hasResurrected) {
+	
+		UIViewController *vc = [[UIViewController alloc] init];
+	
+		vc.title = @"Test";
+		
+		UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+	
+		
+		resController.viewController = nav;
+		
+	}
+	
+	[window addSubview:resController.view];
     // Override point for customization after app launch    
 
 	[window makeKeyAndVisible];

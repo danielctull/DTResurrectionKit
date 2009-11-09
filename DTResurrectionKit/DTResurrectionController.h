@@ -6,15 +6,15 @@
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DTResurrectionKit.h"
 
 @interface DTResurrectionController : UIViewController {
+	UIViewController<DTResurrection> *viewController;
+	NSString *archivePath;
+	BOOL hasResurrected;
 }
 
-- (void)addResurrectableViewControllerWithCreatingViewController:(UIViewController *)creatingViewController
-														theClass:(Class)aClass
-														selector:(SEL)aSelector
-														 objects:(NSArray *)someObjects;
-
+@property (nonatomic, assign) BOOL hasResurrected;
+@property (nonatomic, retain) UIViewController<DTResurrection> *viewController;
 
 @end

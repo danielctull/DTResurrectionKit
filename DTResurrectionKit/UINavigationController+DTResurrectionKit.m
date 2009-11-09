@@ -11,12 +11,17 @@
 
 @implementation UINavigationController (DTResurrectionKit)
 
-- (void)swizzledPushViewController:(UIViewController *)aViewController animated:(BOOL)animated {
-	[self swizzledPushViewController:aViewController animated:animated];
+- (id)initWithResurrector:(DTResurrector *)resurrector {
+	
+	if (!(self = [self initWithRootViewController:nil])) return nil;
+	
+	self.viewControllers = [resurrector objectForKey:@"viewControllers"];
+	
+	return self;
 }
 
-- (void)swizzledPopViewControllerAnimated:(BOOL)animated {
-	[self swizzledPopViewControllerAnimated:animated];
+- (void)encodeToResurrector:(DTResurrector *)resurrector {
+	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
 }
 
 @end

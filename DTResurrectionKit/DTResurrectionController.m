@@ -7,27 +7,62 @@
 //
 
 #import "DTResurrectionController.h"
-#import "UIViewController+DTResurrectionKit.h"
-#import "UINavigationController+DTResurrectionKit.h"
 
-#import "NSObject+DTMethodSwizzling.h"
+@interface DTResurrectionController ()
+- (BOOL)canResurrect;
+- (void)resurrectStack;
+@end
+
 
 @implementation DTResurrectionController
+
+@synthesize hasResurrected, viewController;
 
 - (id)init {
 	
 	if (!(self = [super init])) return nil;
 	
-	[UIViewController swizzleMethod:@selector(presentModalViewController:animated:) withMethod:@selector(swizzledPresentModalViewController:animated:)];
-	[UINavigationController swizzleMethod:@selector(pushViewController:animated:) withMethod:@selector(swizzledPushViewController:animated:)];
-	[UINavigationController swizzleMethod:@selector(popViewControllerAnimated:) withMethod:@selector(swizzledPopViewControllerAnimated:)];
-		
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate:) name:UIApplicationWillTerminateNotification object:nil];
+	
+	NSString *pathComponent = [NSString stringWithFormat:@"DTResurrection_%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
+	archivePath = [[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:pathComponent] retain];
+	
+	if ([self canResurrect]) { // ACCESS FILE SYSTEM TO LOOK FOR STORED PLIST FOR RESURRECTION
+		hasResurrected = YES;
+		[self resurrectStack];
+	}
+	
 	return self;	
 }
 
-- (void)addResurrectableViewControllerWithCreatingViewController:(UIViewController *)creatingViewController
-														theClass:(Class)aClass
-														selector:(SEL)aSelector
-														 objects:(NSArray *)someObjects {}
+- (void)dealloc {
+	[viewController release];
+	[archivePath release];
+	[super dealloc];
+}
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	[self.view addSubview:self.viewController.view];
+}
+
+- (void)resurrectStack {
+	DTResurrector *resurrector = [[DTResurrector alloc] init];
+	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:archivePath];
+	UIViewController<DTResurrection> *vc = [resurrector resurrect:dict];
+	[resurrector release];
+	self.viewController = vc;
+}
+
+- (BOOL)canResurrect {
+	return [[NSFileManager defaultManager] fileExistsAtPath:archivePath];
+}
+
+- (void)applicationWillTerminate:(id)sender {
+	DTResurrector *resurrector = [[DTResurrector alloc] init];
+	NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
+	[resurrector release];
+	[dict writeToFile:archivePath atomically:NO];
+}
 
 @end

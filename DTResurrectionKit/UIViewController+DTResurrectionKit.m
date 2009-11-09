@@ -20,35 +20,17 @@
 	return nil;
 }
 
-- (UIViewController *)newResurrectableViewControllerWithClass:(Class)aClass selector:(SEL)aSelector objects:(NSArray *)someObjects {	
-	if (![aClass isKindOfClass:[UIViewController class]])
-		return nil;
+- (id)initWithResurrector:(DTResurrector *)resurrector {
 	
-	id theViewController = [aClass alloc];
+	if (!(self = [self init])) return nil;
 	
-	NSInvocation *invocation = [[NSInvocation alloc] init];
-	[invocation setTarget:theViewController];
-	[invocation setSelector:aSelector];
+	self.title = [resurrector objectForKey:@"title"];
 	
-	for (NSInteger objectCount = 0; objectCount < [someObjects count]; objectCount++)
-		[invocation setArgument:[someObjects objectAtIndex:objectCount] atIndex:objectCount+2];
-	
-	[invocation invoke];
-	[invocation getReturnValue:&theViewController];
-	
-	[[self resurrectionController] addResurrectableViewControllerWithCreatingViewController:self theClass:aClass selector:aSelector objects:someObjects];
-	
-	return theViewController;	
+	return self;
 }
 
-
-- (UIViewController *)resurrectableViewControllerWithClass:(Class)aClass selector:(SEL)aSelector objects:(NSArray *)someObjects {
-	return [[self newResurrectableViewControllerWithClass:aClass selector:aSelector objects:someObjects] autorelease];
+- (void)encodeToResurrector:(DTResurrector *)resurrector {
+	[resurrector setObject:self.title forKey:@"title"];
 }
-
-- (void)swizzledPresentModalViewController:(UIViewController *)aViewController animated:(BOOL)animated {
-	[self swizzledPresentModalViewController:aViewController animated:animated];
-}
-
 
 @end

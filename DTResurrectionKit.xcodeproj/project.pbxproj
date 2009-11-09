@@ -11,7 +11,13 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		243EF83410A0F6D900E27387 /* NSObject+DTMethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 243EF83310A0F6D900E27387 /* NSObject+DTMethodSwizzling.m */; };
+		240FA77F10A74EFC00476708 /* DTOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FA77610A74EFC00476708 /* DTOrderedDictionary.m */; };
+		240FA78010A74EFC00476708 /* DTQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FA77810A74EFC00476708 /* DTQueue.m */; };
+		240FA78110A74EFC00476708 /* DTSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FA77A10A74EFC00476708 /* DTSortedArray.m */; };
+		240FA78210A74EFC00476708 /* DTStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FA77C10A74EFC00476708 /* DTStack.m */; };
+		240FA78310A74EFC00476708 /* DTTraversableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FA77E10A74EFC00476708 /* DTTraversableDictionary.m */; };
+		24596F3B10A46B56006BC789 /* DTResurrector.m in Sources */ = {isa = PBXBuildFile; fileRef = 24596F3A10A46B56006BC789 /* DTResurrector.m */; };
+		24B93DAE10A1AB4300ABF25D /* DTResurrectionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B93DAD10A1AB4300ABF25D /* DTResurrectionKit.m */; };
 		24D3FE7110A0D05600BECE54 /* UIViewController+DTResurrectionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D3FE7010A0D05600BECE54 /* UIViewController+DTResurrectionKit.m */; };
 		24D3FE7610A0D0C300BECE54 /* DTResurrectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D3FE7510A0D0C300BECE54 /* DTResurrectionController.m */; };
 		24D3FEF810A0ECA600BECE54 /* UINavigationController+DTResurrectionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D3FEF710A0ECA600BECE54 /* UINavigationController+DTResurrectionKit.m */; };
@@ -27,8 +33,21 @@
 		1D3623250D0F684500981E51 /* DTResurrectionKitAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrectionKitAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* DTResurrectionKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTResurrectionKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		243EF83210A0F6D900E27387 /* NSObject+DTMethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DTMethodSwizzling.h"; sourceTree = "<group>"; };
-		243EF83310A0F6D900E27387 /* NSObject+DTMethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DTMethodSwizzling.m"; sourceTree = "<group>"; };
+		240FA77510A74EFC00476708 /* DTOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTOrderedDictionary.h; sourceTree = "<group>"; };
+		240FA77610A74EFC00476708 /* DTOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTOrderedDictionary.m; sourceTree = "<group>"; };
+		240FA77710A74EFC00476708 /* DTQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTQueue.h; sourceTree = "<group>"; };
+		240FA77810A74EFC00476708 /* DTQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTQueue.m; sourceTree = "<group>"; };
+		240FA77910A74EFC00476708 /* DTSortedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSortedArray.h; sourceTree = "<group>"; };
+		240FA77A10A74EFC00476708 /* DTSortedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSortedArray.m; sourceTree = "<group>"; };
+		240FA77B10A74EFC00476708 /* DTStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStack.h; sourceTree = "<group>"; };
+		240FA77C10A74EFC00476708 /* DTStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTStack.m; sourceTree = "<group>"; };
+		240FA77D10A74EFC00476708 /* DTTraversableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTraversableDictionary.h; sourceTree = "<group>"; };
+		240FA77E10A74EFC00476708 /* DTTraversableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTraversableDictionary.m; sourceTree = "<group>"; };
+		240FA81210A8456A00476708 /* DTResurrection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrection.h; sourceTree = "<group>"; };
+		24596F3910A46B56006BC789 /* DTResurrector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrector.h; sourceTree = "<group>"; };
+		24596F3A10A46B56006BC789 /* DTResurrector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrector.m; sourceTree = "<group>"; };
+		24B93DAC10A1AB4300ABF25D /* DTResurrectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionKit.h; sourceTree = "<group>"; };
+		24B93DAD10A1AB4300ABF25D /* DTResurrectionKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrectionKit.m; sourceTree = "<group>"; };
 		24D3FE6F10A0D05600BECE54 /* UIViewController+DTResurrectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DTResurrectionKit.h"; sourceTree = "<group>"; };
 		24D3FE7010A0D05600BECE54 /* UIViewController+DTResurrectionKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DTResurrectionKit.m"; sourceTree = "<group>"; };
 		24D3FE7410A0D0C300BECE54 /* DTResurrectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionController.h; sourceTree = "<group>"; };
@@ -64,8 +83,6 @@
 			children = (
 				1D3623240D0F684500981E51 /* DTResurrectionKitAppDelegate.h */,
 				1D3623250D0F684500981E51 /* DTResurrectionKitAppDelegate.m */,
-				243EF83210A0F6D900E27387 /* NSObject+DTMethodSwizzling.h */,
-				243EF83310A0F6D900E27387 /* NSObject+DTMethodSwizzling.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -78,6 +95,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		240FA77410A74EFC00476708 /* DTFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				240FA77510A74EFC00476708 /* DTOrderedDictionary.h */,
+				240FA77610A74EFC00476708 /* DTOrderedDictionary.m */,
+				240FA77710A74EFC00476708 /* DTQueue.h */,
+				240FA77810A74EFC00476708 /* DTQueue.m */,
+				240FA77910A74EFC00476708 /* DTSortedArray.h */,
+				240FA77A10A74EFC00476708 /* DTSortedArray.m */,
+				240FA77B10A74EFC00476708 /* DTStack.h */,
+				240FA77C10A74EFC00476708 /* DTStack.m */,
+				240FA77D10A74EFC00476708 /* DTTraversableDictionary.h */,
+				240FA77E10A74EFC00476708 /* DTTraversableDictionary.m */,
+			);
+			name = DTFoundation;
+			path = ../DTKit/DTFoundation;
+			sourceTree = SOURCE_ROOT;
+		};
 		24D3FE6A10A0D03A00BECE54 /* DTResurrectionKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +122,11 @@
 				24D3FE7010A0D05600BECE54 /* UIViewController+DTResurrectionKit.m */,
 				24D3FEF610A0ECA600BECE54 /* UINavigationController+DTResurrectionKit.h */,
 				24D3FEF710A0ECA600BECE54 /* UINavigationController+DTResurrectionKit.m */,
+				24B93DAC10A1AB4300ABF25D /* DTResurrectionKit.h */,
+				24B93DAD10A1AB4300ABF25D /* DTResurrectionKit.m */,
+				24596F3910A46B56006BC789 /* DTResurrector.h */,
+				24596F3A10A46B56006BC789 /* DTResurrector.m */,
+				240FA81210A8456A00476708 /* DTResurrection.h */,
 			);
 			path = DTResurrectionKit;
 			sourceTree = "<group>";
@@ -94,6 +134,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				240FA77410A74EFC00476708 /* DTFoundation */,
 				24D3FE6A10A0D03A00BECE54 /* DTResurrectionKit */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -193,7 +234,13 @@
 				24D3FE7110A0D05600BECE54 /* UIViewController+DTResurrectionKit.m in Sources */,
 				24D3FE7610A0D0C300BECE54 /* DTResurrectionController.m in Sources */,
 				24D3FEF810A0ECA600BECE54 /* UINavigationController+DTResurrectionKit.m in Sources */,
-				243EF83410A0F6D900E27387 /* NSObject+DTMethodSwizzling.m in Sources */,
+				24B93DAE10A1AB4300ABF25D /* DTResurrectionKit.m in Sources */,
+				24596F3B10A46B56006BC789 /* DTResurrector.m in Sources */,
+				240FA77F10A74EFC00476708 /* DTOrderedDictionary.m in Sources */,
+				240FA78010A74EFC00476708 /* DTQueue.m in Sources */,
+				240FA78110A74EFC00476708 /* DTSortedArray.m in Sources */,
+				240FA78210A74EFC00476708 /* DTStack.m in Sources */,
+				240FA78310A74EFC00476708 /* DTTraversableDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

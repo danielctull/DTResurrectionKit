@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DTResurrectionController.h"
 
-@interface UINavigationController (DTResurrectionKit)
-- (void)swizzledPushViewController:(UIViewController *)aViewController animated:(BOOL)animated;
-- (void)swizzledPopViewControllerAnimated:(BOOL)animated;
+@interface UINavigationController (DTResurrectionKit) <DTResurrection>
 @end
