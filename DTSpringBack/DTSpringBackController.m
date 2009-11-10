@@ -17,7 +17,6 @@ NSString *const DTSpringBackPathVersion = @"Version";
 - (void)resurrectStack;
 @end
 
-
 @implementation DTSpringBackController
 
 @synthesize hasSprungBack, isDebugMode, viewController;

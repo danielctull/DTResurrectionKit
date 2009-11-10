@@ -74,6 +74,9 @@ NSString *const DTSpringBackPropertyClass = @"class";
 	
 	NSString *token = [self generateToken];
 	
+	
+	//NSLog(@"%@:%s %@ %@", self, _cmd, aKey, object);
+	
 	[objectDictionary setObject:object forKey:token];
 	
 	NSMutableDictionary *objectDict = [[NSMutableDictionary alloc] init];

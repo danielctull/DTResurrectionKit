@@ -17,8 +17,8 @@
 	
 	if (!(self = [self initWithRootViewController:[vcs objectAtIndex:0]])) return nil;
 	
-	for (NSInteger i = 1; i < [vcs count]; i++)	
-		[self pushViewController:[vcs objectAtIndex:1] animated:NO];
+	for (NSInteger i = 1; i < [vcs count]; i++)
+		[self pushViewController:[vcs objectAtIndex:i] animated:NO];
 	
 	return self;
 }
