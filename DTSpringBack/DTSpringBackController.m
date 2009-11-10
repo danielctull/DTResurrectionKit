@@ -20,7 +20,7 @@ NSString *const DTSpringBackPathVersion = @"Version";
 
 @implementation DTSpringBackController
 
-@synthesize hasSprungBack, viewController;
+@synthesize hasSprungBack, isDebugMode, viewController;
 
 - (id)init {
 	
@@ -29,8 +29,14 @@ NSString *const DTSpringBackPathVersion = @"Version";
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate:) name:UIApplicationWillTerminateNotification object:nil];
 	
 	NSString *pathComponent = [NSString stringWithFormat:@"%@%@", DTSpringBackPathVersion, [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
-	archivePath = [[[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DTSpringBackPathBase] stringByAppendingPathComponent:pathComponent] retain];
+	archivePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DTSpringBackPathBase];
 	
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	if (![fileManager fileExistsAtPath:archivePath])
+		[fileManager createDirectoryAtPath:archivePath attributes:nil];
+	
+	archivePath = [[archivePath stringByAppendingPathComponent:pathComponent] retain];
+		
 	if ([self canResurrect]) { // ACCESS FILE SYSTEM TO LOOK FOR STORED PLIST FOR RESURRECTION
 		hasSprungBack = YES;
 		[self resurrectStack];
@@ -50,6 +56,8 @@ NSString *const DTSpringBackPathVersion = @"Version";
 	[super viewDidLoad];
 	self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 	self.viewController.view.frame = self.view.bounds;
+	NSLog(@"%@:%s", self, _cmd);
+	[self.viewController viewWillAppear:NO];
 	[self.view addSubview:self.viewController.view];
 }
 

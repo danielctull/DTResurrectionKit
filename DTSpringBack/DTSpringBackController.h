@@ -12,9 +12,10 @@
 	UIViewController<DTSpringBack> *viewController;
 	NSString *archivePath;
 	BOOL hasSprungBack;
+	BOOL isDebugMode;
 }
 
-@property (nonatomic, assign) BOOL hasSprungBack;
+@property (nonatomic, assign) BOOL hasSprungBack, isDebugMode;
 @property (nonatomic, retain) UIViewController<DTSpringBack> *viewController;
 
 @end
