@@ -56,8 +56,6 @@ NSString *const DTSpringBackPathVersion = @"Version";
 	[super viewDidLoad];
 	self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 	self.viewController.view.frame = self.view.bounds;
-	NSLog(@"%@:%s", self, _cmd);
-	[self.viewController viewWillAppear:NO];
 	[self.view addSubview:self.viewController.view];
 }
 
