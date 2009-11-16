@@ -43,7 +43,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.title = @"Load SpringBack State";
+	self.title = @"SpringBack";
 	
 	UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
 	self.navigationItem.leftBarButtonItem = right;
