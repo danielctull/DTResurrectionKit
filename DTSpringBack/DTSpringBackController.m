@@ -7,9 +7,12 @@
 //
 
 #import "DTSpringBackController.h"
+#import "DTSpringBackLoadViewController.h"
+#import "DTSpringBackSaveViewController.h"
 
 NSString *const DTSpringBackPathBase = @"DTSpringBack";
 NSString *const DTSpringBackPathVersion = @"Version";
+NSString *const DTSpringBackPathDebug = @"Debug";
 
 @interface DTSpringBackController ()
 - (BOOL)canResurrect;
@@ -19,11 +22,13 @@ NSString *const DTSpringBackPathVersion = @"Version";
 
 @implementation DTSpringBackController
 
-@synthesize hasSprungBack, isDebugMode, viewController;
+@synthesize hasSprungBack, debugMode, viewController;
 
 - (id)init {
 	
 	if (!(self = [super init])) return nil;
+	
+	self.position = DTBarPositionTop;
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate:) name:UIApplicationWillTerminateNotification object:nil];
 	
@@ -52,14 +57,26 @@ NSString *const DTSpringBackPathVersion = @"Version";
 }
 
 - (void)viewDidLoad {
+	
+	if (self.debugMode && !self.barView) [[NSBundle mainBundle] loadNibNamed:@"DTSpringBackDebugView" owner:self options:nil];
+	
 	[super viewDidLoad];
-	self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-	self.viewController.view.frame = self.view.bounds;
-	[self.view addSubview:self.viewController.view];
+	
+	self.viewController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+	self.viewController.view.frame = self.contentView.bounds;
+	[self.contentView addSubview:self.viewController.view];
+}
+
+- (void)resurrectWithArchivePath:(NSString *)path {
+	[archivePath release];
+	archivePath = [path copy];
+	[self resurrectStack];
+	self.contentView = nil;
+	self.view = nil;
 }
 
 - (void)resurrectStack {
-	NSLog(@"%@:%s Start", self, _cmd);
+	//NSLog(@"%@:%s Start", self, _cmd);
 	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
 	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:archivePath];
 	UIViewController<DTSpringBack> *vc = [resurrector resurrect:dict];
@@ -68,7 +85,7 @@ NSString *const DTSpringBackPathVersion = @"Version";
 	if (!vc) hasSprungBack = NO;
 	
 	self.viewController = vc;
-	NSLog(@"%@:%s Finish", self, _cmd);
+	//NSLog(@"%@:%s Finish", self, _cmd);
 }
 
 - (BOOL)canResurrect {
@@ -87,6 +104,23 @@ NSString *const DTSpringBackPathVersion = @"Version";
 
 - (void)applicationWillTerminate:(id)sender {
 	[self deconstructStack];
+}
+
+
+- (IBAction)loadSpringBack:(id)sender {
+	DTSpringBackLoadViewController *lvc = [[DTSpringBackLoadViewController alloc] initWithSpringBackController:self];
+	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:lvc];
+	[self presentModalViewController:nav animated:YES];
+	[lvc release];
+	[nav release];
+}
+
+- (IBAction)saveSpringBack:(id)sender {
+	DTSpringBackSaveViewController *lvc = [[DTSpringBackSaveViewController alloc] initWithViewController:self.viewController];
+	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:lvc];
+	[self presentModalViewController:nav animated:YES];
+	[lvc release];
+	[nav release];
 }
 
 @end

@@ -17,12 +17,24 @@
 		if ([nextResponder isKindOfClass:[DTSpringBackController class]])
 			return (DTSpringBackController *)nextResponder;
 	
+	nextResponder = self.parentViewController;
+	
+	NSLog(@"%@:%s %@", self, _cmd, nextResponder);
+	
+	if ([nextResponder isKindOfClass:[DTSpringBackController class]])
+		return (DTSpringBackController *)nextResponder;
+	
+	while (nextResponder = [nextResponder nextResponder]) {
+		NSLog(@"%@:%s %@", self, _cmd, nextResponder);
+		if ([nextResponder isKindOfClass:[DTSpringBackController class]])
+			return (DTSpringBackController *)nextResponder;
+	}
+	
+	
 	return nil;
 }
 
 - (id)initWithResurrector:(DTSpringBackEncoder *)resurrector {
-	
-	NSLog(@"%@:%s", self, _cmd);
 	
 	if (!(self = [self init])) return nil;
 	
@@ -32,7 +44,6 @@
 }
 
 - (void)encodeToResurrector:(DTSpringBackEncoder *)resurrector {
-	NSLog(@"%@:%s", self, _cmd);
 	[resurrector setObject:self.title forKey:@"title"];
 }
 

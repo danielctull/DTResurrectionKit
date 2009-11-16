@@ -51,7 +51,7 @@
 		resController.viewController = tabs;
 		
 	}
-	
+	resController.debugMode = YES;
 	[window addSubview:resController.view];
     // Override point for customization after app launch    
 

@@ -6,16 +6,26 @@
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "DTSpringBack.h"
+#import "DTContentController.h"
 
-@interface DTSpringBackController : UIViewController {
+extern NSString *const DTSpringBackPathBase;
+extern NSString *const DTSpringBackPathVersion;
+extern NSString *const DTSpringBackPathDebug;
+
+@interface DTSpringBackController : DTContentController {
 	UIViewController<DTSpringBack> *viewController;
 	NSString *archivePath;
 	BOOL hasSprungBack;
-	BOOL isDebugMode;
+	BOOL debugMode;
 }
 
-@property (nonatomic, assign) BOOL hasSprungBack, isDebugMode;
+@property (nonatomic, assign) BOOL hasSprungBack, debugMode;
 @property (nonatomic, retain) UIViewController<DTSpringBack> *viewController;
+
+- (IBAction)loadSpringBack:(id)sender;
+- (IBAction)saveSpringBack:(id)sender;
+- (void)resurrectWithArchivePath:(NSString *)path;
 
 @end
