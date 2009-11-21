@@ -7,6 +7,7 @@
 //
 
 #import "UITabBarController+DTSpringBack.h"
+#import "DTSpringBackEncoder.h"
 
 @implementation UITabBarController (DTSpringBack)
 - (id)initWithResurrector:(DTSpringBackEncoder *)resurrector {
@@ -16,11 +17,24 @@
 	self.viewControllers = [resurrector objectForKey:@"viewControllers"];
 	self.selectedIndex = [[resurrector objectForKey:@"selectedIndex"] integerValue];
 	
+	UIViewController *mvc = [resurrector objectForKey:@"modalViewController"];
+	if (mvc) [resurrector viewController:self.selectedViewController unpackedModalViewController:mvc];
+	
 	return self;
 }
 
 - (void)encodeToResurrector:(DTSpringBackEncoder *)resurrector {
 	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
 	[resurrector setObject:[NSNumber numberWithInteger:self.selectedIndex] forKey:@"selectedIndex"];
+	
+	if (self.modalViewController) {
+		if ([self isEqual:self.modalViewController.parentViewController])
+			[resurrector setObject:self.modalViewController forKey:@"modalViewController"];
+	}
 }
+
+- (UIViewController *)frontViewController {
+	return self.selectedViewController;
+}
+
 @end

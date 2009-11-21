@@ -18,6 +18,8 @@
 		247B7DD310B1627000BDA8BF /* DTSpringBackLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B7DD210B1627000BDA8BF /* DTSpringBackLoadViewController.m */; };
 		247B7E0410B1681000BDA8BF /* DTSpringBackSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B7E0310B1681000BDA8BF /* DTSpringBackSaveViewController.m */; };
 		247B7E0810B1682200BDA8BF /* DTSpringBackSaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247B7E0710B1682200BDA8BF /* DTSpringBackSaveView.xib */; };
+		247B7ED510B1A8C700BDA8BF /* DTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B7ED410B1A8C700BDA8BF /* DTTestViewController.m */; };
+		247B7ED910B1A95500BDA8BF /* DTTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247B7ED810B1A95500BDA8BF /* DTTestView.xib */; };
 		24840D8010AB6541001AC236 /* DTSpringBackUIViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24840D7F10AB6541001AC236 /* DTSpringBackUIViewControllerTest.m */; };
 		24840DB410AB674C001AC236 /* DTSpringBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8310A9CCE600716ED8 /* DTSpringBackController.m */; };
 		24840DB510AB674C001AC236 /* DTSpringBackEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8510A9CCE600716ED8 /* DTSpringBackEncoder.m */; };
@@ -56,6 +58,9 @@
 		247B7E0210B1681000BDA8BF /* DTSpringBackSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackSaveViewController.h; sourceTree = "<group>"; };
 		247B7E0310B1681000BDA8BF /* DTSpringBackSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackSaveViewController.m; sourceTree = "<group>"; };
 		247B7E0710B1682200BDA8BF /* DTSpringBackSaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTSpringBackSaveView.xib; sourceTree = "<group>"; };
+		247B7ED310B1A8C700BDA8BF /* DTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTestViewController.h; sourceTree = "<group>"; };
+		247B7ED410B1A8C700BDA8BF /* DTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTestViewController.m; sourceTree = "<group>"; };
+		247B7ED810B1A95500BDA8BF /* DTTestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTTestView.xib; sourceTree = "<group>"; };
 		24840D7710AB64EC001AC236 /* SpringBackTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpringBackTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24840D7810AB64EC001AC236 /* SpringBackTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpringBackTest-Info.plist"; sourceTree = "<group>"; };
 		24840D7E10AB6541001AC236 /* DTSpringBackUIViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackUIViewControllerTest.h; sourceTree = "<group>"; };
@@ -115,6 +120,9 @@
 			children = (
 				1D3623240D0F684500981E51 /* DTResurrectionKitAppDelegate.h */,
 				1D3623250D0F684500981E51 /* DTResurrectionKitAppDelegate.m */,
+				247B7ED310B1A8C700BDA8BF /* DTTestViewController.h */,
+				247B7ED410B1A8C700BDA8BF /* DTTestViewController.m */,
+				247B7ED810B1A95500BDA8BF /* DTTestView.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -297,6 +305,7 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				247B7DB210B15C3B00BDA8BF /* DTSpringBackDebugView.xib in Resources */,
 				247B7E0810B1682200BDA8BF /* DTSpringBackSaveView.xib in Resources */,
+				247B7ED910B1A95500BDA8BF /* DTTestView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +354,7 @@
 				247B7D2710B156D200BDA8BF /* DTContentController.m in Sources */,
 				247B7DD310B1627000BDA8BF /* DTSpringBackLoadViewController.m in Sources */,
 				247B7E0410B1681000BDA8BF /* DTSpringBackSaveViewController.m in Sources */,
+				247B7ED510B1A8C700BDA8BF /* DTTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

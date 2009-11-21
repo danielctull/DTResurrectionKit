@@ -7,6 +7,7 @@
 //
 
 #import "UIViewController+DTSpringBack.h"
+#import "DTSpringBackEncoder.h"
 
 @implementation UIViewController (DTSpringBack)
 
@@ -40,11 +41,31 @@
 	
 	self.title = [resurrector objectForKey:@"title"];
 	
+	UIViewController *mvc = [resurrector objectForKey:@"modalViewController"];
+	if (mvc) {
+		NSLog(@"%@:%s MODAL EXISTS", self, _cmd);
+		NSLog(@"%@:%s %@", self, _cmd, mvc);
+		[resurrector viewController:self unpackedModalViewController:mvc];
+	}
+	
 	return self;
 }
 
 - (void)encodeToResurrector:(DTSpringBackEncoder *)resurrector {
 	[resurrector setObject:self.title forKey:@"title"];
+	
+	if (self.modalViewController) {
+		if ([self isEqual:self.modalViewController.parentViewController])
+			[resurrector setObject:self.modalViewController forKey:@"modalViewController"];
+	}
+}
+
+- (BOOL)isFrontViewController {
+	return [self isEqual:self.frontViewController];
+}
+
+- (UIViewController *)frontViewController {
+	return self;
 }
 
 @end

@@ -11,7 +11,7 @@
 @class DTSpringBackController;
 
 @interface UIViewController (DTSpringBack) <DTSpringBack>
-
 @property (readonly) DTSpringBackController *springBackController;
-
+@property (readonly) UIViewController *frontViewController;
+- (BOOL)isFrontViewController;
 @end

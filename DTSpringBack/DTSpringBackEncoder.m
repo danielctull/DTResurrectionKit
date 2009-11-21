@@ -15,12 +15,38 @@ NSString *const DTSpringBackRootObjectString = @"DTSpringBackRootObject";
 NSString *const DTSpringBackPropertyClass = @"class";
 
 @interface DTSpringBackEncoder ()
+@property (nonatomic, retain, readwrite) NSArray *modalViewControllerParents, *modalViewControllerChildren;
 - (NSString *)generateToken;
 - (NSString *)uniqueString;
 @end
 
 
 @implementation DTSpringBackEncoder
+
+@synthesize modalViewControllerParents, modalViewControllerChildren;
+
+- (id)init {
+	if (!(self = [super init])) return nil;
+	
+	modalViewControllerParents = [[NSArray alloc] init];
+	modalViewControllerChildren = [[NSArray alloc] init];
+	
+	return self;
+}
+
+- (void)dealloc {
+	[modalViewControllerParents release];
+	[modalViewControllerChildren release];
+	[super dealloc];
+}
+
+- (void)viewController:(UIViewController *)parentVC unpackedModalViewController:(UIViewController *)childVC {
+	NSLog(@"%@:%s", self, _cmd);
+	self.modalViewControllerParents = [self.modalViewControllerParents arrayByAddingObject:parentVC];
+	self.modalViewControllerChildren = [self.modalViewControllerChildren arrayByAddingObject:childVC];	
+	NSLog(@"\n%@\n%@", modalViewControllerParents, modalViewControllerChildren);
+}
+
 
 - (NSDictionary *)deconstructWithRootObject:(NSObject<DTSpringBack> *)object {
 	
@@ -103,7 +129,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 
 
 - (id)resurrect:(NSDictionary *)aDictionary {
-		
+	
 	NSString *token = [aDictionary objectForKey:DTSpringBackRootObjectString];
 	
 	if (!token) return nil;	
@@ -137,6 +163,8 @@ NSString *const DTSpringBackPropertyClass = @"class";
 	NSMutableDictionary *parentObject = [encodingStack topObject];
 	
 	NSObject *object = [parentObject objectForKey:key];
+	
+	if (!object) return nil;
 	
 	if ([self objectIsCoreObject:object]) {
 		if ([object isKindOfClass:[NSString class]]) {

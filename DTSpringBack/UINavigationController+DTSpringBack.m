@@ -20,11 +20,40 @@
 	for (NSInteger i = 1; i < [vcs count]; i++)
 		[self pushViewController:[vcs objectAtIndex:i] animated:NO];
 	
+	UIViewController *mvc = [resurrector objectForKey:@"modalViewController"];
+	if (mvc) [resurrector viewController:self.topViewController unpackedModalViewController:mvc];
+	
 	return self;
 }
 
 - (void)encodeToResurrector:(DTSpringBackEncoder *)resurrector {
 	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
+	
+	if (self.modalViewController) {
+		if ([self isEqual:self.modalViewController.parentViewController])
+			[resurrector setObject:self.modalViewController forKey:@"modalViewController"];
+	}
 }
+
+- (UIViewController *)frontViewController {
+	return self.topViewController;
+}
+
+/*
+- (void)logStructure {
+	
+	
+	NSString *stringToLog = [NSString stringWithFormat:@"%@ (", self];
+	
+	for (UIViewController *vc in self.viewControllers)
+		stringToLog = [stringToLog stringByAppendingFormat:@"%@:%@", vc, vc.title];
+	
+	
+	stringToLog = [stringToLog stringByAppendingString:@")"];
+	
+	
+	NSLog(stringToLog);
+	
+}*/
 
 @end

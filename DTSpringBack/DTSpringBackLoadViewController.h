@@ -15,4 +15,6 @@
 	NSString *archivePath;
 }
 
+- (id)initWithSpringBackController:(DTSpringBackController *)sbc;
+
 @end

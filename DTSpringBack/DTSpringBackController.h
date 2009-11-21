@@ -19,6 +19,9 @@ extern NSString *const DTSpringBackPathDebug;
 	NSString *archivePath;
 	BOOL hasSprungBack;
 	BOOL debugMode;
+	
+	NSArray *modalViewControllerParents, *modalViewControllerChildren;
+	
 }
 
 @property (nonatomic, assign) BOOL hasSprungBack, debugMode;

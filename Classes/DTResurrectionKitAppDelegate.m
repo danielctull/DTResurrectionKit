@@ -8,7 +8,7 @@
 
 #import "DTResurrectionKitAppDelegate.h"
 #import "DTSpringBack.h"
-
+#import "DTTestViewController.h"
 @implementation DTResurrectionKitAppDelegate
 
 @synthesize window;
@@ -36,7 +36,7 @@
 		UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:vc2];
 		[vc2 release];
 		
-		UIViewController *vc3 = [[UIViewController alloc] init];
+		DTTestViewController *vc3 = [[DTTestViewController alloc] init];
 		vc3.title = @"Test3";
 		UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:vc3];
 		[vc3 release];
@@ -47,11 +47,10 @@
 		[nav1 release];
 		[nav2 release];
 		[nav3 release];
-		
 		resController.viewController = tabs;
 		
 	}
-	resController.debugMode = YES;
+	resController.debugMode = NO;
 	[window addSubview:resController.view];
     // Override point for customization after app launch    
 

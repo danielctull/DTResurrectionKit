@@ -20,7 +20,14 @@
 	NSDictionary *currentlyEncodingObject;
 	NSString *currentlyEncodingObjectsKey;
 	NSMutableDictionary *objectDictionary;
+	
+	
+	NSArray *modalViewControllerParents, *modalViewControllerChildren;
 }
+
+@property (nonatomic, retain, readonly) NSArray *modalViewControllerParents, *modalViewControllerChildren;
+
+- (void)viewController:(UIViewController *)parentVC unpackedModalViewController:(UIViewController *)childVC;
 
 - (NSDictionary *)deconstructWithRootObject:(NSObject<DTSpringBack> *)object;
 - (id)resurrect:(NSDictionary *)aDictionary;
