@@ -202,47 +202,6 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>2408777110B6A1F100393065</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>UIViewController+DTSpringBack.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>2408777210B6A1F100393065</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>UIViewController+DTSpringBack.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>24B414D510B80F52005A1E60</string>
-						<key>history</key>
-						<array>
-							<string>2408777310B6A1F100393065</string>
-							<string>24B4149A10B80D8B005A1E60</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1278, 664}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>0 713 1278 705 0 0 2560 1418 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
 				<string>2408777610B6A1F100393065</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>UITabBarController+DTSpringBack.m</string>
@@ -257,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>24B414D810B80F52005A1E60</string>
+						<string>24B414E510B81242005A1E60</string>
 						<key>history</key>
 						<array>
 							<string>24B414D610B80F52005A1E60</string>
@@ -298,7 +257,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>24B414D910B80F52005A1E60</string>
+						<string>24B414E610B81242005A1E60</string>
 						<key>history</key>
 						<array>
 							<string>240877EB10B6BAC600393065</string>
@@ -339,7 +298,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>24B414DC10B80F52005A1E60</string>
+						<string>24B414E710B81242005A1E60</string>
 						<key>history</key>
 						<array>
 							<string>24B4149210B80B62005A1E60</string>
@@ -379,7 +338,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>24B414E110B80F52005A1E60</string>
+						<string>24B414E810B81242005A1E60</string>
 						<key>history</key>
 						<array>
 							<string>24B414DF10B80F52005A1E60</string>
@@ -400,6 +359,46 @@
 				<false/>
 				<key>RubberWindowFrame</key>
 				<string>1282 713 1278 705 0 0 2560 1418 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>24B414E910B81242005A1E60</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>DTSpringBackEncoder.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>24B414EA10B81242005A1E60</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>DTSpringBackEncoder.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>24B414EB10B81242005A1E60</string>
+						<key>history</key>
+						<array>
+							<string>24B414E410B811C4005A1E60</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1278, 664}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>0 713 1278 705 0 0 2560 1418 </string>
 			</dict>
 		</dict>
 	</array>
@@ -476,7 +475,7 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>17</integer>
+											<integer>8</integer>
 											<integer>3</integer>
 											<integer>0</integer>
 										</array>
@@ -679,6 +678,7 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>24B414E910B81242005A1E60</string>
 		<string>1C335F2C07B51CD20023D4EE</string>
 		<string>24B414DD10B80F52005A1E60</string>
 		<string>24B414DA10B80F52005A1E60</string>
@@ -686,11 +686,8 @@
 		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>240877EE10B6BAC600393065</string>
 		<string>2408776E10B6A1F100393065</string>
 		<string>2408777610B6A1F100393065</string>
-		<string>2408777910B6A1F100393065</string>
-		<string>2408777110B6A1F100393065</string>
 		<string>/Users/danielctull/Dropbox/Programs/Cocoa/DTResurrectionKit/DTResurrectionKit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

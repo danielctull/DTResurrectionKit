@@ -41,10 +41,10 @@ NSString *const DTSpringBackPropertyClass = @"class";
 }
 
 - (void)viewController:(UIViewController *)parentVC unpackedModalViewController:(UIViewController *)childVC {
-	NSLog(@"%@:%s", self, _cmd);
+	//NSLog(@"%@:%s", self, _cmd);
 	self.modalViewControllerParents = [self.modalViewControllerParents arrayByAddingObject:parentVC];
 	self.modalViewControllerChildren = [self.modalViewControllerChildren arrayByAddingObject:childVC];	
-	NSLog(@"\n%@\n%@", modalViewControllerParents, modalViewControllerChildren);
+	//NSLog(@"\n%@\n%@", modalViewControllerParents, modalViewControllerChildren);
 }
 
 
