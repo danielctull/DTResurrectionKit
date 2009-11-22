@@ -105,14 +105,19 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-	UIViewController *vc = [modalViewControllerParents lastObject];
 	
-	while (![vc isFrontViewController])
-		vc = vc.frontViewController;
 	
-	UIViewController *pushVC = [modalViewControllerChildren lastObject];
-	
-	[vc presentModalViewController:pushVC animated:NO];
+	for (NSInteger i = 0; i < [modalViewControllerParents count]; i++) {
+		
+		UIViewController *vc = [modalViewControllerParents objectAtIndex:i];
+		
+		while (![vc isFrontViewController])
+			vc = vc.frontViewController;
+		
+		UIViewController *pushVC = [modalViewControllerChildren objectAtIndex:i];
+		
+		[vc presentModalViewController:pushVC animated:NO];
+	}
 }
 
 - (void)resurrectWithArchivePath:(NSString *)path {

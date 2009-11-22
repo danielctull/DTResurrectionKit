@@ -202,48 +202,7 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>2408777610B6A1F100393065</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>UITabBarController+DTSpringBack.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>2408777710B6A1F100393065</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>UITabBarController+DTSpringBack.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>24B414E510B81242005A1E60</string>
-						<key>history</key>
-						<array>
-							<string>24B414D610B80F52005A1E60</string>
-							<string>24B414D710B80F52005A1E60</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1278, 664}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>0 713 1278 705 0 0 2560 1418 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>2408776E10B6A1F100393065</string>
+				<string>245315FA10B95C6100A490B6</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>DTSpringBackController.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
@@ -251,17 +210,17 @@
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>2408776F10B6A1F100393065</string>
+						<string>245315FB10B95C6100A490B6</string>
 						<key>PBXProjectModuleLabel</key>
 						<string>DTSpringBackController.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>24B414E610B81242005A1E60</string>
+						<string>245315FE10B95C6100A490B6</string>
 						<key>history</key>
 						<array>
-							<string>240877EB10B6BAC600393065</string>
-							<string>2408783110B6C07100393065</string>
+							<string>245315FC10B95C6100A490B6</string>
+							<string>245315FD10B95C6100A490B6</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -278,127 +237,6 @@
 				<false/>
 				<key>RubberWindowFrame</key>
 				<string>0 4 1278 1414 0 0 2560 1418 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>24B414DA10B80F52005A1E60</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>DTResurrectionKitAppDelegate.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>24B414DB10B80F52005A1E60</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>DTResurrectionKitAppDelegate.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>24B414E710B81242005A1E60</string>
-						<key>history</key>
-						<array>
-							<string>24B4149210B80B62005A1E60</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1278, 664}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>1282 713 1278 705 0 0 2560 1418 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>24B414DD10B80F52005A1E60</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>UIViewController+DTSpringBack.h</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>24B414DE10B80F52005A1E60</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>UIViewController+DTSpringBack.h</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>24B414E810B81242005A1E60</string>
-						<key>history</key>
-						<array>
-							<string>24B414DF10B80F52005A1E60</string>
-							<string>24B414E010B80F52005A1E60</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1278, 664}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>1282 713 1278 705 0 0 2560 1418 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>24B414E910B81242005A1E60</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>DTSpringBackEncoder.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>24B414EA10B81242005A1E60</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>DTSpringBackEncoder.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>24B414EB10B81242005A1E60</string>
-						<key>history</key>
-						<array>
-							<string>24B414E410B811C4005A1E60</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1278, 664}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>0 713 1278 705 0 0 2560 1418 </string>
 			</dict>
 		</dict>
 	</array>
@@ -475,7 +313,7 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>8</integer>
+											<integer>6</integer>
 											<integer>3</integer>
 											<integer>0</integer>
 										</array>
@@ -640,8 +478,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>24B4143810B808D8005A1E60</string>
-				<string>24B4143910B808D8005A1E60</string>
+				<string>245315ED10B959F200A490B6</string>
+				<string>245315EE10B959F200A490B6</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -678,17 +516,9 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>24B414E910B81242005A1E60</string>
-		<string>1C335F2C07B51CD20023D4EE</string>
-		<string>24B414DD10B80F52005A1E60</string>
-		<string>24B414DA10B80F52005A1E60</string>
-		<string>1C530D60069F1CE1000CFCEE</string>
-		<string>1C530D5B069F1CE1000CFCEE</string>
-		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>2408776E10B6A1F100393065</string>
-		<string>2408777610B6A1F100393065</string>
 		<string>/Users/danielctull/Dropbox/Programs/Cocoa/DTResurrectionKit/DTResurrectionKit.xcodeproj</string>
+		<string>245315FA10B95C6100A490B6</string>
 	</array>
 	<key>WindowString</key>
 	<string>1282 59 563 650 0 0 2560 1418 </string>
@@ -842,14 +672,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>UITabBarController+DTSpringBack.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -905,7 +733,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>24B4143F10B808D8005A1E60</string>
+				<string>245315F410B959F200A490B6</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
