@@ -106,18 +106,30 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 - (void)viewDidAppear:(BOOL)animated {
 	
+	[super viewDidAppear:animated];
 	
-	for (NSInteger i = 0; i < [modalViewControllerParents count]; i++) {
+	if (!self.hasSprungBack) return;
+	
+	NSMutableArray *parents = [modalViewControllerParents mutableCopy];
+	NSMutableArray *children = [modalViewControllerChildren mutableCopy];
+	
+	while ([parents count] > 0) {
 		
-		UIViewController *vc = [modalViewControllerParents objectAtIndex:i];
+		UIViewController *vc = [parents lastObject];
 		
 		while (![vc isFrontViewController])
 			vc = vc.frontViewController;
 		
-		UIViewController *pushVC = [modalViewControllerChildren objectAtIndex:i];
+		UIViewController *pushVC = [children lastObject];
 		
 		[vc presentModalViewController:pushVC animated:NO];
+		
+		[parents removeLastObject];
+		[children removeLastObject];	
 	}
+	
+	[parents release];
+	[children release];
 }
 
 - (void)resurrectWithArchivePath:(NSString *)path {
@@ -149,12 +161,12 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 }
 
 - (void)deconstructStack {
-	//NSLog(@"%@:%s Start", self, _cmd);
+	NSLog(@"%@:%s Start", self, _cmd);
 	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
 	NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
 	[resurrector release];
 	[dict writeToFile:archivePath atomically:NO];
-	//NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
+	NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
 }
 
 - (void)applicationWillTerminate:(id)sender {

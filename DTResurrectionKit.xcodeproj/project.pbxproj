@@ -11,6 +11,7 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2453160C10B9668300A490B6 /* DTModalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2453160B10B9668300A490B6 /* DTModalTestViewController.m */; };
 		247B7D1510B1536F00BDA8BF /* DTContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B7D0810B1536F00BDA8BF /* DTContentController.m */; };
 		247B7D2710B156D200BDA8BF /* DTContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B7D0810B1536F00BDA8BF /* DTContentController.m */; };
 		247B7D7310B158D500BDA8BF /* DTSpringBackDebugView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247B7D7210B158D500BDA8BF /* DTSpringBackDebugView.xib */; };
@@ -50,6 +51,8 @@
 		1D3623250D0F684500981E51 /* DTResurrectionKitAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrectionKitAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* SpringBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpringBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2453160A10B9668300A490B6 /* DTModalTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTModalTestViewController.h; sourceTree = "<group>"; };
+		2453160B10B9668300A490B6 /* DTModalTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTModalTestViewController.m; sourceTree = "<group>"; };
 		247B7D0710B1536F00BDA8BF /* DTContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTContentController.h; sourceTree = "<group>"; };
 		247B7D0810B1536F00BDA8BF /* DTContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTContentController.m; sourceTree = "<group>"; };
 		247B7D7210B158D500BDA8BF /* DTSpringBackDebugView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTSpringBackDebugView.xib; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				247B7ED310B1A8C700BDA8BF /* DTTestViewController.h */,
 				247B7ED410B1A8C700BDA8BF /* DTTestViewController.m */,
 				247B7ED810B1A95500BDA8BF /* DTTestView.xib */,
+				2453160A10B9668300A490B6 /* DTModalTestViewController.h */,
+				2453160B10B9668300A490B6 /* DTModalTestViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				247B7DD310B1627000BDA8BF /* DTSpringBackLoadViewController.m in Sources */,
 				247B7E0410B1681000BDA8BF /* DTSpringBackSaveViewController.m in Sources */,
 				247B7ED510B1A8C700BDA8BF /* DTTestViewController.m in Sources */,
+				2453160C10B9668300A490B6 /* DTModalTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
