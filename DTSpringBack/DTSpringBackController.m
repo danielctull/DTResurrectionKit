@@ -84,7 +84,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 - (void)viewDidLoad {
 	
-	[self resurrectStack];
+	if (self.debugMode) [self resurrectStack];
 	
 	if (self.debugMode && !self.barView) [[NSBundle mainBundle] loadNibNamed:@"DTSpringBackDebugView" owner:self options:nil];
 	
@@ -93,15 +93,6 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	self.viewController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 	self.viewController.view.frame = self.contentView.bounds;
 	[self.contentView addSubview:self.viewController.view];
-	/*
-	for (NSInteger i = 0; i < [modalViewControllerParents count]; i++) {
-		NSLog(@"present %@ %@", [modalViewControllerParents objectAtIndex:i], [modalViewControllerChildren objectAtIndex:i]);
-		[[modalViewControllerParents objectAtIndex:i] presentModalViewController:[modalViewControllerChildren objectAtIndex:i] animated:NO];
-	}*/
-	
-	
-	
-	
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -161,12 +152,12 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 }
 
 - (void)deconstructStack {
-	NSLog(@"%@:%s Start", self, _cmd);
+	//NSLog(@"%@:%s Start", self, _cmd);
 	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
 	NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
 	[resurrector release];
 	[dict writeToFile:archivePath atomically:NO];
-	NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
+	//NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
 }
 
 - (void)applicationWillTerminate:(id)sender {
