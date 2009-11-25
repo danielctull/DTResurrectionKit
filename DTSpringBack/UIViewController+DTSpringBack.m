@@ -12,6 +12,7 @@
 @implementation UIViewController (DTSpringBack)
 
 - (DTSpringBackController *)springBackController {
+	
 	UIResponder *nextResponder = self;
 	
 	while (nextResponder = [nextResponder nextResponder])
@@ -20,17 +21,14 @@
 	
 	nextResponder = self.parentViewController;
 	
-	NSLog(@"%@:%s %@", self, _cmd, nextResponder);
-	
 	if ([nextResponder isKindOfClass:[DTSpringBackController class]])
 		return (DTSpringBackController *)nextResponder;
 	
-	while (nextResponder = [nextResponder nextResponder]) {
-		NSLog(@"%@:%s %@", self, _cmd, nextResponder);
+	while (nextResponder = [nextResponder nextResponder])
 		if ([nextResponder isKindOfClass:[DTSpringBackController class]])
 			return (DTSpringBackController *)nextResponder;
-	}
 	
+	NSLog(@"%@:%s springBackController Not Found", self, _cmd);
 	
 	return nil;
 }
@@ -42,11 +40,8 @@
 	self.title = [resurrector objectForKey:@"title"];
 	
 	UIViewController *mvc = [resurrector objectForKey:@"modalViewController"];
-	if (mvc) {
-		NSLog(@"%@:%s MODAL EXISTS", self, _cmd);
-		NSLog(@"%@:%s %@", self, _cmd, mvc);
+	if (mvc)
 		[resurrector viewController:self unpackedModalViewController:mvc];
-	}
 	
 	return self;
 }
@@ -66,6 +61,19 @@
 
 - (UIViewController *)frontViewController {
 	return self;
+}
+
+// USED ONLY IN DEBUG MODE
+- (void)swizzledPresentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated {
+	DTSpringBackController *sbc = self.springBackController;
+	[self swizzledPresentModalViewController:modalViewController animated:animated];	
+	modalViewController.view.frame = sbc.contentView.bounds;
+	[modalViewController.view addObserver:sbc forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:NULL];	
+}
+
+- (void)swizzledDismissModalViewControllerAnimated:(BOOL)animated {
+	[self.view removeObserver:self.springBackController forKeyPath:@"frame"];
+	[self swizzledDismissModalViewControllerAnimated:animated];
 }
 
 @end

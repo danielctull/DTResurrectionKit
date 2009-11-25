@@ -20,6 +20,8 @@ extern NSString *const DTSpringBackPathDebug;
 	BOOL hasSprungBack;
 	BOOL debugMode;
 	
+	BOOL hasSprungBackModalViewControllers;
+	
 	NSArray *modalViewControllerParents, *modalViewControllerChildren;
 	
 }

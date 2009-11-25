@@ -14,4 +14,8 @@
 @property (readonly) DTSpringBackController *springBackController;
 @property (readonly) UIViewController *frontViewController;
 - (BOOL)isFrontViewController;
+
+// USED ONLY IN DEBUG MODE
+- (void)swizzledPresentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated;
+- (void)swizzledDismissModalViewControllerAnimated:(BOOL)animated;
 @end

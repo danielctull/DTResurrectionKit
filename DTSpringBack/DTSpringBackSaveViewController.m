@@ -43,7 +43,7 @@
 }
 
 - (void)cancel:(id)sender {
-	[self.parentViewController dismissModalViewControllerAnimated:YES];
+	[self.parentViewController swizzledDismissModalViewControllerAnimated:YES];
 }
 
 - (void)save:(id)sender {
@@ -70,7 +70,7 @@
 	[dict writeToFile:archivePath atomically:NO];
 	NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
 	
-	[self.parentViewController dismissModalViewControllerAnimated:YES];
+	[self.parentViewController swizzledDismissModalViewControllerAnimated:YES];
 }
 
 @end

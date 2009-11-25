@@ -8,6 +8,7 @@
 
 #import "DTSpringBackLoadViewController.h"
 #import "DTSpringBackController.h"
+#import "UIViewController+DTSpringBack.h"
 
 @implementation DTSpringBackLoadViewController
 
@@ -55,7 +56,7 @@
 
 
 - (void)cancel:(id)sender {
-	[self.parentViewController dismissModalViewControllerAnimated:YES];
+	[self.parentViewController swizzledDismissModalViewControllerAnimated:YES];
 }
 
 /*
@@ -131,7 +132,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[springBackController resurrectWithArchivePath:[archivePath stringByAppendingPathComponent:[tableView cellForRowAtIndexPath:indexPath].textLabel.text]];
-	[self.parentViewController dismissModalViewControllerAnimated:YES];
+	[self.parentViewController swizzledDismissModalViewControllerAnimated:YES];
 }
 
 

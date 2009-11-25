@@ -11,6 +11,8 @@
 #import "DTSpringBackSaveViewController.h"
 #import "UIViewController+DTSpringBack.h"
 
+#import <objc/objc-runtime.h>
+
 NSString *const DTSpringBackPathBase = @"DTSpringBack";
 NSString *const DTSpringBackPathVersion = @"Version";
 NSString *const DTSpringBackPathDebug = @"Debug";
@@ -24,30 +26,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 @implementation DTSpringBackController
 
 @synthesize hasSprungBack, debugMode, viewController;
-/*
-- (void)presentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated {
-	NSLog(@"%@:%s", self, _cmd);
-	//[super presentModalViewController:modalViewController animated:animated];
-	
-	[modalViewController retain];
-	
-	
-	//[self.contentView addSubview:modalViewController.view];
-	
-	[self.contentView insertSubview:modalViewController.view atIndex:100000];
-	modalViewController.view.frame = CGRectMake(0, self.view.bounds.size.height, self.contentView.bounds.size.width, self.contentView.bounds.size.height);
-	
-	NSLog(@"%@:%s %@", self, _cmd, self.contentView);
-	
-	if (animated) [UIView beginAnimations:@"modal" context:NULL];
-	modalViewController.view.frame = self.contentView.bounds;
-	if (animated) [UIView commitAnimations];
-	
-	
-	
-	
-}
-*/
+
 - (id)init {
 	
 	if (!(self = [super init])) return nil;
@@ -84,7 +63,16 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 - (void)viewDidLoad {
 	
-	if (self.debugMode) [self resurrectStack];
+	if (self.debugMode) {
+		Method myReplacementMethod = class_getInstanceMethod([UIViewController class], @selector(swizzledPresentModalViewController:animated:));
+		Method originalMethod = class_getInstanceMethod([UIViewController class], @selector(presentModalViewController:animated:));
+		method_exchangeImplementations(myReplacementMethod, originalMethod);
+		Method dismissReplacementMethod = class_getInstanceMethod([UIViewController class], @selector(swizzledDismissModalViewControllerAnimated:));
+		Method dismissOriginalMethod = class_getInstanceMethod([UIViewController class], @selector(dismissModalViewControllerAnimated:));
+		method_exchangeImplementations(dismissReplacementMethod, dismissOriginalMethod);
+	
+		[self resurrectStack];
+	}
 	
 	if (self.debugMode && !self.barView) [[NSBundle mainBundle] loadNibNamed:@"DTSpringBackDebugView" owner:self options:nil];
 	
@@ -92,14 +80,26 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	
 	self.viewController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 	self.viewController.view.frame = self.contentView.bounds;
+	self.viewController.wantsFullScreenLayout = YES;
+	
+	if (self.debugMode) [self.viewController.view addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:NULL];
+	
 	[self.contentView addSubview:self.viewController.view];
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {	
+	UIView *v = (UIView *)object;
+		
+	if (v.frame.size.height != self.contentView.bounds.size.height)
+		v.frame = self.contentView.bounds;
+}
+
 - (void)viewDidAppear:(BOOL)animated {
-	
 	[super viewDidAppear:animated];
 	
 	if (!self.hasSprungBack) return;
+	
+	if (hasSprungBackModalViewControllers) return;
 	
 	NSMutableArray *parents = [modalViewControllerParents mutableCopy];
 	NSMutableArray *children = [modalViewControllerChildren mutableCopy];
@@ -121,6 +121,8 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	
 	[parents release];
 	[children release];
+	
+	hasSprungBackModalViewControllers = YES;	
 }
 
 - (void)resurrectWithArchivePath:(NSString *)path {
@@ -168,7 +170,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 - (IBAction)loadSpringBack:(id)sender {
 	DTSpringBackLoadViewController *lvc = [[DTSpringBackLoadViewController alloc] initWithSpringBackController:self];
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:lvc];
-	[self presentModalViewController:nav animated:YES];
+	[self swizzledPresentModalViewController:nav animated:YES];
 	[lvc release];
 	[nav release];
 }
@@ -176,7 +178,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 - (IBAction)saveSpringBack:(id)sender {
 	DTSpringBackSaveViewController *lvc = [[DTSpringBackSaveViewController alloc] initWithViewController:self.viewController];
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:lvc];
-	[self presentModalViewController:nav animated:YES];
+	[self swizzledPresentModalViewController:nav animated:YES];
 	[lvc release];
 	[nav release];
 }
