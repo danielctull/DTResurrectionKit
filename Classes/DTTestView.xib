@@ -58,7 +58,7 @@
 											<object class="IBUIButton" id="692454324">
 												<reference key="NSNextResponder" ref="74547256"/>
 												<int key="NSvFlags">319</int>
-												<string key="NSFrame">{{8, 181}, {244, 38}}</string>
+												<string key="NSFrame">{{60, 168}, {140, 64}}</string>
 												<reference key="NSSuperview" ref="74547256"/>
 												<bool key="IBUIOpaque">NO</bool>
 												<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -70,6 +70,7 @@
 													<int key="NSfFlags">16</int>
 												</object>
 												<int key="IBUIButtonType">1</int>
+												<int key="IBUILineBreakMode">0</int>
 												<string key="IBUINormalTitle">Present Modal View Controller</string>
 												<object class="NSColor" key="IBUIHighlightedTitleColor">
 													<int key="NSColorSpace">3</int>

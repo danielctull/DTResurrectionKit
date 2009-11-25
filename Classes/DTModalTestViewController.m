@@ -7,7 +7,7 @@
 //
 
 #import "DTModalTestViewController.h"
-
+#import "DTSpringBack.h"
 
 @implementation DTModalTestViewController
 
@@ -15,6 +15,20 @@
 
 - (id)init {
 	return [self initWithNibName:@"DTTestView" bundle:nil];
+}
+
+- (id)initWithResurrector:(DTSpringBackEncoder *)resurrector {
+	
+	if (!(self = [super initWithResurrector:resurrector])) return nil;
+	
+	count = [[resurrector objectForKey:@"count"] integerValue];
+	
+	return self;
+}
+
+- (void)encodeToResurrector:(DTSpringBackEncoder *)resurrector {
+	[super encodeToResurrector:resurrector];
+	[resurrector setObject:[NSNumber numberWithInteger:self.count] forKey:@"count"];
 }
 
 - (void)setCount:(NSInteger)anInteger {
@@ -43,5 +57,8 @@
 - (void)cancel:(id)sender {
 	[self.parentViewController dismissModalViewControllerAnimated:YES];
 }
+
+
+
 
 @end
