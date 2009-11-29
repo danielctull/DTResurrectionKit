@@ -9,6 +9,8 @@
 #import "DTResurrectionKitAppDelegate.h"
 #import "DTSpringBack.h"
 #import "DTTestViewController.h"
+#import "UIView+DTSubviewExtensions.h"
+
 @implementation DTResurrectionKitAppDelegate
 
 @synthesize window;
@@ -48,13 +50,19 @@
 		[nav2 release];
 		[nav3 release];
 		resController.viewController = tabs;
-		
+		[tabs release];
 	}
-	resController.debugMode = NO;
+	resController.debugMode = YES;
 	[window addSubview:resController.view];
     // Override point for customization after app launch    
 
 	[window makeKeyAndVisible];
+	
+	[self logHierarchy];
+}
+
+- (void)logHierarchy {
+	[self.window logHierarchy];
 }
 
 /**

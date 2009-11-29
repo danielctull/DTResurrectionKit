@@ -11,7 +11,8 @@
 #import "DTSpringBackSaveViewController.h"
 #import "UIViewController+DTSpringBack.h"
 
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
+#import <objc/message.h>
 
 NSString *const DTSpringBackPathBase = @"DTSpringBack";
 NSString *const DTSpringBackPathVersion = @"Version";
@@ -96,6 +97,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
+	[self.viewController viewDidAppear:animated];
 	
 	if (!self.hasSprungBack) return;
 	
@@ -137,6 +139,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	//NSLog(@"%@:%s Start", self, _cmd);
 	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
 	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:archivePath];
+	//NSLog(@"%@:%s %@", self, _cmd, dict);
 	UIViewController<DTSpringBack> *vc = [resurrector resurrect:dict];
 	modalViewControllerParents = [resurrector.modalViewControllerParents retain];
 	modalViewControllerChildren = [resurrector.modalViewControllerChildren retain];

@@ -22,6 +22,6 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 - (NSString *)applicationDocumentsDirectory;
-
+- (void)logHierarchy;
 @end
 
