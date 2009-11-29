@@ -202,7 +202,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 
 - (BOOL)objectIsCoreObject:(id)object {
 	
-	if ([object isKindOfClass:[NSNumber class]] || [object isKindOfClass:[NSString class]] || [object isKindOfClass:[NSData class]])
+	if ([object isKindOfClass:[NSNumber class]] || [object isKindOfClass:[NSString class]] || [object isKindOfClass:[NSData class]] || [object isKindOfClass:[NSDate class]])
 		return YES;
 	
 	return NO;
