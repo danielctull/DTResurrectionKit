@@ -151,6 +151,11 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	//NSLog(@"%@:%s Finish", self, _cmd);
 }
 
+- (void)setDebugMode:(BOOL)aBool {
+	debugMode = aBool;
+	[[UIApplication sharedApplication] setStatusBarHidden:aBool animated:NO];
+}
+
 - (BOOL)canResurrect {
 	//return NO;
 	return [[NSFileManager defaultManager] fileExistsAtPath:archivePath];
