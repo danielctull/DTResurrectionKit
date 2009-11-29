@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "DTSpringBackController.h"
 
-@interface DTSpringBackLoadViewController : UITableViewController {
+@interface DTSpringBackLoadViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
 	NSArray *items;
 	DTSpringBackController *springBackController;
 	NSString *archivePath;
+	UITableView *tableView;
 }
 
-- (id)initWithSpringBackController:(DTSpringBackController *)sbc;
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
 
+- (id)initWithSpringBackController:(DTSpringBackController *)sbc;
+- (IBAction)cancel:(id)sender;
 @end

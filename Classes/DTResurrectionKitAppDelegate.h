@@ -6,8 +6,11 @@
 //  Copyright Daniel Tull 2009. All rights reserved.
 //
 
-@interface DTResurrectionKitAppDelegate : NSObject <UIApplicationDelegate> {
+#import "DTSpringBackController.h"
 
+@interface DTResurrectionKitAppDelegate : NSObject <UIApplicationDelegate> {
+	DTSpringBackController *resController;
+	
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;	    
     NSPersistentStoreCoordinator *persistentStoreCoordinator;

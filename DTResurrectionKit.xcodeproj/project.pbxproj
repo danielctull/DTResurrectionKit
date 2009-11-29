@@ -14,11 +14,6 @@
 		2453160C10B9668300A490B6 /* DTModalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2453160B10B9668300A490B6 /* DTModalTestViewController.m */; };
 		247B7D1510B1536F00BDA8BF /* DTContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B7D0810B1536F00BDA8BF /* DTContentController.m */; };
 		247B7D2710B156D200BDA8BF /* DTContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B7D0810B1536F00BDA8BF /* DTContentController.m */; };
-		247B7D7310B158D500BDA8BF /* DTSpringBackDebugView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247B7D7210B158D500BDA8BF /* DTSpringBackDebugView.xib */; };
-		247B7DB210B15C3B00BDA8BF /* DTSpringBackDebugView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247B7D7210B158D500BDA8BF /* DTSpringBackDebugView.xib */; };
-		247B7DD310B1627000BDA8BF /* DTSpringBackLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B7DD210B1627000BDA8BF /* DTSpringBackLoadViewController.m */; };
-		247B7E0410B1681000BDA8BF /* DTSpringBackSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B7E0310B1681000BDA8BF /* DTSpringBackSaveViewController.m */; };
-		247B7E0810B1682200BDA8BF /* DTSpringBackSaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247B7E0710B1682200BDA8BF /* DTSpringBackSaveView.xib */; };
 		247B7ED510B1A8C700BDA8BF /* DTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B7ED410B1A8C700BDA8BF /* DTTestViewController.m */; };
 		247B7ED910B1A95500BDA8BF /* DTTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247B7ED810B1A95500BDA8BF /* DTTestView.xib */; };
 		24840D8010AB6541001AC236 /* DTSpringBackUIViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24840D7F10AB6541001AC236 /* DTSpringBackUIViewControllerTest.m */; };
@@ -40,6 +35,18 @@
 		24D5B52210C1A241000FBDE0 /* UIView+DTSubviewExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D5B52110C1A241000FBDE0 /* UIView+DTSubviewExtensions.m */; };
 		24E1D58910AF3C12000EDD26 /* DTStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E1D58810AF3C12000EDD26 /* DTStack.m */; };
 		24E1D59010AF3C2E000EDD26 /* DTStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E1D58810AF3C12000EDD26 /* DTStack.m */; };
+		24F9CC3210C31E33002669C8 /* DTSpringBackDebugView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F9CC2410C31E33002669C8 /* DTSpringBackDebugView.xib */; };
+		24F9CC3310C31E33002669C8 /* DTSpringBackLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F9CC2610C31E33002669C8 /* DTSpringBackLoadViewController.m */; };
+		24F9CC3410C31E33002669C8 /* DTSpringBackSaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F9CC2710C31E33002669C8 /* DTSpringBackSaveView.xib */; };
+		24F9CC3510C31E33002669C8 /* DTSpringBackSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F9CC2910C31E33002669C8 /* DTSpringBackSaveViewController.m */; };
+		24F9CC3610C31E33002669C8 /* DTSpringBackBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 24F9CC2B10C31E33002669C8 /* DTSpringBackBarBackground.png */; };
+		24F9CC3710C31E33002669C8 /* DTSpringBackButtonCancelDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 24F9CC2C10C31E33002669C8 /* DTSpringBackButtonCancelDefault.png */; };
+		24F9CC3810C31E33002669C8 /* DTSpringBackButtonCancelSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 24F9CC2D10C31E33002669C8 /* DTSpringBackButtonCancelSelected.png */; };
+		24F9CC3910C31E33002669C8 /* DTSpringBackButtonLoadDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 24F9CC2E10C31E33002669C8 /* DTSpringBackButtonLoadDefault.png */; };
+		24F9CC3A10C31E33002669C8 /* DTSpringBackButtonLoadSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 24F9CC2F10C31E33002669C8 /* DTSpringBackButtonLoadSelected.png */; };
+		24F9CC3B10C31E33002669C8 /* DTSpringBackButtonSaveDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 24F9CC3010C31E33002669C8 /* DTSpringBackButtonSaveDefault.png */; };
+		24F9CC3C10C31E33002669C8 /* DTSpringBackButtonSaveSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 24F9CC3110C31E33002669C8 /* DTSpringBackButtonSaveSelected.png */; };
+		24F9CC4010C31E4B002669C8 /* DTSpringBackLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F9CC3F10C31E4B002669C8 /* DTSpringBackLoadView.xib */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28C3AD8A0F43EF2300507BA6 /* DTResurrectionKit.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28C3AD890F43EF2300507BA6 /* DTResurrectionKit.xcdatamodel */; };
@@ -56,12 +63,6 @@
 		2453160B10B9668300A490B6 /* DTModalTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTModalTestViewController.m; sourceTree = "<group>"; };
 		247B7D0710B1536F00BDA8BF /* DTContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTContentController.h; sourceTree = "<group>"; };
 		247B7D0810B1536F00BDA8BF /* DTContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTContentController.m; sourceTree = "<group>"; };
-		247B7D7210B158D500BDA8BF /* DTSpringBackDebugView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTSpringBackDebugView.xib; sourceTree = "<group>"; };
-		247B7DD110B1627000BDA8BF /* DTSpringBackLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackLoadViewController.h; sourceTree = "<group>"; };
-		247B7DD210B1627000BDA8BF /* DTSpringBackLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackLoadViewController.m; sourceTree = "<group>"; };
-		247B7E0210B1681000BDA8BF /* DTSpringBackSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackSaveViewController.h; sourceTree = "<group>"; };
-		247B7E0310B1681000BDA8BF /* DTSpringBackSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackSaveViewController.m; sourceTree = "<group>"; };
-		247B7E0710B1682200BDA8BF /* DTSpringBackSaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTSpringBackSaveView.xib; sourceTree = "<group>"; };
 		247B7ED310B1A8C700BDA8BF /* DTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTestViewController.h; sourceTree = "<group>"; };
 		247B7ED410B1A8C700BDA8BF /* DTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTestViewController.m; sourceTree = "<group>"; };
 		247B7ED810B1A95500BDA8BF /* DTTestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTTestView.xib; sourceTree = "<group>"; };
@@ -90,6 +91,20 @@
 		24D5B52110C1A241000FBDE0 /* UIView+DTSubviewExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+DTSubviewExtensions.m"; path = "../DTKit/Categories/UIView+DTSubviewExtensions.m"; sourceTree = SOURCE_ROOT; };
 		24E1D58710AF3C12000EDD26 /* DTStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStack.h; sourceTree = "<group>"; };
 		24E1D58810AF3C12000EDD26 /* DTStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTStack.m; sourceTree = "<group>"; };
+		24F9CC2410C31E33002669C8 /* DTSpringBackDebugView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTSpringBackDebugView.xib; sourceTree = "<group>"; };
+		24F9CC2510C31E33002669C8 /* DTSpringBackLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackLoadViewController.h; sourceTree = "<group>"; };
+		24F9CC2610C31E33002669C8 /* DTSpringBackLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackLoadViewController.m; sourceTree = "<group>"; };
+		24F9CC2710C31E33002669C8 /* DTSpringBackSaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTSpringBackSaveView.xib; sourceTree = "<group>"; };
+		24F9CC2810C31E33002669C8 /* DTSpringBackSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackSaveViewController.h; sourceTree = "<group>"; };
+		24F9CC2910C31E33002669C8 /* DTSpringBackSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackSaveViewController.m; sourceTree = "<group>"; };
+		24F9CC2B10C31E33002669C8 /* DTSpringBackBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTSpringBackBarBackground.png; sourceTree = "<group>"; };
+		24F9CC2C10C31E33002669C8 /* DTSpringBackButtonCancelDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTSpringBackButtonCancelDefault.png; sourceTree = "<group>"; };
+		24F9CC2D10C31E33002669C8 /* DTSpringBackButtonCancelSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTSpringBackButtonCancelSelected.png; sourceTree = "<group>"; };
+		24F9CC2E10C31E33002669C8 /* DTSpringBackButtonLoadDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTSpringBackButtonLoadDefault.png; sourceTree = "<group>"; };
+		24F9CC2F10C31E33002669C8 /* DTSpringBackButtonLoadSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTSpringBackButtonLoadSelected.png; sourceTree = "<group>"; };
+		24F9CC3010C31E33002669C8 /* DTSpringBackButtonSaveDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTSpringBackButtonSaveDefault.png; sourceTree = "<group>"; };
+		24F9CC3110C31E33002669C8 /* DTSpringBackButtonSaveSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTSpringBackButtonSaveSelected.png; sourceTree = "<group>"; };
+		24F9CC3F10C31E4B002669C8 /* DTSpringBackLoadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTSpringBackLoadView.xib; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28C3AD890F43EF2300507BA6 /* DTResurrectionKit.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = DTResurrectionKit.xcdatamodel; sourceTree = "<group>"; };
@@ -183,12 +198,7 @@
 				24D07D8D10A9CCE600716ED8 /* UITabBarController+DTSpringBack.m */,
 				24D07D8E10A9CCE600716ED8 /* UIViewController+DTSpringBack.h */,
 				24D07D8F10A9CCE600716ED8 /* UIViewController+DTSpringBack.m */,
-				247B7D7210B158D500BDA8BF /* DTSpringBackDebugView.xib */,
-				247B7DD110B1627000BDA8BF /* DTSpringBackLoadViewController.h */,
-				247B7DD210B1627000BDA8BF /* DTSpringBackLoadViewController.m */,
-				247B7E0210B1681000BDA8BF /* DTSpringBackSaveViewController.h */,
-				247B7E0310B1681000BDA8BF /* DTSpringBackSaveViewController.m */,
-				247B7E0710B1682200BDA8BF /* DTSpringBackSaveView.xib */,
+				24F9CC2310C31E33002669C8 /* SpringBackDebugger */,
 			);
 			path = DTSpringBack;
 			sourceTree = "<group>";
@@ -200,6 +210,35 @@
 				24E1D58810AF3C12000EDD26 /* DTStack.m */,
 			);
 			path = DTFoundation;
+			sourceTree = "<group>";
+		};
+		24F9CC2310C31E33002669C8 /* SpringBackDebugger */ = {
+			isa = PBXGroup;
+			children = (
+				24F9CC2410C31E33002669C8 /* DTSpringBackDebugView.xib */,
+				24F9CC3F10C31E4B002669C8 /* DTSpringBackLoadView.xib */,
+				24F9CC2510C31E33002669C8 /* DTSpringBackLoadViewController.h */,
+				24F9CC2610C31E33002669C8 /* DTSpringBackLoadViewController.m */,
+				24F9CC2710C31E33002669C8 /* DTSpringBackSaveView.xib */,
+				24F9CC2810C31E33002669C8 /* DTSpringBackSaveViewController.h */,
+				24F9CC2910C31E33002669C8 /* DTSpringBackSaveViewController.m */,
+				24F9CC2A10C31E33002669C8 /* Images */,
+			);
+			path = SpringBackDebugger;
+			sourceTree = "<group>";
+		};
+		24F9CC2A10C31E33002669C8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				24F9CC2B10C31E33002669C8 /* DTSpringBackBarBackground.png */,
+				24F9CC2C10C31E33002669C8 /* DTSpringBackButtonCancelDefault.png */,
+				24F9CC2D10C31E33002669C8 /* DTSpringBackButtonCancelSelected.png */,
+				24F9CC2E10C31E33002669C8 /* DTSpringBackButtonLoadDefault.png */,
+				24F9CC2F10C31E33002669C8 /* DTSpringBackButtonLoadSelected.png */,
+				24F9CC3010C31E33002669C8 /* DTSpringBackButtonSaveDefault.png */,
+				24F9CC3110C31E33002669C8 /* DTSpringBackButtonSaveSelected.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
@@ -313,9 +352,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				247B7DB210B15C3B00BDA8BF /* DTSpringBackDebugView.xib in Resources */,
-				247B7E0810B1682200BDA8BF /* DTSpringBackSaveView.xib in Resources */,
 				247B7ED910B1A95500BDA8BF /* DTTestView.xib in Resources */,
+				24F9CC3210C31E33002669C8 /* DTSpringBackDebugView.xib in Resources */,
+				24F9CC3410C31E33002669C8 /* DTSpringBackSaveView.xib in Resources */,
+				24F9CC3610C31E33002669C8 /* DTSpringBackBarBackground.png in Resources */,
+				24F9CC3710C31E33002669C8 /* DTSpringBackButtonCancelDefault.png in Resources */,
+				24F9CC3810C31E33002669C8 /* DTSpringBackButtonCancelSelected.png in Resources */,
+				24F9CC3910C31E33002669C8 /* DTSpringBackButtonLoadDefault.png in Resources */,
+				24F9CC3A10C31E33002669C8 /* DTSpringBackButtonLoadSelected.png in Resources */,
+				24F9CC3B10C31E33002669C8 /* DTSpringBackButtonSaveDefault.png in Resources */,
+				24F9CC3C10C31E33002669C8 /* DTSpringBackButtonSaveSelected.png in Resources */,
+				24F9CC4010C31E4B002669C8 /* DTSpringBackLoadView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +370,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				247B7D7310B158D500BDA8BF /* DTSpringBackDebugView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,11 +408,11 @@
 				24D07D9610A9CCE600716ED8 /* UIViewController+DTSpringBack.m in Sources */,
 				24E1D59010AF3C2E000EDD26 /* DTStack.m in Sources */,
 				247B7D2710B156D200BDA8BF /* DTContentController.m in Sources */,
-				247B7DD310B1627000BDA8BF /* DTSpringBackLoadViewController.m in Sources */,
-				247B7E0410B1681000BDA8BF /* DTSpringBackSaveViewController.m in Sources */,
 				247B7ED510B1A8C700BDA8BF /* DTTestViewController.m in Sources */,
 				2453160C10B9668300A490B6 /* DTModalTestViewController.m in Sources */,
 				24D5B52210C1A241000FBDE0 /* UIView+DTSubviewExtensions.m in Sources */,
+				24F9CC3310C31E33002669C8 /* DTSpringBackLoadViewController.m in Sources */,
+				24F9CC3510C31E33002669C8 /* DTSpringBackSaveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -172,18 +172,14 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 - (IBAction)loadSpringBack:(id)sender {
 	DTSpringBackLoadViewController *lvc = [[DTSpringBackLoadViewController alloc] initWithSpringBackController:self];
-	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:lvc];
-	[self swizzledPresentModalViewController:nav animated:YES];
+	[self swizzledPresentModalViewController:lvc animated:YES];
 	[lvc release];
-	[nav release];
 }
 
 - (IBAction)saveSpringBack:(id)sender {
 	DTSpringBackSaveViewController *lvc = [[DTSpringBackSaveViewController alloc] initWithViewController:self.viewController];
-	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:lvc];
-	[self swizzledPresentModalViewController:nav animated:YES];
+	[self swizzledPresentModalViewController:lvc animated:YES];
 	[lvc release];
-	[nav release];
 }
 
 @end

@@ -17,5 +17,6 @@
 @property (nonatomic, retain) IBOutlet UITextField *textField;
 
 - (id)initWithViewController:(UIViewController *)vc;
-
+- (void)cancel:(id)sender;
+- (void)save:(id)sender;
 @end

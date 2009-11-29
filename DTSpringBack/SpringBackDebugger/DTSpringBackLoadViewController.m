@@ -12,6 +12,7 @@
 
 @implementation DTSpringBackLoadViewController
 
+@synthesize tableView;
 
 - (id)initWithSpringBackController:(DTSpringBackController *)sbc {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -55,7 +56,7 @@
 }
 
 
-- (void)cancel:(id)sender {
+- (IBAction)cancel:(id)sender {
 	[self.parentViewController swizzledDismissModalViewControllerAnimated:YES];
 }
 
@@ -115,11 +116,11 @@
 
 
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
@@ -130,8 +131,8 @@
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[springBackController resurrectWithArchivePath:[archivePath stringByAppendingPathComponent:[tableView cellForRowAtIndexPath:indexPath].textLabel.text]];
+- (void)tableView:(UITableView *)tv didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[springBackController resurrectWithArchivePath:[archivePath stringByAppendingPathComponent:[tv cellForRowAtIndexPath:indexPath].textLabel.text]];
 	[self.parentViewController swizzledDismissModalViewControllerAnimated:YES];
 }
 

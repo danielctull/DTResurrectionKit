@@ -214,9 +214,11 @@ NSString *const DTSpringBackPropertyClass = @"class";
 
 - (NSString *)uniqueString {
 	CFUUIDRef uuidObj = CFUUIDCreate(nil);
-	NSString *string = (NSString *)CFUUIDCreateString(nil, uuidObj);	
+	CFStringRef uniqueString = CFUUIDCreateString(nil, uuidObj);
+	NSString *string = [(NSString *)uniqueString retain];
+	CFRelease(uniqueString);
 	CFRelease(uuidObj);
-	return string;
+	return [string autorelease];
 }
 
 @end

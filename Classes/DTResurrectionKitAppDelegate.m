@@ -22,7 +22,7 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 	
 	
-	DTSpringBackController *resController = [[DTSpringBackController alloc] init];
+	resController = [[DTSpringBackController alloc] init];
 	
 	if (!resController.hasSprungBack) {
 		
@@ -169,7 +169,7 @@
 #pragma mark Memory management
 
 - (void)dealloc {
-	
+	[resController release];
     [managedObjectContext release];
     [managedObjectModel release];
     [persistentStoreCoordinator release];
