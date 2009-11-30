@@ -137,17 +137,23 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 - (void)resurrectStack {
 	//NSLog(@"%@:%s Start", self, _cmd);
+		
 	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
-	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:archivePath];
-	//NSLog(@"%@:%s %@", self, _cmd, dict);
-	UIViewController<DTSpringBack> *vc = [resurrector resurrect:dict];
-	modalViewControllerParents = [resurrector.modalViewControllerParents retain];
-	modalViewControllerChildren = [resurrector.modalViewControllerChildren retain];
-	[resurrector release];
+	@try {
+		NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:archivePath];
+		UIViewController<DTSpringBack> *vc = [resurrector resurrect:dict];
+		modalViewControllerParents = [resurrector.modalViewControllerParents retain];
+		modalViewControllerChildren = [resurrector.modalViewControllerChildren retain];
+		self.viewController = vc;
+	}
+	@catch (NSException * exception) {
+		//NSLog(@"Caught %@: %@", [exception name], [exception reason]);
+	}
+	@finally {
+		[resurrector release];
+		if (!self.viewController) hasSprungBack = NO;
+	}
 	
-	if (!vc) hasSprungBack = NO;
-	
-	self.viewController = vc;
 	//NSLog(@"%@:%s Finish", self, _cmd);
 }
 
@@ -163,10 +169,19 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 - (void)deconstructStack {
 	//NSLog(@"%@:%s Start", self, _cmd);
+	
 	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
-	NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
-	[resurrector release];
-	[dict writeToFile:archivePath atomically:NO];
+	@try {
+		NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
+		[dict writeToFile:archivePath atomically:YES];
+	}
+	@catch (NSException *exception) {
+		//NSLog(@"Caught %@: %@", [exception name], [exception reason]);
+	}
+	@finally {
+		[resurrector release];
+	}
+	
 	//NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
 }
 
