@@ -15,7 +15,7 @@ extern NSString *const DTSpringBackPathVersion;
 extern NSString *const DTSpringBackPathDebug;
 
 @interface DTSpringBackController : DTContentController {
-	UIViewController<DTSpringBack> *viewController;
+	//UIViewController<DTSpringBack> *viewController;
 	NSString *archivePath;
 	BOOL hasSprungBack;
 	BOOL debugMode;
@@ -27,7 +27,7 @@ extern NSString *const DTSpringBackPathDebug;
 }
 
 @property (nonatomic, assign) BOOL hasSprungBack, debugMode;
-@property (nonatomic, retain) UIViewController<DTSpringBack> *viewController;
+//@property (nonatomic, retain) UIViewController<DTSpringBack> *viewController;
 
 - (IBAction)loadSpringBack:(id)sender;
 - (IBAction)saveSpringBack:(id)sender;

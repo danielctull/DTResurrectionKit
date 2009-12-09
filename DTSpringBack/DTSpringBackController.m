@@ -26,7 +26,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 @implementation DTSpringBackController
 
-@synthesize hasSprungBack, debugMode, viewController;
+@synthesize hasSprungBack, debugMode;
 
 - (id)init {
 	
@@ -79,13 +79,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	
 	[super viewDidLoad];
 	
-	self.viewController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-	self.viewController.view.frame = self.contentView.bounds;
-	self.viewController.wantsFullScreenLayout = YES;
-	
 	if (self.debugMode) [self.viewController.view addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:NULL];
-	
-	[self.contentView addSubview:self.viewController.view];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {	
@@ -97,7 +91,6 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-	[self.viewController viewDidAppear:animated];
 	
 	if (!self.hasSprungBack) return;
 	
