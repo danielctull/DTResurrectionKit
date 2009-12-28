@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+DTSpringBack.h"
-#import "DTSpringBackEncoder.h"
+#import "DTSpringBackArchiver.h"
 
 @implementation UIViewController (DTSpringBack)
 
@@ -33,25 +33,25 @@
 	return nil;
 }
 
-- (id)initWithResurrector:(DTSpringBackEncoder *)resurrector {
+- (id)initWithArchiver:(DTSpringBackArchiver *)archiver {
 	
 	if (!(self = [self init])) return nil;
 	
-	self.title = [resurrector objectForKey:@"title"];
+	self.title = [archiver objectForKey:@"title"];
 	
-	UIViewController *mvc = [resurrector objectForKey:@"modalViewController"];
+	UIViewController *mvc = [archiver objectForKey:@"modalViewController"];
 	if (mvc)
-		[resurrector viewController:self unpackedModalViewController:mvc];
+		[archiver viewController:self unpackedModalViewController:mvc];
 	
 	return self;
 }
 
-- (void)encodeToResurrector:(DTSpringBackEncoder *)resurrector {
-	[resurrector setObject:self.title forKey:@"title"];
+- (void)encodeToArchiver:(DTSpringBackArchiver *)archiver {
+	[archiver setObject:self.title forKey:@"title"];
 	
 	if (self.modalViewController) {
 		if ([self isEqual:self.modalViewController.parentViewController])
-			[resurrector setObject:self.modalViewController forKey:@"modalViewController"];
+			[archiver setObject:self.modalViewController forKey:@"modalViewController"];
 	}
 }
 

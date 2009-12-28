@@ -131,7 +131,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 - (void)resurrectStack {
 	//NSLog(@"%@:%s Start", self, _cmd);
 		
-	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
+	DTSpringBackArchiver *resurrector = [[DTSpringBackArchiver alloc] init];
 	@try {
 		NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:archivePath];
 		UIViewController<DTSpringBack> *vc = [resurrector resurrect:dict];
@@ -163,10 +163,11 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 - (void)deconstructStack {
 	//NSLog(@"%@:%s Start", self, _cmd);
 	
-	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
+	DTSpringBackArchiver *resurrector = [[DTSpringBackArchiver alloc] init];
 	@try {
 		NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
 		[dict writeToFile:archivePath atomically:YES];
+		//NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
 	}
 	@catch (NSException *exception) {
 		//NSLog(@"Caught %@: %@", [exception name], [exception reason]);
@@ -174,8 +175,6 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	@finally {
 		[resurrector release];
 	}
-	
-	//NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
 }
 
 - (void)applicationWillTerminate:(id)sender {

@@ -23,11 +23,11 @@
 	UITabBarController *tbc = [[UITabBarController alloc] init];
 	//tbc.viewControllers = vcArray;
 	/*
-	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
+	DTSpringBackArchiver *resurrector = [[DTSpringBackArchiver alloc] init];
 	NSDictionary *dict = [resurrector deconstructWithRootObject:tbc];
 	[resurrector release];
 	
-	DTSpringBackEncoder *anotherResurrector = [[DTSpringBackEncoder alloc] init];
+	DTSpringBackArchiver *anotherResurrector = [[DTSpringBackArchiver alloc] init];
 	UITabBarController<DTSpringBack> *resurrectedTBC = [anotherResurrector resurrect:dict];
 	[anotherResurrector release];
 	

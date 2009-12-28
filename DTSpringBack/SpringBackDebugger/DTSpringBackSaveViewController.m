@@ -61,7 +61,7 @@
 	
 	archivePath = [archivePath stringByAppendingPathComponent:self.textField.text];
 	
-	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
+	DTSpringBackArchiver *resurrector = [[DTSpringBackArchiver alloc] init];
 	
 	
 	

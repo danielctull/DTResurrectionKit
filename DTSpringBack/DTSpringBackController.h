@@ -26,7 +26,8 @@ extern NSString *const DTSpringBackPathDebug;
 	
 }
 
-@property (nonatomic, assign) BOOL hasSprungBack, debugMode;
+@property (nonatomic, assign) BOOL hasSprungBack;
+@property (nonatomic, assign) BOOL debugMode;
 //@property (nonatomic, retain) UIViewController<DTSpringBack> *viewController;
 
 - (IBAction)loadSpringBack:(id)sender;

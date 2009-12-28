@@ -15,11 +15,11 @@
 	UIViewController *vc = [[UIViewController alloc] init];
 	vc.title = @"test";
 	
-	DTSpringBackEncoder *resurrector = [[DTSpringBackEncoder alloc] init];
+	DTSpringBackArchiver *resurrector = [[DTSpringBackArchiver alloc] init];
 	NSDictionary *dict = [resurrector deconstructWithRootObject:vc];
 	[resurrector release];
 	
-	DTSpringBackEncoder *anotherResurrector = [[DTSpringBackEncoder alloc] init];
+	DTSpringBackArchiver *anotherResurrector = [[DTSpringBackArchiver alloc] init];
 	UIViewController<DTSpringBack> *resurrectedVC = [anotherResurrector resurrect:dict];
 	[anotherResurrector release];
 	STAssertTrue([vc.title isEqualToString:resurrectedVC.title], @"Title is not equal when resurrected.");

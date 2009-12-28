@@ -17,18 +17,18 @@
 	return [self initWithNibName:@"DTTestView" bundle:nil];
 }
 
-- (id)initWithResurrector:(DTSpringBackEncoder *)resurrector {
+- (id)initWithArchiver:(DTSpringBackArchiver *)archiver {
 	
-	if (!(self = [super initWithResurrector:resurrector])) return nil;
+	if (!(self = [super initWithArchiver:archiver])) return nil;
 	
-	count = [[resurrector objectForKey:@"count"] integerValue];
+	count = [[archiver objectForKey:@"count"] integerValue];
 	
 	return self;
 }
 
-- (void)encodeToResurrector:(DTSpringBackEncoder *)resurrector {
-	[super encodeToResurrector:resurrector];
-	[resurrector setObject:[NSNumber numberWithInteger:self.count] forKey:@"count"];
+- (void)encodeToArchiver:(DTSpringBackArchiver *)archiver {
+	[super encodeToArchiver:archiver];
+	[archiver setObject:[NSNumber numberWithInteger:self.count] forKey:@"count"];
 }
 
 - (void)setCount:(NSInteger)anInteger {

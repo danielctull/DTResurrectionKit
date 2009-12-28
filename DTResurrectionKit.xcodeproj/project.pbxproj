@@ -18,7 +18,7 @@
 		247B7ED910B1A95500BDA8BF /* DTTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247B7ED810B1A95500BDA8BF /* DTTestView.xib */; };
 		24840D8010AB6541001AC236 /* DTSpringBackUIViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24840D7F10AB6541001AC236 /* DTSpringBackUIViewControllerTest.m */; };
 		24840DB410AB674C001AC236 /* DTSpringBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8310A9CCE600716ED8 /* DTSpringBackController.m */; };
-		24840DB510AB674C001AC236 /* DTSpringBackEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8510A9CCE600716ED8 /* DTSpringBackEncoder.m */; };
+		24840DB510AB674C001AC236 /* DTSpringBackArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8510A9CCE600716ED8 /* DTSpringBackArchiver.m */; };
 		24840DB610AB674D001AC236 /* NSArray+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8710A9CCE600716ED8 /* NSArray+DTSpringBack.m */; };
 		24840DB710AB674F001AC236 /* NSDictionary+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8910A9CCE600716ED8 /* NSDictionary+DTSpringBack.m */; };
 		24840DB810AB6750001AC236 /* UINavigationController+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8B10A9CCE600716ED8 /* UINavigationController+DTSpringBack.m */; };
@@ -26,7 +26,7 @@
 		24840DBA10AB6753001AC236 /* UIViewController+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8F10A9CCE600716ED8 /* UIViewController+DTSpringBack.m */; };
 		24840E4C10AB6BA4001AC236 /* DTSpringBackUITabBarControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24840E4B10AB6BA4001AC236 /* DTSpringBackUITabBarControllerTests.m */; };
 		24D07D9010A9CCE600716ED8 /* DTSpringBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8310A9CCE600716ED8 /* DTSpringBackController.m */; };
-		24D07D9110A9CCE600716ED8 /* DTSpringBackEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8510A9CCE600716ED8 /* DTSpringBackEncoder.m */; };
+		24D07D9110A9CCE600716ED8 /* DTSpringBackArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8510A9CCE600716ED8 /* DTSpringBackArchiver.m */; };
 		24D07D9210A9CCE600716ED8 /* NSArray+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8710A9CCE600716ED8 /* NSArray+DTSpringBack.m */; };
 		24D07D9310A9CCE600716ED8 /* NSDictionary+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8910A9CCE600716ED8 /* NSDictionary+DTSpringBack.m */; };
 		24D07D9410A9CCE600716ED8 /* UINavigationController+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D07D8B10A9CCE600716ED8 /* UINavigationController+DTSpringBack.m */; };
@@ -75,8 +75,8 @@
 		24D07D8110A9CCE600716ED8 /* DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBack.h; sourceTree = "<group>"; };
 		24D07D8210A9CCE600716ED8 /* DTSpringBackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackController.h; sourceTree = "<group>"; };
 		24D07D8310A9CCE600716ED8 /* DTSpringBackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackController.m; sourceTree = "<group>"; };
-		24D07D8410A9CCE600716ED8 /* DTSpringBackEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackEncoder.h; sourceTree = "<group>"; };
-		24D07D8510A9CCE600716ED8 /* DTSpringBackEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackEncoder.m; sourceTree = "<group>"; };
+		24D07D8410A9CCE600716ED8 /* DTSpringBackArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackArchiver.h; sourceTree = "<group>"; };
+		24D07D8510A9CCE600716ED8 /* DTSpringBackArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackArchiver.m; sourceTree = "<group>"; };
 		24D07D8610A9CCE600716ED8 /* NSArray+DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DTSpringBack.h"; sourceTree = "<group>"; };
 		24D07D8710A9CCE600716ED8 /* NSArray+DTSpringBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DTSpringBack.m"; sourceTree = "<group>"; };
 		24D07D8810A9CCE600716ED8 /* NSDictionary+DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DTSpringBack.h"; sourceTree = "<group>"; };
@@ -186,8 +186,8 @@
 				24D07D8110A9CCE600716ED8 /* DTSpringBack.h */,
 				24D07D8210A9CCE600716ED8 /* DTSpringBackController.h */,
 				24D07D8310A9CCE600716ED8 /* DTSpringBackController.m */,
-				24D07D8410A9CCE600716ED8 /* DTSpringBackEncoder.h */,
-				24D07D8510A9CCE600716ED8 /* DTSpringBackEncoder.m */,
+				24D07D8410A9CCE600716ED8 /* DTSpringBackArchiver.h */,
+				24D07D8510A9CCE600716ED8 /* DTSpringBackArchiver.m */,
 				24D07D8610A9CCE600716ED8 /* NSArray+DTSpringBack.h */,
 				24D07D8710A9CCE600716ED8 /* NSArray+DTSpringBack.m */,
 				24D07D8810A9CCE600716ED8 /* NSDictionary+DTSpringBack.h */,
@@ -400,7 +400,7 @@
 				1D3623260D0F684500981E51 /* DTResurrectionKitAppDelegate.m in Sources */,
 				28C3AD8A0F43EF2300507BA6 /* DTResurrectionKit.xcdatamodel in Sources */,
 				24D07D9010A9CCE600716ED8 /* DTSpringBackController.m in Sources */,
-				24D07D9110A9CCE600716ED8 /* DTSpringBackEncoder.m in Sources */,
+				24D07D9110A9CCE600716ED8 /* DTSpringBackArchiver.m in Sources */,
 				24D07D9210A9CCE600716ED8 /* NSArray+DTSpringBack.m in Sources */,
 				24D07D9310A9CCE600716ED8 /* NSDictionary+DTSpringBack.m in Sources */,
 				24D07D9410A9CCE600716ED8 /* UINavigationController+DTSpringBack.m in Sources */,
@@ -422,7 +422,7 @@
 			files = (
 				24840D8010AB6541001AC236 /* DTSpringBackUIViewControllerTest.m in Sources */,
 				24840DB410AB674C001AC236 /* DTSpringBackController.m in Sources */,
-				24840DB510AB674C001AC236 /* DTSpringBackEncoder.m in Sources */,
+				24840DB510AB674C001AC236 /* DTSpringBackArchiver.m in Sources */,
 				24840DB610AB674D001AC236 /* NSArray+DTSpringBack.m in Sources */,
 				24840DB710AB674F001AC236 /* NSDictionary+DTSpringBack.m in Sources */,
 				24840DB810AB6750001AC236 /* UINavigationController+DTSpringBack.m in Sources */,

@@ -1,12 +1,12 @@
 //
-//  DTSpringBackEncoder.m
+//  DTSpringBackArchiver.m
 //  DTSpringBack
 //
 //  Created by Daniel Tull on 06.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "DTSpringBackEncoder.h"
+#import "DTSpringBackArchiver.h"
 #import "DTSpringBackController.h"
 
 NSString *const DTSpringBackObjectString = @"DTSpringBackObject";
@@ -14,14 +14,14 @@ NSString *const DTSpringBackRootObjectString = @"DTSpringBackRootObject";
 
 NSString *const DTSpringBackPropertyClass = @"class";
 
-@interface DTSpringBackEncoder ()
+@interface DTSpringBackArchiver ()
 @property (nonatomic, retain, readwrite) NSArray *modalViewControllerParents, *modalViewControllerChildren;
 - (NSString *)generateToken;
 - (NSString *)uniqueString;
 @end
 
 
-@implementation DTSpringBackEncoder
+@implementation DTSpringBackArchiver
 
 @synthesize modalViewControllerParents, modalViewControllerChildren;
 
@@ -67,7 +67,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 	[mainDictionary setObject:objectDict forKey:token];
 	[objectDict release];
 	
-	[object encodeToResurrector:self];
+	[object encodeToArchiver:self];
 	
 	[encodingStack pop];
 	[encodingStack release];
@@ -119,9 +119,9 @@ NSString *const DTSpringBackPropertyClass = @"class";
 	[encodingStack push:objectDict];
 	[objectDict release];
 	
-	if ([object respondsToSelector:@selector(encodeToResurrector:)]) {
+	if ([object respondsToSelector:@selector(encodeToArchiver:)]) {
 		[parentObject setObject:token forKey:aKey];
-		[object encodeToResurrector:self];
+		[object encodeToArchiver:self];
 	}
 	
 	[encodingStack pop];
@@ -147,7 +147,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 	
 	[encodingStack push:objectDict];
 	
-	NSObject<DTSpringBack> *returnObject = [[objectClass alloc] initWithResurrector:self];	
+	NSObject<DTSpringBack> *returnObject = [[objectClass alloc] initWithArchiver:self];	
 	
 	[encodingStack pop];
 	
@@ -193,7 +193,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 	
 	[objectDictionary setObject:returnObject forKey:token];
 		
-	returnObject = [returnObject initWithResurrector:self];	
+	returnObject = [returnObject initWithArchiver:self];	
 	
 	[encodingStack pop];
 	

@@ -7,29 +7,29 @@
 //
 
 #import "UITabBarController+DTSpringBack.h"
-#import "DTSpringBackEncoder.h"
+#import "DTSpringBackArchiver.h"
 
 @implementation UITabBarController (DTSpringBack)
-- (id)initWithResurrector:(DTSpringBackEncoder *)resurrector {
+- (id)initWithArchiver:(DTSpringBackArchiver *)archiver {
 	
 	if (!(self = [self init])) return nil;
 	
-	self.viewControllers = [resurrector objectForKey:@"viewControllers"];
-	self.selectedIndex = [[resurrector objectForKey:@"selectedIndex"] integerValue];
+	self.viewControllers = [archiver objectForKey:@"viewControllers"];
+	self.selectedIndex = [[archiver objectForKey:@"selectedIndex"] integerValue];
 	
-	UIViewController *mvc = [resurrector objectForKey:@"modalViewController"];
-	if (mvc) [resurrector viewController:self.selectedViewController unpackedModalViewController:mvc];
+	UIViewController *mvc = [archiver objectForKey:@"modalViewController"];
+	if (mvc) [archiver viewController:self.selectedViewController unpackedModalViewController:mvc];
 	
 	return self;
 }
 
-- (void)encodeToResurrector:(DTSpringBackEncoder *)resurrector {
-	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
-	[resurrector setObject:[NSNumber numberWithInteger:self.selectedIndex] forKey:@"selectedIndex"];
+- (void)encodeToArchiver:(DTSpringBackArchiver *)archiver {
+	[archiver setObject:self.viewControllers forKey:@"viewControllers"];
+	[archiver setObject:[NSNumber numberWithInteger:self.selectedIndex] forKey:@"selectedIndex"];
 	
 	if (self.modalViewController) {
 		if ([self isEqual:self.modalViewController.parentViewController])
-			[resurrector setObject:self.modalViewController forKey:@"modalViewController"];
+			[archiver setObject:self.modalViewController forKey:@"modalViewController"];
 	}
 }
 
