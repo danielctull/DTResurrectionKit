@@ -16,15 +16,15 @@
  
  As shown in DTSpring, you can save 
  
- @param spring The "spring" doing the restoration.
+ @param archiver The archiver doing the restoration.
  */
-- (id)initWithArchiver:(DTSpringBackArchiver *)spring;
+- (id)initWithArchiver:(DTSpringBackArchiver *)archiver;
 
 /** @brief Method SpringBack uses to save the object metadata.
  
- @param spring The "spring" doing the saving.
+ @param archiver The archiver doing the saving.
  */
-- (void)encodeToArchiver:(DTSpringBackArchiver *)spring;
+- (void)encodeToArchiver:(DTSpringBackArchiver *)archiver;
 @end
 
 #import "DTSpringBackArchiver.h"

@@ -1,9 +1,9 @@
 //
 //  main.m
-//  DTResurrectionKit
+//  DTSpringBack
 //
-//  Created by Daniel Tull on 03.11.2009.
-//  Copyright Daniel Tull 2009. All rights reserved.
+//  Created by Daniel Tull on 07.01.2010.
+//  Copyright Daniel Tull 2010. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

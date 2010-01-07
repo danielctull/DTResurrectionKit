@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "DTSpringBack.h"
 
+/** Adds the methods for the SpringBack protocol to NSArray.
+ */
 @interface NSArray (DTSpringBack) <DTSpringBack>
 
 

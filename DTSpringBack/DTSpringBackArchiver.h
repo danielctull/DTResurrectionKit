@@ -6,6 +6,7 @@
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "DTStack.h"
 
 @protocol DTSpringBack;
@@ -43,20 +44,50 @@
 
 - (void)viewController:(UIViewController *)parentVC unpackedModalViewController:(UIViewController *)childVC;
 
-- (NSDictionary *)deconstructWithRootObject:(NSObject<DTSpringBack> *)object;
-- (id)resurrect:(NSDictionary *)aDictionary;
-
-
 
 - (BOOL)objectIsCoreObject:(id)object;
 
+/** @name Convert graph hierarchy
+ @{
+ */
+/** @brief Encodes the graph hierarchy starting at the given object.
+ 
+ @param object The root object of the graph.
+ return A dictionary representing the object graph.
+ */
+- (NSDictionary *)deconstructWithRootObject:(NSObject<DTSpringBack> *)object;
 
-/** @brief Uses to save metadata about the object.
+/** @brief Restores a graph hierarchy using a dictionary representation.
+ 
+ @param dictionary A dictionary representing the object graph.
+ return The root object of the graph.
+ */
+- (id)resurrect:(NSDictionary *)dictionary;
+
+
+/**
+ @}
+ */
+
+/** @name Storing values
+ @{
+ */
+
+/** @brief Use to save metadata about the object.
   
  @param object The object to be saved.
  @param key The key to identify the object.
  */
 - (void)setObject:(id)object forKey:(NSString *)key;
+
+/** @brief Use to retrive metadata about the object.
+ 
+ @param key The key to identify the object.
+ */
 - (id)objectForKey:(NSString *)key;
+
+/**
+ @}
+ */
 
 @end

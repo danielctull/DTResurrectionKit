@@ -14,6 +14,9 @@ extern NSString *const DTSpringBackPathBase;
 extern NSString *const DTSpringBackPathVersion;
 extern NSString *const DTSpringBackPathDebug;
 
+/** The SpringBack controller is a view controller subclass that easily enables
+ SpringBack behaviour in your application.
+ */
 @interface DTSpringBackController : DTContentController {
 	//UIViewController<DTSpringBack> *viewController;
 	NSString *archivePath;

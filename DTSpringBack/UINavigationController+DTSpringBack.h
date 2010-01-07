@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DTSpringBackController.h"
 
+/** Adds the methods for the SpringBack protocol to UINavigationController.
+ */
 @interface UINavigationController (DTSpringBack) <DTSpringBack>
 @end
