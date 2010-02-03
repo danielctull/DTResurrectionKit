@@ -7,7 +7,7 @@
 //
 
 #import "DTSpringBackAppDelegate.h"
-#import "DTTestViewController.h"
+#import "DTModalTestViewController.h"
 
 @implementation DTSpringBackAppDelegate
 
@@ -32,7 +32,7 @@
 		UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:vc2];
 		[vc2 release];
 		
-		DTTestViewController *vc3 = [[DTTestViewController alloc] init];
+		DTModalTestViewController *vc3 = [[DTModalTestViewController alloc] init];
 		vc3.title = @"Test3";
 		UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:vc3];
 		[vc3 release];
@@ -46,6 +46,8 @@
 		springBackController.viewController = tabs;
 		[tabs release];
 	}
+	
+	springBackController.debugMode = YES;
 	
 	[window addSubview:springBackController.view];
 	

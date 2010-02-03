@@ -6,10 +6,9 @@
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "DTSpringBackController.h"
+#import "DTSpringBack.h"
 #import "DTSpringBackLoadViewController.h"
 #import "DTSpringBackSaveViewController.h"
-#import "UIViewController+DTSpringBack.h"
 
 #import <objc/runtime.h>
 #import <objc/message.h>
@@ -167,7 +166,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	@try {
 		NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
 		[dict writeToFile:archivePath atomically:YES];
-		//NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
+		NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
 	}
 	@catch (NSException *exception) {
 		//NSLog(@"Caught %@: %@", [exception name], [exception reason]);

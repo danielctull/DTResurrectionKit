@@ -16,14 +16,6 @@
 }
 
 - (IBAction)presentVC:(id)sender {
-	DTModalTestViewController *vc = [[DTModalTestViewController alloc] init];
-	vc.count = 0;
-	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-	[vc release];
-	[self presentModalViewController:nav animated:YES];
-	[nav release];
 }
-
-
 
 @end

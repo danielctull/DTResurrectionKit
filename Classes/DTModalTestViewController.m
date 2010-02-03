@@ -14,6 +14,7 @@
 @synthesize count;
 
 - (id)init {
+	NSLog(@"%@:%s", self, _cmd);
 	return [self initWithNibName:@"DTTestView" bundle:nil];
 }
 
@@ -37,6 +38,7 @@
 }
 
 - (IBAction)presentVC:(id)sender {
+	NSLog(@"%@:%s", self, _cmd);
 	DTModalTestViewController *vc = [[DTModalTestViewController alloc] init];
 	vc.count = self.count + 1;
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
