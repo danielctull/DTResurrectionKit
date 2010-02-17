@@ -30,7 +30,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 - (id)init {
 	
 	if (!(self = [super init])) return nil;
-		
+	
 	self.position = DTBarPositionTop;
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate:) name:UIApplicationWillTerminateNotification object:nil];
@@ -44,10 +44,14 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	
 	archivePath = [[archivePath stringByAppendingPathComponent:pathComponent] retain];
 	
+	
+	
 	if ([self canResurrect]) { // ACCESS FILE SYSTEM TO LOOK FOR STORED PLIST FOR RESURRECTION
 		hasSprungBack = YES;
 		[self resurrectStack];
 	}
+	
+	hasSprungBack = YES;
 	
 	return self;	
 }
@@ -177,7 +181,23 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 }
 
 - (void)applicationWillTerminate:(id)sender {
-	[self deconstructStack];
+	
+	UIGraphicsBeginImageContext(self.view.bounds.size);
+	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	NSLog(@"%@:%s %@", self, _cmd, viewImage);
+	
+	NSData *data = UIImagePNGRepresentation(viewImage);
+	
+	
+	
+	if (![data writeToFile:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"IMAGETEST"] atomically:YES])
+		NSLog(@"%@:%s IMAGE NOT SAVED", self, _cmd);
+	else
+		NSLog(@"%@:%s IMAGE SAVED", self, _cmd);
+	
+	//[self deconstructStack];
 }
 
 

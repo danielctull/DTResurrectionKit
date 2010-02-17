@@ -15,7 +15,15 @@
 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
-
+	
+	NSData *d = [NSData dataWithContentsOfFile:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"IMAGETEST"]];
+	UIImage *i = [UIImage imageWithData:d];
+	UIImageView *iv = [[UIImageView alloc] initWithImage:i];
+	
+	NSLog(@"%@:%s iv:%@", self, _cmd, iv);
+	
+	[window addSubview:iv];
+	/*
 	springBackController = [[DTSpringBackController alloc] init];
 	
 	if (!springBackController.hasSprungBack) {
@@ -47,14 +55,13 @@
 		[tabs release];
 	}
 	
-	springBackController.debugMode = YES;
+	//springBackController.debugMode = YES;
 	
-	[window addSubview:springBackController.view];
+	[window addSubview:springBackController.view];*/
 	
     // Override point for customization after application launch
     [window makeKeyAndVisible];
 }
-
 
 - (void)dealloc {
 	[springBackController release];
