@@ -10,6 +10,8 @@
 #import "DTSpringBackLoadViewController.h"
 #import "DTSpringBackSaveViewController.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 #import <objc/runtime.h>
 #import <objc/message.h>
 
@@ -21,6 +23,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 - (BOOL)canResurrect;
 - (void)deconstructStack;
 - (void)resurrectStack;
+- (void)saveCurrentImage;
 @end
 
 @implementation DTSpringBackController
@@ -50,8 +53,6 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 		hasSprungBack = YES;
 		[self resurrectStack];
 	}
-	
-	hasSprungBack = YES;
 	
 	return self;	
 }
@@ -94,7 +95,21 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
+	/*
+	NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"IMAGETEST"];
 	
+	UIImage *i = [[UIImage alloc] initWithContentsOfFile:path];
+	
+	NSLog(@"%@:%s %@", self, _cmd, i);
+	
+	UIImageView *iv = [[UIImageView alloc] initWithImage:i];
+	NSLog(@"%@:%s %@", self, _cmd, iv);
+	[i release];
+	
+	[self.view addSubview:iv];
+	
+	[iv release];
+	*/
 	if (!self.hasSprungBack) return;
 	
 	if (hasSprungBackModalViewControllers) return;
@@ -180,24 +195,22 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	}
 }
 
-- (void)applicationWillTerminate:(id)sender {
+- (void)saveCurrentImage {
+	NSString *imageSavePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"IMAGETEST"];
 	
 	UIGraphicsBeginImageContext(self.view.bounds.size);
+	[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
 	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	
-	NSLog(@"%@:%s %@", self, _cmd, viewImage);
+	NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(viewImage)];
 	
-	NSData *data = UIImagePNGRepresentation(viewImage);
-	
-	
-	
-	if (![data writeToFile:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"IMAGETEST"] atomically:YES])
-		NSLog(@"%@:%s IMAGE NOT SAVED", self, _cmd);
-	else
-		NSLog(@"%@:%s IMAGE SAVED", self, _cmd);
-	
-	//[self deconstructStack];
+	[imageData writeToFile:imageSavePath atomically:YES];
+}
+
+- (void)applicationWillTerminate:(id)sender {
+	[self deconstructStack];
+	[self saveCurrentImage];
 }
 
 

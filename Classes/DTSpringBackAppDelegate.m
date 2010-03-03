@@ -14,18 +14,11 @@
 @synthesize window;
 
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
 	
-	NSData *d = [NSData dataWithContentsOfFile:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"IMAGETEST"]];
-	UIImage *i = [UIImage imageWithData:d];
-	UIImageView *iv = [[UIImageView alloc] initWithImage:i];
-	
-	NSLog(@"%@:%s iv:%@", self, _cmd, iv);
-	
-	[window addSubview:iv];
-	/*
 	springBackController = [[DTSpringBackController alloc] init];
 	
+	// If ResurrectionKit hasn't managed to resurrect, we need to set up ourselves.
 	if (!springBackController.hasSprungBack) {
 		
 		NSLog(@"MANUAL SETUP");
@@ -57,9 +50,8 @@
 	
 	//springBackController.debugMode = YES;
 	
-	[window addSubview:springBackController.view];*/
+	[window addSubview:springBackController.view];
 	
-    // Override point for customization after application launch
     [window makeKeyAndVisible];
 }
 
