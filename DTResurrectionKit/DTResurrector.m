@@ -9,8 +9,8 @@
 #import "DTResurrector.h"
 #import "DTResurrectionController.h"
 
-NSString *const DTResurrectionKitObjectString = @"DTResurrectionKitObject";
-NSString *const DTResurrectionKitRootObjectString = @"DTResurrectionKitRootObject";
+NSString *const DTResurrectionObjectString = @"DTResurrectionObject";
+NSString *const DTResurrectionRootObjectString = @"DTResurrectionRootObject";
 
 NSString *const DTResurrectionKitPropertyClass = @"class";
 
@@ -58,7 +58,7 @@ NSString *const DTResurrectionKitPropertyClass = @"class";
 	
 	[objectDictionary setObject:object forKey:token];
 	
-	[mainDictionary setObject:token forKey:DTResurrectionKitRootObjectString];
+	[mainDictionary setObject:token forKey:DTResurrectionRootObjectString];
 	
 	NSMutableDictionary *objectDict = [[NSMutableDictionary alloc] init];
 	[objectDict setObject:NSStringFromClass([object class]) forKey:DTResurrectionKitPropertyClass];
@@ -130,7 +130,7 @@ NSString *const DTResurrectionKitPropertyClass = @"class";
 
 - (id)resurrect:(NSDictionary *)aDictionary {
 	
-	NSString *token = [aDictionary objectForKey:DTResurrectionKitRootObjectString];
+	NSString *token = [aDictionary objectForKey:DTResurrectionRootObjectString];
 	
 	if (!token) return nil;	
 	
@@ -169,7 +169,7 @@ NSString *const DTResurrectionKitPropertyClass = @"class";
 	if ([self objectIsCoreObject:object]) {
 		if ([object isKindOfClass:[NSString class]]) {
 			NSString *string = (NSString *)object;
-			if (![string hasPrefix:DTResurrectionKitObjectString])
+			if (![string hasPrefix:DTResurrectionObjectString])
 				return string;
 		} else {
 			return object;
@@ -209,7 +209,7 @@ NSString *const DTResurrectionKitPropertyClass = @"class";
 }
 
 - (NSString *)generateToken {
-	return [NSString stringWithFormat:@"%@:%@", DTResurrectionKitObjectString, [self uniqueString]];
+	return [NSString stringWithFormat:@"%@:%@", DTResurrectionObjectString, [self uniqueString]];
 }
 
 - (NSString *)uniqueString {
