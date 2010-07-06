@@ -1,5 +1,5 @@
 //
-//  UITabBarController+DTSpringBack.h
+//  UITabBarController+DTResurrectionKit.h
 //  DTSpringBack
 //
 //  Created by Daniel Tull on 09.11.2009.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "DTSpringBack.h"
+#import "DTResurrectionKit.h"
 
 /** Adds the methods for the SpringBack protocol to UITabBarController.
  */
-@interface UITabBarController (DTSpringBack) <DTSpringBack>
+@interface UITabBarController (DTResurrection) <DTResurrection>
 @end

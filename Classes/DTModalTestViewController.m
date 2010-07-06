@@ -7,7 +7,7 @@
 //
 
 #import "DTModalTestViewController.h"
-#import "DTSpringBack.h"
+#import "DTResurrectionKit.h"
 
 @implementation DTModalTestViewController
 

@@ -6,7 +6,7 @@
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "DTSpringBack.h"
+#import "DTResurrectionKit.h"
 #import "DTSpringBackLoadViewController.h"
 #import "DTSpringBackSaveViewController.h"
 
@@ -156,7 +156,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	DTResurrector *resurrector = [[DTResurrector alloc] init];
 	@try {
 		NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:archivePath];
-		UIViewController<DTSpringBack> *vc = [resurrector resurrect:dict];
+		UIViewController<DTResurrection> *vc = [resurrector resurrect:dict];
 		modalViewControllerParents = [resurrector.modalViewControllerParents retain];
 		modalViewControllerChildren = [resurrector.modalViewControllerChildren retain];
 		self.viewController = vc;

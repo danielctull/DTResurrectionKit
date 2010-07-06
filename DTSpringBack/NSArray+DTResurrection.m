@@ -1,15 +1,15 @@
 //
-//  NSArray+DTSpringBack.m
-//  DTSpringBack
+//  NSArray+DTResurrection.m
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 09.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "NSArray+DTSpringBack.h"
+#import "NSArray+DTResurrection.h"
 
 
-@implementation NSArray (DTSpringBack)
+@implementation NSArray (DTResurrection)
 
 - (id)initWithResurrector:(DTResurrector *)resurrector {
 	

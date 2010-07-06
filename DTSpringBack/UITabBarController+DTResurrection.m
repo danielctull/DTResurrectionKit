@@ -6,10 +6,9 @@
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "UITabBarController+DTSpringBack.h"
-#import "DTResurrector.h"
+#import "UITabBarController+DTResurrection.h"
 
-@implementation UITabBarController (DTSpringBack)
+@implementation UITabBarController (DTResurrection)
 - (id)initWithResurrector:(DTResurrector *)resurrector {
 	
 	if (!(self = [self init])) return nil;

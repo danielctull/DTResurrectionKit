@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DTSpringBack.h"
+#import "DTResurrectionKit.h"
 
 @interface DTSpringBackAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;

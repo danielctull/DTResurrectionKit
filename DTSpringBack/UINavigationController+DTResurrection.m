@@ -1,15 +1,15 @@
 //
-//  UINavigationController+DTSpringBack.m
-//  DTSpringBack
+//  UINavigationController+DTResurrection.m
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 03.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "UINavigationController+DTSpringBack.h"
+#import "UINavigationController+DTResurrection.h"
 
 
-@implementation UINavigationController (DTSpringBack)
+@implementation UINavigationController (DTResurrection)
 
 - (id)initWithResurrector:(DTResurrector *)resurrector {
 	

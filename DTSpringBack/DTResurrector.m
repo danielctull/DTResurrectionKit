@@ -48,7 +48,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 }
 
 
-- (NSDictionary *)deconstructWithRootObject:(NSObject<DTSpringBack> *)object {
+- (NSDictionary *)deconstructWithRootObject:(NSObject<DTResurrection> *)object {
 	
 	mainDictionary = [[NSMutableDictionary alloc] init];
 	encodingStack = [[DTStack alloc] init];
@@ -147,7 +147,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 	
 	[encodingStack push:objectDict];
 	
-	NSObject<DTSpringBack> *returnObject = [[objectClass alloc] initWithResurrector:self];	
+	NSObject<DTResurrection> *returnObject = [[objectClass alloc] initWithResurrector:self];	
 	
 	[encodingStack pop];
 	
@@ -178,7 +178,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 	
 	NSString *token = (NSString *)object;
 	
-	NSObject<DTSpringBack> *returnObject;
+	NSObject<DTResurrection> *returnObject;
 	
 	if (returnObject = [objectDictionary objectForKey:token])
 		return returnObject;

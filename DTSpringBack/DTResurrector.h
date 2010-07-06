@@ -1,6 +1,6 @@
 //
 //  DTResurrector.h
-//  DTSpringBack
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 06.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DTStack.h"
 
-@protocol DTSpringBack;
+@protocol DTResurrection;
 
 
 /** When SpringBack is prompted to save it will ask every object in the object graph to save neccessary data
@@ -55,7 +55,7 @@
  @param object The root object of the graph.
  return A dictionary representing the object graph.
  */
-- (NSDictionary *)deconstructWithRootObject:(NSObject<DTSpringBack> *)object;
+- (NSDictionary *)deconstructWithRootObject:(NSObject<DTResurrection> *)object;
 
 /** @brief Restores a graph hierarchy using a dictionary representation.
  

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DTSpringBack.h"
+#import "DTResurrectionKit.h"
 #import "DTContentController.h"
 
 extern NSString *const DTSpringBackPathBase;
@@ -18,7 +18,7 @@ extern NSString *const DTSpringBackPathDebug;
  SpringBack behaviour in your application.
  */
 @interface DTResurrectionController : DTContentController {
-	//UIViewController<DTSpringBack> *viewController;
+	//UIViewController<DTResurrection> *viewController;
 	NSString *archivePath;
 	BOOL hasSprungBack;
 	BOOL debugMode;
@@ -31,7 +31,7 @@ extern NSString *const DTSpringBackPathDebug;
 
 @property (nonatomic, assign) BOOL hasSprungBack;
 @property (nonatomic, assign) BOOL debugMode;
-//@property (nonatomic, retain) UIViewController<DTSpringBack> *viewController;
+//@property (nonatomic, retain) UIViewController<DTResurrection> *viewController;
 
 - (IBAction)loadSpringBack:(id)sender;
 - (IBAction)saveSpringBack:(id)sender;

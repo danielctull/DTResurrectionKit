@@ -8,7 +8,7 @@
 
 #import "DTSpringBackLoadViewController.h"
 #import "DTResurrectionController.h"
-#import "UIViewController+DTSpringBack.h"
+#import "UIViewController+DTResurrection.h"
 
 @implementation DTSpringBackLoadViewController
 

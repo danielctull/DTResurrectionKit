@@ -13,8 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		241E29AE10F69EFC0076D698 /* DTResurrector.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299110F69EFC0076D698 /* DTResurrector.m */; };
 		241E29AF10F69EFC0076D698 /* DTResurrectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299310F69EFC0076D698 /* DTResurrectionController.m */; };
-		241E29B010F69EFC0076D698 /* NSArray+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299510F69EFC0076D698 /* NSArray+DTSpringBack.m */; };
-		241E29B110F69EFC0076D698 /* NSDictionary+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299710F69EFC0076D698 /* NSDictionary+DTSpringBack.m */; };
+		241E29B010F69EFC0076D698 /* NSArray+DTResurrection.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299510F69EFC0076D698 /* NSArray+DTResurrection.m */; };
+		241E29B110F69EFC0076D698 /* NSDictionary+DTResurrection.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299710F69EFC0076D698 /* NSDictionary+DTResurrection.m */; };
 		241E29B210F69EFC0076D698 /* DTSpringBackDebugView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241E299910F69EFC0076D698 /* DTSpringBackDebugView.xib */; };
 		241E29B310F69EFC0076D698 /* DTSpringBackLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241E299A10F69EFC0076D698 /* DTSpringBackLoadView.xib */; };
 		241E29B410F69EFC0076D698 /* DTSpringBackLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299C10F69EFC0076D698 /* DTSpringBackLoadViewController.m */; };
@@ -27,9 +27,9 @@
 		241E29BB10F69EFC0076D698 /* DTSpringBackButtonLoadSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 241E29A510F69EFC0076D698 /* DTSpringBackButtonLoadSelected.png */; };
 		241E29BC10F69EFC0076D698 /* DTSpringBackButtonSaveDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 241E29A610F69EFC0076D698 /* DTSpringBackButtonSaveDefault.png */; };
 		241E29BD10F69EFC0076D698 /* DTSpringBackButtonSaveSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 241E29A710F69EFC0076D698 /* DTSpringBackButtonSaveSelected.png */; };
-		241E29BE10F69EFC0076D698 /* UINavigationController+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29A910F69EFC0076D698 /* UINavigationController+DTSpringBack.m */; };
-		241E29BF10F69EFC0076D698 /* UITabBarController+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29AB10F69EFC0076D698 /* UITabBarController+DTSpringBack.m */; };
-		241E29C010F69EFC0076D698 /* UIViewController+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29AD10F69EFC0076D698 /* UIViewController+DTSpringBack.m */; };
+		241E29BE10F69EFC0076D698 /* UINavigationController+DTResurrection.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29A910F69EFC0076D698 /* UINavigationController+DTResurrection.m */; };
+		241E29BF10F69EFC0076D698 /* UITabBarController+DTResurrection.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29AB10F69EFC0076D698 /* UITabBarController+DTResurrection.m */; };
+		241E29C010F69EFC0076D698 /* UIViewController+DTResurrection.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29AD10F69EFC0076D698 /* UIViewController+DTResurrection.m */; };
 		241E29DC10F6A0240076D698 /* DTModalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29D610F6A0240076D698 /* DTModalTestViewController.m */; };
 		241E29DD10F6A0240076D698 /* DTTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241E29D710F6A0240076D698 /* DTTestView.xib */; };
 		241E29DE10F6A0240076D698 /* DTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29D910F6A0240076D698 /* DTTestViewController.m */; };
@@ -45,15 +45,15 @@
 		1D3623250D0F684500981E51 /* DTSpringBackAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* DTSpringBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTSpringBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		241E298F10F69EFC0076D698 /* DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBack.h; sourceTree = "<group>"; };
+		241E298F10F69EFC0076D698 /* DTResurrectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionKit.h; sourceTree = "<group>"; };
 		241E299010F69EFC0076D698 /* DTResurrector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrector.h; sourceTree = "<group>"; };
 		241E299110F69EFC0076D698 /* DTResurrector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrector.m; sourceTree = "<group>"; };
 		241E299210F69EFC0076D698 /* DTResurrectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionController.h; sourceTree = "<group>"; };
 		241E299310F69EFC0076D698 /* DTResurrectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrectionController.m; sourceTree = "<group>"; };
-		241E299410F69EFC0076D698 /* NSArray+DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DTSpringBack.h"; sourceTree = "<group>"; };
-		241E299510F69EFC0076D698 /* NSArray+DTSpringBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DTSpringBack.m"; sourceTree = "<group>"; };
-		241E299610F69EFC0076D698 /* NSDictionary+DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DTSpringBack.h"; sourceTree = "<group>"; };
-		241E299710F69EFC0076D698 /* NSDictionary+DTSpringBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DTSpringBack.m"; sourceTree = "<group>"; };
+		241E299410F69EFC0076D698 /* NSArray+DTResurrection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DTResurrection.h"; sourceTree = "<group>"; };
+		241E299510F69EFC0076D698 /* NSArray+DTResurrection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DTResurrection.m"; sourceTree = "<group>"; };
+		241E299610F69EFC0076D698 /* NSDictionary+DTResurrection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DTResurrection.h"; sourceTree = "<group>"; };
+		241E299710F69EFC0076D698 /* NSDictionary+DTResurrection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DTResurrection.m"; sourceTree = "<group>"; };
 		241E299910F69EFC0076D698 /* DTSpringBackDebugView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTSpringBackDebugView.xib; sourceTree = "<group>"; };
 		241E299A10F69EFC0076D698 /* DTSpringBackLoadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTSpringBackLoadView.xib; sourceTree = "<group>"; };
 		241E299B10F69EFC0076D698 /* DTSpringBackLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackLoadViewController.h; sourceTree = "<group>"; };
@@ -68,12 +68,12 @@
 		241E29A510F69EFC0076D698 /* DTSpringBackButtonLoadSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTSpringBackButtonLoadSelected.png; sourceTree = "<group>"; };
 		241E29A610F69EFC0076D698 /* DTSpringBackButtonSaveDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTSpringBackButtonSaveDefault.png; sourceTree = "<group>"; };
 		241E29A710F69EFC0076D698 /* DTSpringBackButtonSaveSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTSpringBackButtonSaveSelected.png; sourceTree = "<group>"; };
-		241E29A810F69EFC0076D698 /* UINavigationController+DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+DTSpringBack.h"; sourceTree = "<group>"; };
-		241E29A910F69EFC0076D698 /* UINavigationController+DTSpringBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+DTSpringBack.m"; sourceTree = "<group>"; };
-		241E29AA10F69EFC0076D698 /* UITabBarController+DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+DTSpringBack.h"; sourceTree = "<group>"; };
-		241E29AB10F69EFC0076D698 /* UITabBarController+DTSpringBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+DTSpringBack.m"; sourceTree = "<group>"; };
-		241E29AC10F69EFC0076D698 /* UIViewController+DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DTSpringBack.h"; sourceTree = "<group>"; };
-		241E29AD10F69EFC0076D698 /* UIViewController+DTSpringBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DTSpringBack.m"; sourceTree = "<group>"; };
+		241E29A810F69EFC0076D698 /* UINavigationController+DTResurrection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+DTResurrection.h"; sourceTree = "<group>"; };
+		241E29A910F69EFC0076D698 /* UINavigationController+DTResurrection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+DTResurrection.m"; sourceTree = "<group>"; };
+		241E29AA10F69EFC0076D698 /* UITabBarController+DTResurrection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+DTResurrection.h"; sourceTree = "<group>"; };
+		241E29AB10F69EFC0076D698 /* UITabBarController+DTResurrection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+DTResurrection.m"; sourceTree = "<group>"; };
+		241E29AC10F69EFC0076D698 /* UIViewController+DTResurrection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DTResurrection.h"; sourceTree = "<group>"; };
+		241E29AD10F69EFC0076D698 /* UIViewController+DTResurrection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DTResurrection.m"; sourceTree = "<group>"; };
 		241E29D510F6A0240076D698 /* DTModalTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTModalTestViewController.h; sourceTree = "<group>"; };
 		241E29D610F6A0240076D698 /* DTModalTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTModalTestViewController.m; sourceTree = "<group>"; };
 		241E29D710F6A0240076D698 /* DTTestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTTestView.xib; sourceTree = "<group>"; };
@@ -129,22 +129,22 @@
 		241E298E10F69EFC0076D698 /* DTSpringBack */ = {
 			isa = PBXGroup;
 			children = (
-				241E298F10F69EFC0076D698 /* DTSpringBack.h */,
+				241E298F10F69EFC0076D698 /* DTResurrectionKit.h */,
 				241E299010F69EFC0076D698 /* DTResurrector.h */,
 				241E299110F69EFC0076D698 /* DTResurrector.m */,
 				241E299210F69EFC0076D698 /* DTResurrectionController.h */,
 				241E299310F69EFC0076D698 /* DTResurrectionController.m */,
 				241E299810F69EFC0076D698 /* SpringBackDebugger */,
-				241E299410F69EFC0076D698 /* NSArray+DTSpringBack.h */,
-				241E299510F69EFC0076D698 /* NSArray+DTSpringBack.m */,
-				241E299610F69EFC0076D698 /* NSDictionary+DTSpringBack.h */,
-				241E299710F69EFC0076D698 /* NSDictionary+DTSpringBack.m */,
-				241E29A810F69EFC0076D698 /* UINavigationController+DTSpringBack.h */,
-				241E29A910F69EFC0076D698 /* UINavigationController+DTSpringBack.m */,
-				241E29AA10F69EFC0076D698 /* UITabBarController+DTSpringBack.h */,
-				241E29AB10F69EFC0076D698 /* UITabBarController+DTSpringBack.m */,
-				241E29AC10F69EFC0076D698 /* UIViewController+DTSpringBack.h */,
-				241E29AD10F69EFC0076D698 /* UIViewController+DTSpringBack.m */,
+				241E299410F69EFC0076D698 /* NSArray+DTResurrection.h */,
+				241E299510F69EFC0076D698 /* NSArray+DTResurrection.m */,
+				241E299610F69EFC0076D698 /* NSDictionary+DTResurrection.h */,
+				241E299710F69EFC0076D698 /* NSDictionary+DTResurrection.m */,
+				241E29A810F69EFC0076D698 /* UINavigationController+DTResurrection.h */,
+				241E29A910F69EFC0076D698 /* UINavigationController+DTResurrection.m */,
+				241E29AA10F69EFC0076D698 /* UITabBarController+DTResurrection.h */,
+				241E29AB10F69EFC0076D698 /* UITabBarController+DTResurrection.m */,
+				241E29AC10F69EFC0076D698 /* UIViewController+DTResurrection.h */,
+				241E29AD10F69EFC0076D698 /* UIViewController+DTResurrection.m */,
 			);
 			path = DTSpringBack;
 			sourceTree = "<group>";
@@ -307,13 +307,13 @@
 				1D3623260D0F684500981E51 /* DTSpringBackAppDelegate.m in Sources */,
 				241E29AE10F69EFC0076D698 /* DTResurrector.m in Sources */,
 				241E29AF10F69EFC0076D698 /* DTResurrectionController.m in Sources */,
-				241E29B010F69EFC0076D698 /* NSArray+DTSpringBack.m in Sources */,
-				241E29B110F69EFC0076D698 /* NSDictionary+DTSpringBack.m in Sources */,
+				241E29B010F69EFC0076D698 /* NSArray+DTResurrection.m in Sources */,
+				241E29B110F69EFC0076D698 /* NSDictionary+DTResurrection.m in Sources */,
 				241E29B410F69EFC0076D698 /* DTSpringBackLoadViewController.m in Sources */,
 				241E29B610F69EFC0076D698 /* DTSpringBackSaveViewController.m in Sources */,
-				241E29BE10F69EFC0076D698 /* UINavigationController+DTSpringBack.m in Sources */,
-				241E29BF10F69EFC0076D698 /* UITabBarController+DTSpringBack.m in Sources */,
-				241E29C010F69EFC0076D698 /* UIViewController+DTSpringBack.m in Sources */,
+				241E29BE10F69EFC0076D698 /* UINavigationController+DTResurrection.m in Sources */,
+				241E29BF10F69EFC0076D698 /* UITabBarController+DTResurrection.m in Sources */,
+				241E29C010F69EFC0076D698 /* UIViewController+DTResurrection.m in Sources */,
 				241E29DC10F6A0240076D698 /* DTModalTestViewController.m in Sources */,
 				241E29DE10F6A0240076D698 /* DTTestViewController.m in Sources */,
 				247B136D11E3A45900A09376 /* DTStack.m in Sources */,

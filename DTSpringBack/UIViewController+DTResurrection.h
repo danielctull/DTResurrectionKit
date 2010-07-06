@@ -1,19 +1,19 @@
 //
-//  UIViewController+DTSpringBack.h
-//  DTSpringBack
+//  UIViewController+DTResurrection.h
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 03.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "DTSpringBack.h"
+#import "DTResurrectionKit.h"
 
 @class DTResurrectionController;
 
 /** Adds the methods for the SpringBack protocol to UIViewController and adds methods for finding the root 
  SpringBack controller and the front most view controller.
  */
-@interface UIViewController (DTSpringBack) <DTSpringBack>
+@interface UIViewController (DTResurrection) <DTResurrection>
 @property (readonly) DTResurrectionController *springBackController;
 @property (readonly) UIViewController *frontViewController;
 - (BOOL)isFrontViewController;

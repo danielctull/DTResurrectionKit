@@ -7,7 +7,7 @@
 //
 
 #import "DTSpringBackSaveViewController.h"
-#import "UIViewController+DTSpringBack.h"
+#import "UIViewController+DTResurrection.h"
 
 @implementation DTSpringBackSaveViewController
 

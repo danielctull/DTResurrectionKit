@@ -1,15 +1,15 @@
 //
-//  UINavigationController+DTSpringBack.h
-//  DTSpringBack
+//  UINavigationController+DTResurrection.h
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 03.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "DTResurrectionController.h"
+#import "DTResurrectionKit.h"
 
 /** Adds the methods for the SpringBack protocol to UINavigationController.
  */
-@interface UINavigationController (DTSpringBack) <DTSpringBack>
+@interface UINavigationController (DTResurrection) <DTResurrection>
 @end

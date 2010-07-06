@@ -1,15 +1,15 @@
 //
-//  UIViewController+DTSpringBack.m
-//  DTSpringBack
+//  UIViewController+DTResurrection.m
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 03.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "UIViewController+DTSpringBack.h"
+#import "UIViewController+DTResurrection.h"
 #import "DTResurrector.h"
 
-@implementation UIViewController (DTSpringBack)
+@implementation UIViewController (DTResurrection)
 
 - (DTResurrectionController *)springBackController {
 	

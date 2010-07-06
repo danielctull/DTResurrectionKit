@@ -1,5 +1,5 @@
 //
-//  DTSpringBack.h
+//  DTResurrectionKit.h
 //  DTSpringBack
 //
 //  Created by Daniel Tull on 09.11.2009.
@@ -11,7 +11,7 @@
 /** The DTSpringBack protocol should be adopted by any class wanting to be saved to and restored
  from the SpringBack system.
  */
-@protocol DTSpringBack
+@protocol DTResurrection
 /** @brief Initialiser SpringBack uses to restore the object.
  
  As shown in DTSpring, you can save 
@@ -30,8 +30,8 @@
 #import "DTResurrector.h"
 #import "DTResurrectionController.h"
 
-#import "UITabBarController+DTSpringBack.h"
-#import "UIViewController+DTSpringBack.h"
-#import "UINavigationController+DTSpringBack.h"
-#import "NSArray+DTSpringBack.h"
-#import "NSDictionary+DTSpringBack.h"
+#import "UITabBarController+DTResurrection.h"
+#import "UIViewController+DTResurrection.h"
+#import "UINavigationController+DTResurrection.h"
+#import "NSArray+DTResurrection.h"
+#import "NSDictionary+DTResurrection.h"

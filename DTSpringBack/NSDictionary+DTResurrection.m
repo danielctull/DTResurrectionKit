@@ -1,15 +1,15 @@
 //
-//  NSDictionary+DTSpringBack.m
-//  DTSpringBack
+//  NSDictionary+DTResurrection.m
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 09.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "NSDictionary+DTSpringBack.h"
+#import "NSDictionary+DTResurrection.h"
 
 
-@implementation NSDictionary (DTSpringBack)
+@implementation NSDictionary (DTResurrection)
 
 - (id)initWithResurrector:(DTResurrector *)resurrector {
 	
