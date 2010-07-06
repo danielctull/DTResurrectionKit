@@ -1,30 +1,27 @@
 //
-//  DTSpringBackAppDelegate.m
-//  DTSpringBack
+//  DTResurrectionKitAppDelegate.m
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 03.11.2009.
 //  Copyright Daniel Tull 2009. All rights reserved.
 //
 
-#import "DTSpringBackAppDelegate.h"
+#import "DTResurrectionKitAppDelegate.h"
 #import "DTModalTestViewController.h"
 
-@implementation DTSpringBackAppDelegate
+@implementation DTResurrectionKitAppDelegate
 
 @synthesize window;
 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	
-	springBackController = [[DTResurrectionController alloc] init];
+	resurrectionController = [[DTResurrectionController alloc] init];
 	
-	//springBackController.debugMode = YES;
-	
-	[window addSubview:springBackController.view];
-    [window makeKeyAndVisible];
+	//resurrectionController.debugMode = YES;
 	
 	// If ResurrectionKit hasn't managed to resurrect, we need to set up ourselves.
-	if (!springBackController.hasSprungBack) {
+	if (!resurrectionController.hasSprungBack) {
 		
 		NSLog(@"MANUAL SETUP");
 		
@@ -49,13 +46,16 @@
 		[nav1 release];
 		[nav2 release];
 		[nav3 release];
-		springBackController.viewController = tabs;
+		resurrectionController.viewController = tabs;
 		[tabs release];
 	}
+	
+	[window addSubview:resurrectionController.view];
+    [window makeKeyAndVisible];
 }
 
 - (void)dealloc {
-	[springBackController release];
+	[resurrectionController release];
     [window release];
     [super dealloc];
 }

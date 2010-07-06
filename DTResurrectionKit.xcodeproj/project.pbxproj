@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* DTSpringBackAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* DTSpringBackAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -33,6 +32,7 @@
 		241E29DC10F6A0240076D698 /* DTModalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29D610F6A0240076D698 /* DTModalTestViewController.m */; };
 		241E29DD10F6A0240076D698 /* DTTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241E29D710F6A0240076D698 /* DTTestView.xib */; };
 		241E29DE10F6A0240076D698 /* DTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29D910F6A0240076D698 /* DTTestViewController.m */; };
+		2461780C11E3B1AB007EB306 /* DTResurrectionKitAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461780B11E3B1AB007EB306 /* DTResurrectionKitAppDelegate.m */; };
 		247B136D11E3A45900A09376 /* DTStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B136C11E3A45900A09376 /* DTStack.m */; };
 		247B137411E3A47E00A09376 /* DTContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B137311E3A47E00A09376 /* DTContentController.m */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
@@ -41,8 +41,6 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* DTSpringBackAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* DTSpringBackAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* DTResurrectionKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTResurrectionKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		241E298F10F69EFC0076D698 /* DTResurrectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionKit.h; sourceTree = "<group>"; };
@@ -79,6 +77,8 @@
 		241E29D710F6A0240076D698 /* DTTestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTTestView.xib; sourceTree = "<group>"; };
 		241E29D810F6A0240076D698 /* DTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTestViewController.h; sourceTree = "<group>"; };
 		241E29D910F6A0240076D698 /* DTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTestViewController.m; sourceTree = "<group>"; };
+		2461780A11E3B1AB007EB306 /* DTResurrectionKitAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionKitAppDelegate.h; sourceTree = "<group>"; };
+		2461780B11E3B1AB007EB306 /* DTResurrectionKitAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrectionKitAppDelegate.m; sourceTree = "<group>"; };
 		247B136B11E3A45900A09376 /* DTStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStack.h; sourceTree = "<group>"; };
 		247B136C11E3A45900A09376 /* DTStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTStack.m; sourceTree = "<group>"; };
 		247B137211E3A47E00A09376 /* DTContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTContentController.h; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1D3623240D0F684500981E51 /* DTSpringBackAppDelegate.h */,
-				1D3623250D0F684500981E51 /* DTSpringBackAppDelegate.m */,
+				2461780A11E3B1AB007EB306 /* DTResurrectionKitAppDelegate.h */,
+				2461780B11E3B1AB007EB306 /* DTResurrectionKitAppDelegate.m */,
 				241E29D510F6A0240076D698 /* DTModalTestViewController.h */,
 				241E29D610F6A0240076D698 /* DTModalTestViewController.m */,
 				241E29D710F6A0240076D698 /* DTTestView.xib */,
@@ -304,7 +304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* DTSpringBackAppDelegate.m in Sources */,
 				241E29AE10F69EFC0076D698 /* DTResurrector.m in Sources */,
 				241E29AF10F69EFC0076D698 /* DTResurrectionController.m in Sources */,
 				241E29B010F69EFC0076D698 /* NSArray+DTResurrection.m in Sources */,
@@ -318,6 +317,7 @@
 				241E29DE10F6A0240076D698 /* DTTestViewController.m in Sources */,
 				247B136D11E3A45900A09376 /* DTStack.m in Sources */,
 				247B137411E3A47E00A09376 /* DTContentController.m in Sources */,
+				2461780C11E3B1AB007EB306 /* DTResurrectionKitAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
