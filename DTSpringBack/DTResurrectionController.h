@@ -1,5 +1,5 @@
 //
-//  DTSpringBackController.h
+//  DTResurrectionController.h
 //  DTSpringBack
 //
 //  Created by Daniel Tull on 03.11.2009.
@@ -17,7 +17,7 @@ extern NSString *const DTSpringBackPathDebug;
 /** The SpringBack controller is a view controller subclass that easily enables
  SpringBack behaviour in your application.
  */
-@interface DTSpringBackController : DTContentController {
+@interface DTResurrectionController : DTContentController {
 	//UIViewController<DTSpringBack> *viewController;
 	NSString *archivePath;
 	BOOL hasSprungBack;

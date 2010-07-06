@@ -12,7 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		241E29AE10F69EFC0076D698 /* DTResurrector.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299110F69EFC0076D698 /* DTResurrector.m */; };
-		241E29AF10F69EFC0076D698 /* DTSpringBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299310F69EFC0076D698 /* DTSpringBackController.m */; };
+		241E29AF10F69EFC0076D698 /* DTResurrectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299310F69EFC0076D698 /* DTResurrectionController.m */; };
 		241E29B010F69EFC0076D698 /* NSArray+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299510F69EFC0076D698 /* NSArray+DTSpringBack.m */; };
 		241E29B110F69EFC0076D698 /* NSDictionary+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299710F69EFC0076D698 /* NSDictionary+DTSpringBack.m */; };
 		241E29B210F69EFC0076D698 /* DTSpringBackDebugView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241E299910F69EFC0076D698 /* DTSpringBackDebugView.xib */; };
@@ -48,8 +48,8 @@
 		241E298F10F69EFC0076D698 /* DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBack.h; sourceTree = "<group>"; };
 		241E299010F69EFC0076D698 /* DTResurrector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrector.h; sourceTree = "<group>"; };
 		241E299110F69EFC0076D698 /* DTResurrector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrector.m; sourceTree = "<group>"; };
-		241E299210F69EFC0076D698 /* DTSpringBackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackController.h; sourceTree = "<group>"; };
-		241E299310F69EFC0076D698 /* DTSpringBackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackController.m; sourceTree = "<group>"; };
+		241E299210F69EFC0076D698 /* DTResurrectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionController.h; sourceTree = "<group>"; };
+		241E299310F69EFC0076D698 /* DTResurrectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrectionController.m; sourceTree = "<group>"; };
 		241E299410F69EFC0076D698 /* NSArray+DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DTSpringBack.h"; sourceTree = "<group>"; };
 		241E299510F69EFC0076D698 /* NSArray+DTSpringBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DTSpringBack.m"; sourceTree = "<group>"; };
 		241E299610F69EFC0076D698 /* NSDictionary+DTSpringBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DTSpringBack.h"; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 				241E298F10F69EFC0076D698 /* DTSpringBack.h */,
 				241E299010F69EFC0076D698 /* DTResurrector.h */,
 				241E299110F69EFC0076D698 /* DTResurrector.m */,
-				241E299210F69EFC0076D698 /* DTSpringBackController.h */,
-				241E299310F69EFC0076D698 /* DTSpringBackController.m */,
+				241E299210F69EFC0076D698 /* DTResurrectionController.h */,
+				241E299310F69EFC0076D698 /* DTResurrectionController.m */,
 				241E299810F69EFC0076D698 /* SpringBackDebugger */,
 				241E299410F69EFC0076D698 /* NSArray+DTSpringBack.h */,
 				241E299510F69EFC0076D698 /* NSArray+DTSpringBack.m */,
@@ -306,7 +306,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* DTSpringBackAppDelegate.m in Sources */,
 				241E29AE10F69EFC0076D698 /* DTResurrector.m in Sources */,
-				241E29AF10F69EFC0076D698 /* DTSpringBackController.m in Sources */,
+				241E29AF10F69EFC0076D698 /* DTResurrectionController.m in Sources */,
 				241E29B010F69EFC0076D698 /* NSArray+DTSpringBack.m in Sources */,
 				241E29B110F69EFC0076D698 /* NSDictionary+DTSpringBack.m in Sources */,
 				241E29B410F69EFC0076D698 /* DTSpringBackLoadViewController.m in Sources */,

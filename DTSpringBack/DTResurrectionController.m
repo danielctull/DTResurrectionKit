@@ -1,5 +1,5 @@
 //
-//  DTSpringBackController.m
+//  DTResurrectionController.m
 //  DTSpringBack
 //
 //  Created by Daniel Tull on 03.11.2009.
@@ -19,7 +19,7 @@ NSString *const DTSpringBackPathBase = @"DTSpringBack";
 NSString *const DTSpringBackPathVersion = @"Version";
 NSString *const DTSpringBackPathDebug = @"Debug";
 
-@interface DTSpringBackController ()
+@interface DTResurrectionController ()
 - (BOOL)canResurrect;
 - (void)deconstructStack;
 - (void)resurrectStack;
@@ -27,7 +27,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 - (void)applicationWillGoAway:(id)sender;
 @end
 
-@implementation DTSpringBackController
+@implementation DTResurrectionController
 
 @synthesize hasSprungBack, debugMode;
 
