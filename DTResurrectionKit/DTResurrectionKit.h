@@ -12,15 +12,15 @@
  from the SpringBack system.
  */
 @protocol DTResurrection
-/** @brief Initialiser SpringBack uses to restore the object.
+/** @brief Initialiser DTResurrectionKit uses to restore the object.
  
- As shown in DTSpring, you can save 
+ As shown in DTResurrector, you can save 
  
  @param resurrector The resurrector doing the restoration.
  */
 - (id)initWithResurrector:(DTResurrector *)resurrector;
 
-/** @brief Method SpringBack uses to save the object metadata.
+/** @brief Method DTResurrectionKit uses to save the object metadata.
  
  @param resurrector The resurrector doing the saving.
  */
