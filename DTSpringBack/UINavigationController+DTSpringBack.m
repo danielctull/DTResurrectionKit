@@ -11,7 +11,7 @@
 
 @implementation UINavigationController (DTSpringBack)
 
-- (id)initWithArchiver:(DTSpringBackArchiver *)archiver {
+- (id)initWithArchiver:(DTResurrector *)archiver {
 	
 	NSArray *vcs = [archiver objectForKey:@"viewControllers"];
 	
@@ -26,7 +26,7 @@
 	return self;
 }
 
-- (void)encodeToArchiver:(DTSpringBackArchiver *)archiver {
+- (void)encodeToArchiver:(DTResurrector *)archiver {
 	[archiver setObject:self.viewControllers forKey:@"viewControllers"];
 	
 	if (self.modalViewController) {

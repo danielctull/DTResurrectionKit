@@ -11,7 +11,7 @@
 
 @implementation NSDictionary (DTSpringBack)
 
-- (id)initWithArchiver:(DTSpringBackArchiver *)archiver {
+- (id)initWithArchiver:(DTResurrector *)archiver {
 	
 	NSInteger amount = [[archiver objectForKey:@"amount"] integerValue];
 	
@@ -27,7 +27,7 @@
 	return self;
 }
 
-- (void)encodeToArchiver:(DTSpringBackArchiver *)archiver {
+- (void)encodeToArchiver:(DTResurrector *)archiver {
 	
 	[archiver setObject:[NSNumber numberWithInt:[self count]] forKey:@"amount"];
 	

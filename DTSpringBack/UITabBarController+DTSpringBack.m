@@ -7,10 +7,10 @@
 //
 
 #import "UITabBarController+DTSpringBack.h"
-#import "DTSpringBackArchiver.h"
+#import "DTResurrector.h"
 
 @implementation UITabBarController (DTSpringBack)
-- (id)initWithArchiver:(DTSpringBackArchiver *)archiver {
+- (id)initWithArchiver:(DTResurrector *)archiver {
 	
 	if (!(self = [self init])) return nil;
 	
@@ -23,7 +23,7 @@
 	return self;
 }
 
-- (void)encodeToArchiver:(DTSpringBackArchiver *)archiver {
+- (void)encodeToArchiver:(DTResurrector *)archiver {
 	[archiver setObject:self.viewControllers forKey:@"viewControllers"];
 	[archiver setObject:[NSNumber numberWithInteger:self.selectedIndex] forKey:@"selectedIndex"];
 	

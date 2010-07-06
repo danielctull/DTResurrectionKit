@@ -153,7 +153,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 - (void)resurrectStack {
 	//NSLog(@"%@:%s Start", self, _cmd);
 		
-	DTSpringBackArchiver *resurrector = [[DTSpringBackArchiver alloc] init];
+	DTResurrector *resurrector = [[DTResurrector alloc] init];
 	@try {
 		NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:archivePath];
 		UIViewController<DTSpringBack> *vc = [resurrector resurrect:dict];
@@ -185,7 +185,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 - (void)deconstructStack {
 	//NSLog(@"%@:%s Start", self, _cmd);
 	
-	DTSpringBackArchiver *resurrector = [[DTSpringBackArchiver alloc] init];
+	DTResurrector *resurrector = [[DTResurrector alloc] init];
 	@try {
 		NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
 		[dict writeToFile:archivePath atomically:YES];

@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+DTSpringBack.h"
-#import "DTSpringBackArchiver.h"
+#import "DTResurrector.h"
 
 @implementation UIViewController (DTSpringBack)
 
@@ -33,7 +33,7 @@
 	return nil;
 }
 
-- (id)initWithArchiver:(DTSpringBackArchiver *)archiver {
+- (id)initWithArchiver:(DTResurrector *)archiver {
 	
 	if (!(self = [self init])) return nil;
 	
@@ -46,7 +46,7 @@
 	return self;
 }
 
-- (void)encodeToArchiver:(DTSpringBackArchiver *)archiver {
+- (void)encodeToArchiver:(DTResurrector *)archiver {
 	[archiver setObject:self.title forKey:@"title"];
 	
 	if (self.modalViewController) {

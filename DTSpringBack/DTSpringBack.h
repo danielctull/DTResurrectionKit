@@ -6,7 +6,7 @@
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-@class DTSpringBackArchiver;
+@class DTResurrector;
 
 /** The DTSpringBack protocol should be adopted by any class wanting to be saved to and restored
  from the SpringBack system.
@@ -18,16 +18,16 @@
  
  @param archiver The archiver doing the restoration.
  */
-- (id)initWithArchiver:(DTSpringBackArchiver *)archiver;
+- (id)initWithArchiver:(DTResurrector *)archiver;
 
 /** @brief Method SpringBack uses to save the object metadata.
  
  @param archiver The archiver doing the saving.
  */
-- (void)encodeToArchiver:(DTSpringBackArchiver *)archiver;
+- (void)encodeToArchiver:(DTResurrector *)archiver;
 @end
 
-#import "DTSpringBackArchiver.h"
+#import "DTResurrector.h"
 #import "DTSpringBackController.h"
 
 #import "UITabBarController+DTSpringBack.h"

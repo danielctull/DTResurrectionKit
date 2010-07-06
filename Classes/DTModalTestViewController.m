@@ -18,7 +18,7 @@
 	return [self initWithNibName:@"DTTestView" bundle:nil];
 }
 
-- (id)initWithArchiver:(DTSpringBackArchiver *)archiver {
+- (id)initWithArchiver:(DTResurrector *)archiver {
 	
 	if (!(self = [super initWithArchiver:archiver])) return nil;
 	
@@ -27,7 +27,7 @@
 	return self;
 }
 
-- (void)encodeToArchiver:(DTSpringBackArchiver *)archiver {
+- (void)encodeToArchiver:(DTResurrector *)archiver {
 	[super encodeToArchiver:archiver];
 	[archiver setObject:[NSNumber numberWithInteger:self.count] forKey:@"count"];
 }
