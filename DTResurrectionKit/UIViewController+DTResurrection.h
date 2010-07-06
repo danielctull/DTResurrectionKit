@@ -10,7 +10,7 @@
 
 @class DTResurrectionController;
 
-/** Adds the methods for the SpringBack protocol to UIViewController and adds methods for finding the root 
+/** Adds the methods for the DTResurrector protocol to UIViewController and adds methods for finding the root 
  SpringBack controller and the front most view controller.
  */
 @interface UIViewController (DTResurrection) <DTResurrection>

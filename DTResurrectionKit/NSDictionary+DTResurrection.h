@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DTResurrectionKit.h"
 
-/** Adds the methods for the SpringBack protocol to NSDictionary.
+/** Adds the methods for the DTResurrector protocol to NSDictionary.
  */
 @interface NSDictionary (DTResurrection) <DTResurrection>
 @end

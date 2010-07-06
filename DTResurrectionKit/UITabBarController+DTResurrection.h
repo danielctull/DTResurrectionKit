@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "DTResurrectionKit.h"
 
-/** Adds the methods for the SpringBack protocol to UITabBarController.
+/** Adds the methods for the DTResurrector protocol to UITabBarController.
  */
 @interface UITabBarController (DTResurrection) <DTResurrection>
 @end
