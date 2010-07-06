@@ -182,7 +182,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 - (void)setDebugMode:(BOOL)aBool {
 	debugMode = aBool;
-	[[UIApplication sharedApplication] setStatusBarHidden:aBool animated:NO];
+	[UIApplication sharedApplication].statusBarHidden = aBool;
 }
 
 - (BOOL)canResurrect {
