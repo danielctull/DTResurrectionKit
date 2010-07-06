@@ -9,7 +9,7 @@
 @class DTResurrector;
 
 /** The DTResurrectionKit protocol should be adopted by any class wanting to be saved to and restored
- from the SpringBack system.
+ from the resurrection system.
  */
 @protocol DTResurrection
 /** @brief Initialiser DTResurrectionKit uses to restore the object.
