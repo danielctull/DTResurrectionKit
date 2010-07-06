@@ -24,6 +24,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 - (void)deconstructStack;
 - (void)resurrectStack;
 - (void)saveCurrentImage;
+- (void)applicationWillGoAway:(id)sender;
 @end
 
 @implementation DTSpringBackController
@@ -36,7 +37,8 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	
 	self.position = DTBarPositionTop;
 	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillTerminate:) name:UIApplicationWillTerminateNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillGoAway:) name:UIApplicationWillTerminateNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillGoAway:) name:UIApplicationDidEnterBackgroundNotification object:nil];
 	
 	NSString *pathComponent = [NSString stringWithFormat:@"%@%@", DTSpringBackPathVersion, [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
 	archivePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DTSpringBackPathBase];
@@ -218,9 +220,9 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	[imageData writeToFile:imageSavePath atomically:YES];
 }
 
-- (void)applicationWillTerminate:(id)sender {
+- (void)applicationWillGoAway:(id)sender {
 	[self deconstructStack];
-	[self saveCurrentImage];
+	//[self saveCurrentImage];
 }
 
 
