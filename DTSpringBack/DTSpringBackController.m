@@ -142,16 +142,6 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	hasSprungBackModalViewControllers = YES;	
 }
 
-- (void)setViewController:(UIViewController *)vc {
-	[super setViewController:vc];
-	
-	self.viewController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-	self.viewController.view.frame = self.contentView.bounds;
-	self.viewController.wantsFullScreenLayout = YES;
-	
-	[self.contentView addSubview:self.viewController.view];
-}
-
 - (void)resurrectWithArchivePath:(NSString *)path {
 	[archivePath release];
 	archivePath = [path copy];
