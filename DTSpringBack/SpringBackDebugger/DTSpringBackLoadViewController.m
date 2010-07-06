@@ -24,14 +24,14 @@
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if (![fileManager fileExistsAtPath:archivePath])
-		[fileManager createDirectoryAtPath:archivePath attributes:nil];
+		[fileManager createDirectoryAtPath:archivePath withIntermediateDirectories:YES attributes:nil error:nil];
 	
 	archivePath = [[archivePath stringByAppendingPathComponent:DTSpringBackPathDebug] retain];
 	
 	if (![fileManager fileExistsAtPath:archivePath])
-		[fileManager createDirectoryAtPath:archivePath attributes:nil];
+		[fileManager createDirectoryAtPath:archivePath withIntermediateDirectories:YES attributes:nil error:nil];
 	
-	items = [[fileManager directoryContentsAtPath:archivePath] copy];
+	items = [[fileManager contentsOfDirectoryAtPath:archivePath error:nil] copy];
 	
     return self;
 }

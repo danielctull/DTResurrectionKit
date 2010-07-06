@@ -45,7 +45,9 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if (![fileManager fileExistsAtPath:archivePath])
-		[fileManager createDirectoryAtPath:archivePath attributes:nil];
+		[fileManager createDirectoryAtPath:archivePath withIntermediateDirectories:YES attributes:nil error:nil];
+		
+	//[fileManager createDirectoryAtPath:archivePath attributes:nil];
 	
 	archivePath = [[archivePath stringByAppendingPathComponent:pathComponent] retain];
 	
