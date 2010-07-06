@@ -11,22 +11,22 @@
 
 @implementation UIViewController (DTSpringBack)
 
-- (DTSpringBackController *)springBackController {
+- (DTResurrectionController *)springBackController {
 	
 	UIResponder *nextResponder = self;
 	
 	while (nextResponder = [nextResponder nextResponder])
-		if ([nextResponder isKindOfClass:[DTSpringBackController class]])
-			return (DTSpringBackController *)nextResponder;
+		if ([nextResponder isKindOfClass:[DTResurrectionController class]])
+			return (DTResurrectionController *)nextResponder;
 	
 	nextResponder = self.parentViewController;
 	
-	if ([nextResponder isKindOfClass:[DTSpringBackController class]])
-		return (DTSpringBackController *)nextResponder;
+	if ([nextResponder isKindOfClass:[DTResurrectionController class]])
+		return (DTResurrectionController *)nextResponder;
 	
 	while (nextResponder = [nextResponder nextResponder])
-		if ([nextResponder isKindOfClass:[DTSpringBackController class]])
-			return (DTSpringBackController *)nextResponder;
+		if ([nextResponder isKindOfClass:[DTResurrectionController class]])
+			return (DTResurrectionController *)nextResponder;
 	
 	NSLog(@"%@:%s springBackController Not Found", self, _cmd);
 	
@@ -65,7 +65,7 @@
 
 // USED ONLY IN DEBUG MODE
 - (void)swizzledPresentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated {
-	DTSpringBackController *sbc = self.springBackController;
+	DTResurrectionController *sbc = self.springBackController;
 	[self swizzledPresentModalViewController:modalViewController animated:animated];	
 	modalViewController.view.frame = sbc.contentView.bounds;
 	[modalViewController.view addObserver:sbc forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:NULL];	

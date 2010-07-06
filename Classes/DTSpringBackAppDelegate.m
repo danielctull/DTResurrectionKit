@@ -16,7 +16,7 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	
-	springBackController = [[DTSpringBackController alloc] init];
+	springBackController = [[DTResurrectionController alloc] init];
 	
 	//springBackController.debugMode = YES;
 	

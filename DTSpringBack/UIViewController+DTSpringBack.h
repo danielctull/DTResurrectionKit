@@ -8,13 +8,13 @@
 
 #import "DTSpringBack.h"
 
-@class DTSpringBackController;
+@class DTResurrectionController;
 
 /** Adds the methods for the SpringBack protocol to UIViewController and adds methods for finding the root 
  SpringBack controller and the front most view controller.
  */
 @interface UIViewController (DTSpringBack) <DTSpringBack>
-@property (readonly) DTSpringBackController *springBackController;
+@property (readonly) DTResurrectionController *springBackController;
 @property (readonly) UIViewController *frontViewController;
 - (BOOL)isFrontViewController;
 

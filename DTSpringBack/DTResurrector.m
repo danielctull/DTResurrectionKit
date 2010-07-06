@@ -7,7 +7,7 @@
 //
 
 #import "DTResurrector.h"
-#import "DTSpringBackController.h"
+#import "DTResurrectionController.h"
 
 NSString *const DTSpringBackObjectString = @"DTSpringBackObject";
 NSString *const DTSpringBackRootObjectString = @"DTSpringBackRootObject";

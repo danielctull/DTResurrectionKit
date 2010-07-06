@@ -28,7 +28,7 @@
 @end
 
 #import "DTResurrector.h"
-#import "DTSpringBackController.h"
+#import "DTResurrectionController.h"
 
 #import "UITabBarController+DTSpringBack.h"
 #import "UIViewController+DTSpringBack.h"

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DTSpringBackController.h"
+#import "DTResurrectionController.h"
 
 /** Adds the methods for the SpringBack protocol to UINavigationController.
  */

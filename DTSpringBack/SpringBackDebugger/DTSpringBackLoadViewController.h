@@ -7,17 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DTSpringBackController.h"
+#import "DTResurrectionController.h"
 
 @interface DTSpringBackLoadViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
 	NSArray *items;
-	DTSpringBackController *springBackController;
+	DTResurrectionController *springBackController;
 	NSString *archivePath;
 	UITableView *tableView;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 
-- (id)initWithSpringBackController:(DTSpringBackController *)sbc;
+- (id)initWithSpringBackController:(DTResurrectionController *)sbc;
 - (IBAction)cancel:(id)sender;
 @end

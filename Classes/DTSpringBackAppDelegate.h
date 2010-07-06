@@ -11,7 +11,7 @@
 
 @interface DTSpringBackAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-	DTSpringBackController *springBackController;
+	DTResurrectionController *springBackController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

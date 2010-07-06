@@ -7,14 +7,14 @@
 //
 
 #import "DTSpringBackLoadViewController.h"
-#import "DTSpringBackController.h"
+#import "DTResurrectionController.h"
 #import "UIViewController+DTSpringBack.h"
 
 @implementation DTSpringBackLoadViewController
 
 @synthesize tableView;
 
-- (id)initWithSpringBackController:(DTSpringBackController *)sbc {
+- (id)initWithSpringBackController:(DTResurrectionController *)sbc {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
     if (!(self = [super init])) return nil;
 	
