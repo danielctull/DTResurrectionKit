@@ -18,6 +18,11 @@
 	
 	springBackController = [[DTSpringBackController alloc] init];
 	
+	//springBackController.debugMode = YES;
+	
+	[window addSubview:springBackController.view];
+    [window makeKeyAndVisible];
+	
 	// If ResurrectionKit hasn't managed to resurrect, we need to set up ourselves.
 	if (!springBackController.hasSprungBack) {
 		
@@ -47,12 +52,6 @@
 		springBackController.viewController = tabs;
 		[tabs release];
 	}
-	
-	//springBackController.debugMode = YES;
-	
-	[window addSubview:springBackController.view];
-	
-    [window makeKeyAndVisible];
 }
 
 - (void)dealloc {
