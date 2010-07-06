@@ -12,7 +12,7 @@
 @protocol DTResurrection;
 
 
-/** When SpringBack is prompted to save it will ask every object in the object graph to save neccessary data
+/** When DTResurrectionKit is prompted to save it will ask every object in the object graph to save neccessary data
  using the -encodeToResurrector method defined in the DTResurrectionKit protocol. When asked, objects can store any 
  object they wish, as long as it itself adheres to the DTResurrectionKit protocol or is one of the core objects:
  NSString, NSData, NSDate or NSNumber.

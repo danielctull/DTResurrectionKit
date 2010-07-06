@@ -14,8 +14,8 @@ extern NSString *const DTResurrectionKitPathBase;
 extern NSString *const DTResurrectionKitPathVersion;
 extern NSString *const DTResurrectionKitPathDebug;
 
-/** The SpringBack controller is a view controller subclass that easily enables
- SpringBack behaviour in your application.
+/** The resurrection controller is a view controller subclass that easily enables
+ resurrection behaviour in your application.
  */
 @interface DTResurrectionController : DTContentController {
 	//UIViewController<DTResurrection> *viewController;
@@ -33,8 +33,8 @@ extern NSString *const DTResurrectionKitPathDebug;
 @property (nonatomic, assign) BOOL debugMode;
 //@property (nonatomic, retain) UIViewController<DTResurrection> *viewController;
 
-- (IBAction)loadSpringBack:(id)sender;
-- (IBAction)saveSpringBack:(id)sender;
+- (IBAction)loadResurrection:(id)sender;
+- (IBAction)saveResurrection:(id)sender;
 - (void)resurrectWithArchivePath:(NSString *)path;
 
 @end

@@ -218,13 +218,13 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 }
 
 
-- (IBAction)loadSpringBack:(id)sender {
+- (IBAction)loadResurrection:(id)sender {
 	DTResurrectionKitLoadViewController *lvc = [[DTResurrectionKitLoadViewController alloc] initWithresurrectionController:self];
 	[self swizzledPresentModalViewController:lvc animated:YES];
 	[lvc release];
 }
 
-- (IBAction)saveSpringBack:(id)sender {
+- (IBAction)saveResurrection:(id)sender {
 	DTResurrectionKitSaveViewController *lvc = [[DTResurrectionKitSaveViewController alloc] initWithViewController:self.viewController];
 	[self swizzledPresentModalViewController:lvc animated:YES];
 	[lvc release];
