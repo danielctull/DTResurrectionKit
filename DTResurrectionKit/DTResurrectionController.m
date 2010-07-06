@@ -29,7 +29,7 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 
 @implementation DTResurrectionController
 
-@synthesize hasSprungBack, debugMode;
+@synthesize hasResurrected, debugMode;
 
 - (id)init {
 	
@@ -54,7 +54,7 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 	
 	
 	if ([self canResurrect]) { // ACCESS FILE SYSTEM TO LOOK FOR STORED PLIST FOR RESURRECTION
-		hasSprungBack = YES;
+		hasResurrected = YES;
 		[self resurrectStack];
 	}
 	
@@ -114,9 +114,9 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 	
 	[iv release];
 	*/
-	if (!self.hasSprungBack) return;
+	if (!self.hasResurrected) return;
 	
-	if (hasSprungBackModalViewControllers) return;
+	if (hasResurrectedModalViewControllers) return;
 	
 	NSMutableArray *parents = [modalViewControllerParents mutableCopy];
 	NSMutableArray *children = [modalViewControllerChildren mutableCopy];
@@ -139,7 +139,7 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 	[parents release];
 	[children release];
 	
-	hasSprungBackModalViewControllers = YES;	
+	hasResurrectedModalViewControllers = YES;	
 }
 
 - (void)resurrectWithArchivePath:(NSString *)path {
@@ -166,7 +166,7 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 	}
 	@finally {
 		[resurrector release];
-		if (!self.viewController) hasSprungBack = NO;
+		if (!self.viewController) hasResurrected = NO;
 	}
 	
 	//NSLog(@"%@:%s Finish", self, _cmd);

@@ -21,7 +21,7 @@
 	//resurrectionController.debugMode = YES;
 	
 	// If ResurrectionKit hasn't managed to resurrect, we need to set up ourselves.
-	if (!resurrectionController.hasSprungBack) {
+	if (!resurrectionController.hasResurrected) {
 		
 		NSLog(@"MANUAL SETUP");
 		

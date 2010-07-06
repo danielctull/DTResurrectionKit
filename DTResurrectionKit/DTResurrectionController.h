@@ -20,16 +20,16 @@ extern NSString *const DTResurrectionKitPathDebug;
 @interface DTResurrectionController : DTContentController {
 	//UIViewController<DTResurrection> *viewController;
 	NSString *archivePath;
-	BOOL hasSprungBack;
+	BOOL hasResurrected;
 	BOOL debugMode;
 	
-	BOOL hasSprungBackModalViewControllers;
+	BOOL hasResurrectedModalViewControllers;
 	
 	NSArray *modalViewControllerParents, *modalViewControllerChildren;
 	
 }
 
-@property (nonatomic, assign) BOOL hasSprungBack;
+@property (nonatomic, assign) BOOL hasResurrected;
 @property (nonatomic, assign) BOOL debugMode;
 //@property (nonatomic, retain) UIViewController<DTResurrection> *viewController;
 
