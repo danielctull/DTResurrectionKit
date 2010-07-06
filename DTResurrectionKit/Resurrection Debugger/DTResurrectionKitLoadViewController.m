@@ -45,7 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.title = @"SpringBack";
+	self.title = @"DTResurrectionKit";
 	
 	UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
 	self.navigationItem.leftBarButtonItem = right;
