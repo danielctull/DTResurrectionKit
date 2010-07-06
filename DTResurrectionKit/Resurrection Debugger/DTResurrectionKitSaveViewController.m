@@ -1,20 +1,20 @@
 //
-//  DTSpringBackSaveViewController.m
+//  DTResurrectionKitSaveViewController.m
 //  DTResurrectionKit
 //
 //  Created by Daniel Tull on 16.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "DTSpringBackSaveViewController.h"
+#import "DTResurrectionKitSaveViewController.h"
 #import "UIViewController+DTResurrection.h"
 
-@implementation DTSpringBackSaveViewController
+@implementation DTResurrectionKitSaveViewController
 
 @synthesize textField;
 
 - (id)initWithViewController:(UIViewController *)vc {
-	if (!(self = [self initWithNibName:@"DTSpringBackSaveView" bundle:nil])) return nil;
+	if (!(self = [self initWithNibName:@"DTResurrectionKitSaveView" bundle:nil])) return nil;
 	
 	vcToSave = [vc retain];
 	
@@ -48,13 +48,13 @@
 
 - (void)save:(id)sender {
 	
-	NSString *archivePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DTSpringBackPathBase];
+	NSString *archivePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DTResurrectionKitPathBase];
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if (![fileManager fileExistsAtPath:archivePath])
 		[fileManager createDirectoryAtPath:archivePath withIntermediateDirectories:YES attributes:nil error:nil];
 	
-	archivePath = [archivePath stringByAppendingPathComponent:DTSpringBackPathDebug];
+	archivePath = [archivePath stringByAppendingPathComponent:DTResurrectionKitPathDebug];
 	
 	if (![fileManager fileExistsAtPath:archivePath])
 		[fileManager createDirectoryAtPath:archivePath withIntermediateDirectories:YES attributes:nil error:nil];

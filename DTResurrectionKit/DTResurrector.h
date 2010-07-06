@@ -13,8 +13,8 @@
 
 
 /** When SpringBack is prompted to save it will ask every object in the object graph to save neccessary data
- using the -encodeToResurrector method defined in the DTSpringBack protocol. When asked, objects can store any 
- object they wish, as long as it itself adheres to the DTSpringBack protocol or is one of the core objects:
+ using the -encodeToResurrector method defined in the DTResurrectionKit protocol. When asked, objects can store any 
+ object they wish, as long as it itself adheres to the DTResurrectionKit protocol or is one of the core objects:
  NSString, NSData, NSDate or NSNumber.
  
  Once passed to the encoder, it will then ask any non-core-object to save its data. In this reccursive fashion,

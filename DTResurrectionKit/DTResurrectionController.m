@@ -1,23 +1,23 @@
 //
 //  DTResurrectionController.m
-//  DTSpringBack
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 03.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
 #import "DTResurrectionKit.h"
-#import "DTSpringBackLoadViewController.h"
-#import "DTSpringBackSaveViewController.h"
+#import "DTResurrectionKitLoadViewController.h"
+#import "DTResurrectionKitSaveViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-NSString *const DTSpringBackPathBase = @"DTSpringBack";
-NSString *const DTSpringBackPathVersion = @"Version";
-NSString *const DTSpringBackPathDebug = @"Debug";
+NSString *const DTResurrectionKitPathBase = @"DTResurrectionKit";
+NSString *const DTResurrectionKitPathVersion = @"Version";
+NSString *const DTResurrectionKitPathDebug = @"Debug";
 
 @interface DTResurrectionController ()
 - (BOOL)canResurrect;
@@ -40,8 +40,8 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillGoAway:) name:UIApplicationWillTerminateNotification object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillGoAway:) name:UIApplicationDidEnterBackgroundNotification object:nil];
 	
-	NSString *pathComponent = [NSString stringWithFormat:@"%@%@", DTSpringBackPathVersion, [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
-	archivePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DTSpringBackPathBase];
+	NSString *pathComponent = [NSString stringWithFormat:@"%@%@", DTResurrectionKitPathVersion, [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
+	archivePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DTResurrectionKitPathBase];
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if (![fileManager fileExistsAtPath:archivePath])
@@ -83,7 +83,7 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 		[self resurrectStack];
 	}
 	
-	if (self.debugMode && !self.barView) [[NSBundle mainBundle] loadNibNamed:@"DTSpringBackDebugView" owner:self options:nil];
+	if (self.debugMode && !self.barView) [[NSBundle mainBundle] loadNibNamed:@"DTResurrectionKitDebugView" owner:self options:nil];
 	
 	[super viewDidLoad];
 	
@@ -219,13 +219,13 @@ NSString *const DTSpringBackPathDebug = @"Debug";
 
 
 - (IBAction)loadSpringBack:(id)sender {
-	DTSpringBackLoadViewController *lvc = [[DTSpringBackLoadViewController alloc] initWithSpringBackController:self];
+	DTResurrectionKitLoadViewController *lvc = [[DTResurrectionKitLoadViewController alloc] initWithSpringBackController:self];
 	[self swizzledPresentModalViewController:lvc animated:YES];
 	[lvc release];
 }
 
 - (IBAction)saveSpringBack:(id)sender {
-	DTSpringBackSaveViewController *lvc = [[DTSpringBackSaveViewController alloc] initWithViewController:self.viewController];
+	DTResurrectionKitSaveViewController *lvc = [[DTResurrectionKitSaveViewController alloc] initWithViewController:self.viewController];
 	[self swizzledPresentModalViewController:lvc animated:YES];
 	[lvc release];
 }

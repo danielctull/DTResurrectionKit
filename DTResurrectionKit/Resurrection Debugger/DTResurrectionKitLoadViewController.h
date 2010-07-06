@@ -1,5 +1,5 @@
 //
-//  DTSpringBackLoadViewController.h
+//  DTResurrectionKitLoadViewController.h
 //  DTResurrectionKit
 //
 //  Created by Daniel Tull on 16.11.2009.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DTResurrectionController.h"
 
-@interface DTSpringBackLoadViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface DTResurrectionKitLoadViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
 	NSArray *items;
 	DTResurrectionController *springBackController;
 	NSString *archivePath;

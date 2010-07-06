@@ -1,5 +1,5 @@
 //
-//  DTSpringBackSaveViewController.h
+//  DTResurrectionKitSaveViewController.h
 //  DTResurrectionKit
 //
 //  Created by Daniel Tull on 16.11.2009.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface DTSpringBackSaveViewController : UIViewController {
+@interface DTResurrectionKitSaveViewController : UIViewController {
 	UITextField *textField;
 	UIViewController *vcToSave;
 }

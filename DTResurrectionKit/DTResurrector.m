@@ -1,6 +1,6 @@
 //
 //  DTResurrector.m
-//  DTSpringBack
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 06.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
@@ -9,10 +9,10 @@
 #import "DTResurrector.h"
 #import "DTResurrectionController.h"
 
-NSString *const DTSpringBackObjectString = @"DTSpringBackObject";
-NSString *const DTSpringBackRootObjectString = @"DTSpringBackRootObject";
+NSString *const DTResurrectionKitObjectString = @"DTResurrectionKitObject";
+NSString *const DTResurrectionKitRootObjectString = @"DTResurrectionKitRootObject";
 
-NSString *const DTSpringBackPropertyClass = @"class";
+NSString *const DTResurrectionKitPropertyClass = @"class";
 
 @interface DTResurrector ()
 @property (nonatomic, retain, readwrite) NSArray *modalViewControllerParents, *modalViewControllerChildren;
@@ -58,10 +58,10 @@ NSString *const DTSpringBackPropertyClass = @"class";
 	
 	[objectDictionary setObject:object forKey:token];
 	
-	[mainDictionary setObject:token forKey:DTSpringBackRootObjectString];
+	[mainDictionary setObject:token forKey:DTResurrectionKitRootObjectString];
 	
 	NSMutableDictionary *objectDict = [[NSMutableDictionary alloc] init];
-	[objectDict setObject:NSStringFromClass([object class]) forKey:DTSpringBackPropertyClass];
+	[objectDict setObject:NSStringFromClass([object class]) forKey:DTResurrectionKitPropertyClass];
 	[encodingStack push:objectDict];
 	
 	[mainDictionary setObject:objectDict forKey:token];
@@ -110,11 +110,11 @@ NSString *const DTSpringBackPropertyClass = @"class";
 	[mainDictionary setObject:objectDict forKey:token];
 	
 	if ([object isKindOfClass:[NSArray class]])
-		[objectDict setObject:@"NSArray" forKey:DTSpringBackPropertyClass];
+		[objectDict setObject:@"NSArray" forKey:DTResurrectionKitPropertyClass];
 	else if ([object isKindOfClass:[NSDictionary class]])
-		[objectDict setObject:@"NSDictionary" forKey:DTSpringBackPropertyClass];
+		[objectDict setObject:@"NSDictionary" forKey:DTResurrectionKitPropertyClass];
 	else
-		[objectDict setObject:NSStringFromClass([object class]) forKey:DTSpringBackPropertyClass];
+		[objectDict setObject:NSStringFromClass([object class]) forKey:DTResurrectionKitPropertyClass];
 	
 	[encodingStack push:objectDict];
 	[objectDict release];
@@ -130,7 +130,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 
 - (id)resurrect:(NSDictionary *)aDictionary {
 	
-	NSString *token = [aDictionary objectForKey:DTSpringBackRootObjectString];
+	NSString *token = [aDictionary objectForKey:DTResurrectionKitRootObjectString];
 	
 	if (!token) return nil;	
 	
@@ -142,7 +142,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 		
 	[encodingStack push:objectDict];
 	
-	Class objectClass = NSClassFromString([objectDict objectForKey:DTSpringBackPropertyClass]);
+	Class objectClass = NSClassFromString([objectDict objectForKey:DTResurrectionKitPropertyClass]);
 	
 	
 	[encodingStack push:objectDict];
@@ -169,7 +169,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 	if ([self objectIsCoreObject:object]) {
 		if ([object isKindOfClass:[NSString class]]) {
 			NSString *string = (NSString *)object;
-			if (![string hasPrefix:DTSpringBackObjectString])
+			if (![string hasPrefix:DTResurrectionKitObjectString])
 				return string;
 		} else {
 			return object;
@@ -185,7 +185,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 		
 	NSDictionary *objectDict = [mainDictionary objectForKey:token];
 	
-	Class objectClass = NSClassFromString([objectDict objectForKey:DTSpringBackPropertyClass]);
+	Class objectClass = NSClassFromString([objectDict objectForKey:DTResurrectionKitPropertyClass]);
 	
 	[encodingStack push:objectDict];
 	
@@ -209,7 +209,7 @@ NSString *const DTSpringBackPropertyClass = @"class";
 }
 
 - (NSString *)generateToken {
-	return [NSString stringWithFormat:@"%@:%@", DTSpringBackObjectString, [self uniqueString]];
+	return [NSString stringWithFormat:@"%@:%@", DTResurrectionKitObjectString, [self uniqueString]];
 }
 
 - (NSString *)uniqueString {

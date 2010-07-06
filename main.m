@@ -1,6 +1,6 @@
 //
 //  main.m
-//  DTSpringBack
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 07.01.2010.
 //  Copyright Daniel Tull 2010. All rights reserved.

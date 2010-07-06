@@ -1,6 +1,6 @@
 //
 //  DTResurrectionController.h
-//  DTSpringBack
+//  DTResurrectionKit
 //
 //  Created by Daniel Tull on 03.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
@@ -10,9 +10,9 @@
 #import "DTResurrectionKit.h"
 #import "DTContentController.h"
 
-extern NSString *const DTSpringBackPathBase;
-extern NSString *const DTSpringBackPathVersion;
-extern NSString *const DTSpringBackPathDebug;
+extern NSString *const DTResurrectionKitPathBase;
+extern NSString *const DTResurrectionKitPathVersion;
+extern NSString *const DTResurrectionKitPathDebug;
 
 /** The SpringBack controller is a view controller subclass that easily enables
  SpringBack behaviour in your application.

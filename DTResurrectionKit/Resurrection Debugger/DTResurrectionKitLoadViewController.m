@@ -1,16 +1,16 @@
 //
-//  DTSpringBackLoadViewController.m
+//  DTResurrectionKitLoadViewController.m
 //  DTResurrectionKit
 //
 //  Created by Daniel Tull on 16.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "DTSpringBackLoadViewController.h"
+#import "DTResurrectionKitLoadViewController.h"
 #import "DTResurrectionController.h"
 #import "UIViewController+DTResurrection.h"
 
-@implementation DTSpringBackLoadViewController
+@implementation DTResurrectionKitLoadViewController
 
 @synthesize tableView;
 
@@ -20,13 +20,13 @@
 	
 	springBackController = [sbc retain];
 	
-	archivePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DTSpringBackPathBase];
+	archivePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DTResurrectionKitPathBase];
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if (![fileManager fileExistsAtPath:archivePath])
 		[fileManager createDirectoryAtPath:archivePath withIntermediateDirectories:YES attributes:nil error:nil];
 	
-	archivePath = [[archivePath stringByAppendingPathComponent:DTSpringBackPathDebug] retain];
+	archivePath = [[archivePath stringByAppendingPathComponent:DTResurrectionKitPathDebug] retain];
 	
 	if (![fileManager fileExistsAtPath:archivePath])
 		[fileManager createDirectoryAtPath:archivePath withIntermediateDirectories:YES attributes:nil error:nil];
