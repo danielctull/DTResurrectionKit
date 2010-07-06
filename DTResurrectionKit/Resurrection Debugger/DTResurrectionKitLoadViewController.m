@@ -14,11 +14,11 @@
 
 @synthesize tableView;
 
-- (id)initWithSpringBackController:(DTResurrectionController *)sbc {
+- (id)initWithresurrectionController:(DTResurrectionController *)sbc {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
     if (!(self = [super init])) return nil;
 	
-	springBackController = [sbc retain];
+	resurrectionController = [sbc retain];
 	
 	archivePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DTResurrectionKitPathBase];
 	
@@ -132,7 +132,7 @@
 
 
 - (void)tableView:(UITableView *)tv didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[springBackController resurrectWithArchivePath:[archivePath stringByAppendingPathComponent:[tv cellForRowAtIndexPath:indexPath].textLabel.text]];
+	[resurrectionController resurrectWithArchivePath:[archivePath stringByAppendingPathComponent:[tv cellForRowAtIndexPath:indexPath].textLabel.text]];
 	[self.parentViewController swizzledDismissModalViewControllerAnimated:YES];
 }
 

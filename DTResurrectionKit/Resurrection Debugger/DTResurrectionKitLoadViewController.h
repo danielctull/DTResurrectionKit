@@ -11,13 +11,13 @@
 
 @interface DTResurrectionKitLoadViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
 	NSArray *items;
-	DTResurrectionController *springBackController;
+	DTResurrectionController *resurrectionController;
 	NSString *archivePath;
 	UITableView *tableView;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 
-- (id)initWithSpringBackController:(DTResurrectionController *)sbc;
+- (id)initWithresurrectionController:(DTResurrectionController *)sbc;
 - (IBAction)cancel:(id)sender;
 @end

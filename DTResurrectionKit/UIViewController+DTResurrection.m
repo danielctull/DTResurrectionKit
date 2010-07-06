@@ -11,7 +11,7 @@
 
 @implementation UIViewController (DTResurrection)
 
-- (DTResurrectionController *)springBackController {
+- (DTResurrectionController *)resurrectionController {
 	
 	UIResponder *nextResponder = self;
 	
@@ -28,7 +28,7 @@
 		if ([nextResponder isKindOfClass:[DTResurrectionController class]])
 			return (DTResurrectionController *)nextResponder;
 	
-	NSLog(@"%@:%s springBackController Not Found", self, _cmd);
+	NSLog(@"%@:%s resurrectionController Not Found", self, _cmd);
 	
 	return nil;
 }
@@ -65,14 +65,14 @@
 
 // USED ONLY IN DEBUG MODE
 - (void)swizzledPresentModalViewController:(UIViewController *)modalViewController animated:(BOOL)animated {
-	DTResurrectionController *sbc = self.springBackController;
+	DTResurrectionController *sbc = self.resurrectionController;
 	[self swizzledPresentModalViewController:modalViewController animated:animated];	
 	modalViewController.view.frame = sbc.contentView.bounds;
 	[modalViewController.view addObserver:sbc forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:NULL];	
 }
 
 - (void)swizzledDismissModalViewControllerAnimated:(BOOL)animated {
-	[self.view removeObserver:self.springBackController forKeyPath:@"frame"];
+	[self.view removeObserver:self.resurrectionController forKeyPath:@"frame"];
 	[self swizzledDismissModalViewControllerAnimated:animated];
 }
 

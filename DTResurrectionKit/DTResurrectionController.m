@@ -219,7 +219,7 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 
 
 - (IBAction)loadSpringBack:(id)sender {
-	DTResurrectionKitLoadViewController *lvc = [[DTResurrectionKitLoadViewController alloc] initWithSpringBackController:self];
+	DTResurrectionKitLoadViewController *lvc = [[DTResurrectionKitLoadViewController alloc] initWithresurrectionController:self];
 	[self swizzledPresentModalViewController:lvc animated:YES];
 	[lvc release];
 }

@@ -14,7 +14,7 @@
  SpringBack controller and the front most view controller.
  */
 @interface UIViewController (DTResurrection) <DTResurrection>
-@property (readonly) DTResurrectionController *springBackController;
+@property (readonly) DTResurrectionController *resurrectionController;
 @property (readonly) UIViewController *frontViewController;
 - (BOOL)isFrontViewController;
 
