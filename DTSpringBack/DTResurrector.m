@@ -1,12 +1,12 @@
 //
-//  DTSpringBackArchiver.m
+//  DTResurrector.m
 //  DTSpringBack
 //
 //  Created by Daniel Tull on 06.11.2009.
 //  Copyright 2009 Daniel Tull. All rights reserved.
 //
 
-#import "DTSpringBackArchiver.h"
+#import "DTResurrector.h"
 #import "DTSpringBackController.h"
 
 NSString *const DTSpringBackObjectString = @"DTSpringBackObject";
@@ -14,14 +14,14 @@ NSString *const DTSpringBackRootObjectString = @"DTSpringBackRootObject";
 
 NSString *const DTSpringBackPropertyClass = @"class";
 
-@interface DTSpringBackArchiver ()
+@interface DTResurrector ()
 @property (nonatomic, retain, readwrite) NSArray *modalViewControllerParents, *modalViewControllerChildren;
 - (NSString *)generateToken;
 - (NSString *)uniqueString;
 @end
 
 
-@implementation DTSpringBackArchiver
+@implementation DTResurrector
 
 @synthesize modalViewControllerParents, modalViewControllerChildren;
 

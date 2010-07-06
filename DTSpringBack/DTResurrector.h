@@ -1,5 +1,5 @@
 //
-//  DTSpringBackArchiver.h
+//  DTResurrector.h
 //  DTSpringBack
 //
 //  Created by Daniel Tull on 06.11.2009.
@@ -25,7 +25,7 @@
  objects are not duplicated, but all the original connections are preserved, so that two objects referencing 
  another will both still be referencing the same object after restoration.
  */
-@interface DTSpringBackArchiver : NSObject {
+@interface DTResurrector : NSObject {
 
 	NSMutableDictionary *mainDictionary;
 	
