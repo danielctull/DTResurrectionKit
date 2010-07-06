@@ -33,12 +33,6 @@
 		241E29DC10F6A0240076D698 /* DTModalTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29D610F6A0240076D698 /* DTModalTestViewController.m */; };
 		241E29DD10F6A0240076D698 /* DTTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241E29D710F6A0240076D698 /* DTTestView.xib */; };
 		241E29DE10F6A0240076D698 /* DTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29D910F6A0240076D698 /* DTTestViewController.m */; };
-		241E2A8010F6A2860076D698 /* libDTUIKitDevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E2A7310F6A22F0076D698 /* libDTUIKitDevice.a */; };
-		241E2A8110F6A2860076D698 /* libDTUIKitSimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E2A7410F6A22F0076D698 /* libDTUIKitSimulator.a */; };
-		241E2AB710F6A5750076D698 /* libDTFoundationDevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E2AAF10F6A5750076D698 /* libDTFoundationDevice.a */; };
-		241E2AB810F6A5750076D698 /* libDTFoundationSimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E2AB010F6A5750076D698 /* libDTFoundationSimulator.a */; };
-		241E2AC310F6A5CA0076D698 /* libDTFoundationDevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E2AAF10F6A5750076D698 /* libDTFoundationDevice.a */; };
-		241E2AC510F6A5D30076D698 /* libDTUIKitDevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E2A7310F6A22F0076D698 /* libDTUIKitDevice.a */; };
 		241E2AC710F6A5E80076D698 /* DTSpringBack.h in Headers */ = {isa = PBXBuildFile; fileRef = 241E298F10F69EFC0076D698 /* DTSpringBack.h */; };
 		241E2AC810F6A5E90076D698 /* DTSpringBackArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 241E299010F69EFC0076D698 /* DTSpringBackArchiver.h */; };
 		241E2AC910F6A5EA0076D698 /* DTSpringBackArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E299110F69EFC0076D698 /* DTSpringBackArchiver.m */; };
@@ -77,8 +71,8 @@
 		241E2B0F10F6A7A70076D698 /* UINavigationController+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29A910F69EFC0076D698 /* UINavigationController+DTSpringBack.m */; };
 		241E2B1010F6A7A70076D698 /* UITabBarController+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29AB10F69EFC0076D698 /* UITabBarController+DTSpringBack.m */; };
 		241E2B1110F6A7A70076D698 /* UIViewController+DTSpringBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E29AD10F69EFC0076D698 /* UIViewController+DTSpringBack.m */; };
-		241E2B1210F6A7B70076D698 /* libDTFoundationSimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E2AB010F6A5750076D698 /* libDTFoundationSimulator.a */; };
-		241E2B1310F6A7B70076D698 /* libDTUIKitSimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E2A7410F6A22F0076D698 /* libDTUIKitSimulator.a */; };
+		247B136D11E3A45900A09376 /* DTStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B136C11E3A45900A09376 /* DTStack.m */; };
+		247B137411E3A47E00A09376 /* DTContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B137311E3A47E00A09376 /* DTContentController.m */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 /* End PBXBuildFile section */
@@ -123,25 +117,12 @@
 		241E29D710F6A0240076D698 /* DTTestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTTestView.xib; sourceTree = "<group>"; };
 		241E29D810F6A0240076D698 /* DTTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTestViewController.h; sourceTree = "<group>"; };
 		241E29D910F6A0240076D698 /* DTTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTestViewController.m; sourceTree = "<group>"; };
-		241E2A7310F6A22F0076D698 /* libDTUIKitDevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDTUIKitDevice.a; sourceTree = "<group>"; };
-		241E2A7410F6A22F0076D698 /* libDTUIKitSimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDTUIKitSimulator.a; sourceTree = "<group>"; };
-		241E2A7710F6A2580076D698 /* DTContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTContentController.h; sourceTree = "<group>"; };
-		241E2AA910F6A5750076D698 /* DTFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFoundation.h; sourceTree = "<group>"; };
-		241E2AAA10F6A5750076D698 /* DTOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTOrderedDictionary.h; sourceTree = "<group>"; };
-		241E2AAB10F6A5750076D698 /* DTQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTQueue.h; sourceTree = "<group>"; };
-		241E2AAC10F6A5750076D698 /* DTSortedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSortedArray.h; sourceTree = "<group>"; };
-		241E2AAD10F6A5750076D698 /* DTStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStack.h; sourceTree = "<group>"; };
-		241E2AAE10F6A5750076D698 /* DTTraversableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTraversableDictionary.h; sourceTree = "<group>"; };
-		241E2AAF10F6A5750076D698 /* libDTFoundationDevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDTFoundationDevice.a; sourceTree = "<group>"; };
-		241E2AB010F6A5750076D698 /* libDTFoundationSimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDTFoundationSimulator.a; sourceTree = "<group>"; };
-		241E2AB110F6A5750076D698 /* NSArray+DTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DTExtras.h"; sourceTree = "<group>"; };
-		241E2AB210F6A5750076D698 /* NSDate+DTComponentExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DTComponentExtension.h"; sourceTree = "<group>"; };
-		241E2AB310F6A5750076D698 /* NSDate+DTHTTPDateStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DTHTTPDateStrings.h"; sourceTree = "<group>"; };
-		241E2AB410F6A5750076D698 /* NSNumber+DTMaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+DTMaths.h"; sourceTree = "<group>"; };
-		241E2AB510F6A5750076D698 /* NSSet+DTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+DTExtras.h"; sourceTree = "<group>"; };
-		241E2AB610F6A5750076D698 /* NSString+DTPrefixString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DTPrefixString.h"; sourceTree = "<group>"; };
-		241E2AC010F6A5BA0076D698 /* libDTSpringBackDevice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDTSpringBackDevice.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		241E2AFC10F6A7960076D698 /* libDTSpringBackSimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDTSpringBackSimulator.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		247B136B11E3A45900A09376 /* DTStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStack.h; sourceTree = "<group>"; };
+		247B136C11E3A45900A09376 /* DTStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTStack.m; sourceTree = "<group>"; };
+		247B136E11E3A45900A09376 /* libDTSpringBackDevice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDTSpringBackDevice.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		247B136F11E3A45900A09376 /* libDTSpringBackSimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDTSpringBackSimulator.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		247B137211E3A47E00A09376 /* DTContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTContentController.h; sourceTree = "<group>"; };
+		247B137311E3A47E00A09376 /* DTContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTContentController.m; sourceTree = "<group>"; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -157,10 +138,6 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
-				241E2A8010F6A2860076D698 /* libDTUIKitDevice.a in Frameworks */,
-				241E2A8110F6A2860076D698 /* libDTUIKitSimulator.a in Frameworks */,
-				241E2AB710F6A5750076D698 /* libDTFoundationDevice.a in Frameworks */,
-				241E2AB810F6A5750076D698 /* libDTFoundationSimulator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,8 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				241E2AC310F6A5CA0076D698 /* libDTFoundationDevice.a in Frameworks */,
-				241E2AC510F6A5D30076D698 /* libDTUIKitDevice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +152,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				241E2B1210F6A7B70076D698 /* libDTFoundationSimulator.a in Frameworks */,
-				241E2B1310F6A7B70076D698 /* libDTUIKitSimulator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,8 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* DTSpringBack.app */,
-				241E2AC010F6A5BA0076D698 /* libDTSpringBackDevice.a */,
-				241E2AFC10F6A7960076D698 /* libDTSpringBackSimulator.a */,
+				247B136E11E3A45900A09376 /* libDTSpringBackDevice.a */,
+				247B136F11E3A45900A09376 /* libDTSpringBackSimulator.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,9 +237,8 @@
 		241E2A7210F6A22F0076D698 /* DTUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				241E2A7710F6A2580076D698 /* DTContentController.h */,
-				241E2A7310F6A22F0076D698 /* libDTUIKitDevice.a */,
-				241E2A7410F6A22F0076D698 /* libDTUIKitSimulator.a */,
+				247B137211E3A47E00A09376 /* DTContentController.h */,
+				247B137311E3A47E00A09376 /* DTContentController.m */,
 			);
 			path = DTUIKit;
 			sourceTree = "<group>";
@@ -274,20 +246,8 @@
 		241E2AA810F6A5750076D698 /* DTFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				241E2AA910F6A5750076D698 /* DTFoundation.h */,
-				241E2AAA10F6A5750076D698 /* DTOrderedDictionary.h */,
-				241E2AAB10F6A5750076D698 /* DTQueue.h */,
-				241E2AAC10F6A5750076D698 /* DTSortedArray.h */,
-				241E2AAD10F6A5750076D698 /* DTStack.h */,
-				241E2AAE10F6A5750076D698 /* DTTraversableDictionary.h */,
-				241E2AB110F6A5750076D698 /* NSArray+DTExtras.h */,
-				241E2AB210F6A5750076D698 /* NSDate+DTComponentExtension.h */,
-				241E2AB310F6A5750076D698 /* NSDate+DTHTTPDateStrings.h */,
-				241E2AB410F6A5750076D698 /* NSNumber+DTMaths.h */,
-				241E2AB510F6A5750076D698 /* NSSet+DTExtras.h */,
-				241E2AB610F6A5750076D698 /* NSString+DTPrefixString.h */,
-				241E2AAF10F6A5750076D698 /* libDTFoundationDevice.a */,
-				241E2AB010F6A5750076D698 /* libDTFoundationSimulator.a */,
+				247B136B11E3A45900A09376 /* DTStack.h */,
+				247B136C11E3A45900A09376 /* DTStack.m */,
 			);
 			path = DTFoundation;
 			sourceTree = "<group>";
@@ -406,7 +366,7 @@
 			);
 			name = DTSpringBackDevice;
 			productName = DTSpringBack;
-			productReference = 241E2AC010F6A5BA0076D698 /* libDTSpringBackDevice.a */;
+			productReference = 247B136E11E3A45900A09376 /* libDTSpringBackDevice.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		241E2AFB10F6A7960076D698 /* DTSpringBackSimulator */ = {
@@ -423,7 +383,7 @@
 			);
 			name = DTSpringBackSimulator;
 			productName = DTSpringBackSimulator;
-			productReference = 241E2AFC10F6A7960076D698 /* libDTSpringBackSimulator.a */;
+			productReference = 247B136F11E3A45900A09376 /* libDTSpringBackSimulator.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -485,6 +445,8 @@
 				241E29C010F69EFC0076D698 /* UIViewController+DTSpringBack.m in Sources */,
 				241E29DC10F6A0240076D698 /* DTModalTestViewController.m in Sources */,
 				241E29DE10F6A0240076D698 /* DTTestViewController.m in Sources */,
+				247B136D11E3A45900A09376 /* DTStack.m in Sources */,
+				247B137411E3A47E00A09376 /* DTContentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,7 +613,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.1.2;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Release;
 		};

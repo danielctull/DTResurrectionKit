@@ -8,20 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-/*!
- Specifies the type of connection to use.
- */
-typedef enum {
-	DTConnectionTypeGet = 0,	/*!< Uses a GET connection. */
-	DTConnectionTypePost,		/*!< Uses a POST connection. */
-	DTConnectionTypePut,		/*!< Uses a PUT connection. */
-	DTConnectionTypeDelete,		/*!< Uses a DELETE connection. */
-	DTConnectionTypeOptions,	/*!< Uses a OPTIONS connection. */
-	DTConnectionTypeHead,		/*!< Uses a HEAD connection. */
-	DTConnectionTypeTrace,		/*!< Uses a TRACE connection. */
-	DTConnectionTypeConnect		/*!< Uses a CONNECT connection. */
-} DTConnectionType;
-
 /** This represents a stack (last in, first out) data structure in computer science. It has the
  push and pop operations usually found in stacks, plus a few other methods
  to make it more useful.
