@@ -11,14 +11,14 @@
 
 @implementation NSArray (DTSpringBack)
 
-- (id)initWithArchiver:(DTResurrector *)archiver {
+- (id)initWithResurrector:(DTResurrector *)resurrector {
 	
-	NSInteger amount = [[archiver objectForKey:@"amount"] integerValue];
+	NSInteger amount = [[resurrector objectForKey:@"amount"] integerValue];
 	
 	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
 	
 	for (NSInteger i = 0; i < amount; i++)
-		[tempArray addObject:[archiver objectForKey:[NSString stringWithFormat:@"%i", i]]];
+		[tempArray addObject:[resurrector objectForKey:[NSString stringWithFormat:@"%i", i]]];
 	
 	self = [self initWithArray:tempArray];
 	
@@ -27,12 +27,12 @@
 	return self;
 }
 
-- (void)encodeToArchiver:(DTResurrector *)archiver {
+- (void)encodeToResurrector:(DTResurrector *)resurrector {
 	
-	[archiver setObject:[NSNumber numberWithInt:[self count]] forKey:@"amount"];
+	[resurrector setObject:[NSNumber numberWithInt:[self count]] forKey:@"amount"];
 	
 	for (NSInteger i = 0; i < [self count]; i++)
-		[archiver setObject:[self objectAtIndex:i] forKey:[NSString stringWithFormat:@"%i", i]];	
+		[resurrector setObject:[self objectAtIndex:i] forKey:[NSString stringWithFormat:@"%i", i]];	
 }
 
 

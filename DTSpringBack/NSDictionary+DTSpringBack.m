@@ -11,14 +11,14 @@
 
 @implementation NSDictionary (DTSpringBack)
 
-- (id)initWithArchiver:(DTResurrector *)archiver {
+- (id)initWithResurrector:(DTResurrector *)resurrector {
 	
-	NSInteger amount = [[archiver objectForKey:@"amount"] integerValue];
+	NSInteger amount = [[resurrector objectForKey:@"amount"] integerValue];
 	
 	NSMutableDictionary *tempDict = [[NSMutableDictionary alloc] init];
 	
 	for (NSInteger i = 0; i < amount; i++)
-		[tempDict setObject:[archiver objectForKey:[NSString stringWithFormat:@"object%i", i]] forKey:[archiver objectForKey:[NSString stringWithFormat:@"key%i", i]]];
+		[tempDict setObject:[resurrector objectForKey:[NSString stringWithFormat:@"object%i", i]] forKey:[resurrector objectForKey:[NSString stringWithFormat:@"key%i", i]]];
 		
 	self = [self initWithDictionary:tempDict];
 	
@@ -27,14 +27,14 @@
 	return self;
 }
 
-- (void)encodeToArchiver:(DTResurrector *)archiver {
+- (void)encodeToResurrector:(DTResurrector *)resurrector {
 	
-	[archiver setObject:[NSNumber numberWithInt:[self count]] forKey:@"amount"];
+	[resurrector setObject:[NSNumber numberWithInt:[self count]] forKey:@"amount"];
 	
 	for (NSInteger i = 0; i < [self count]; i++) {
 		id key = [[self allKeys] objectAtIndex:i];
-		[archiver setObject:key forKey:[NSString stringWithFormat:@"key%i", i]];
-		[archiver setObject:[self objectForKey:key] forKey:[NSString stringWithFormat:@"object%i", i]];
+		[resurrector setObject:key forKey:[NSString stringWithFormat:@"key%i", i]];
+		[resurrector setObject:[self objectForKey:key] forKey:[NSString stringWithFormat:@"object%i", i]];
 	}
 }
 @end

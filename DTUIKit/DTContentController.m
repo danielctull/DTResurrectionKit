@@ -36,11 +36,11 @@
     [super dealloc];
 }
 /*
-- (id)initWithArchiver:(DTResurrector *)archiver {
+- (id)initWithResurrector:(DTResurrector *)resurrector {
 	return [self initWithViewController:[resurrector objectForKey:@"viewController"]];
 }
 
-- (void)encodeToArchiver:(DTResurrector *)archiver {
+- (void)encodeToResurrector:(DTResurrector *)resurrector {
 	[resurrector setObject:self.viewController forKey:@"viewController"];
 }*/
 

@@ -33,25 +33,25 @@
 	return nil;
 }
 
-- (id)initWithArchiver:(DTResurrector *)archiver {
+- (id)initWithResurrector:(DTResurrector *)resurrector {
 	
 	if (!(self = [self init])) return nil;
 	
-	self.title = [archiver objectForKey:@"title"];
+	self.title = [resurrector objectForKey:@"title"];
 	
-	UIViewController *mvc = [archiver objectForKey:@"modalViewController"];
+	UIViewController *mvc = [resurrector objectForKey:@"modalViewController"];
 	if (mvc)
-		[archiver viewController:self unpackedModalViewController:mvc];
+		[resurrector viewController:self unpackedModalViewController:mvc];
 	
 	return self;
 }
 
-- (void)encodeToArchiver:(DTResurrector *)archiver {
-	[archiver setObject:self.title forKey:@"title"];
+- (void)encodeToResurrector:(DTResurrector *)resurrector {
+	[resurrector setObject:self.title forKey:@"title"];
 	
 	if (self.modalViewController) {
 		if ([self isEqual:self.modalViewController.parentViewController])
-			[archiver setObject:self.modalViewController forKey:@"modalViewController"];
+			[resurrector setObject:self.modalViewController forKey:@"modalViewController"];
 	}
 }
 

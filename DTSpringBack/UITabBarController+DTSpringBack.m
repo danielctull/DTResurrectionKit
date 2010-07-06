@@ -10,26 +10,26 @@
 #import "DTResurrector.h"
 
 @implementation UITabBarController (DTSpringBack)
-- (id)initWithArchiver:(DTResurrector *)archiver {
+- (id)initWithResurrector:(DTResurrector *)resurrector {
 	
 	if (!(self = [self init])) return nil;
 	
-	self.viewControllers = [archiver objectForKey:@"viewControllers"];
-	self.selectedIndex = [[archiver objectForKey:@"selectedIndex"] integerValue];
+	self.viewControllers = [resurrector objectForKey:@"viewControllers"];
+	self.selectedIndex = [[resurrector objectForKey:@"selectedIndex"] integerValue];
 	
-	UIViewController *mvc = [archiver objectForKey:@"modalViewController"];
-	if (mvc) [archiver viewController:self.selectedViewController unpackedModalViewController:mvc];
+	UIViewController *mvc = [resurrector objectForKey:@"modalViewController"];
+	if (mvc) [resurrector viewController:self.selectedViewController unpackedModalViewController:mvc];
 	
 	return self;
 }
 
-- (void)encodeToArchiver:(DTResurrector *)archiver {
-	[archiver setObject:self.viewControllers forKey:@"viewControllers"];
-	[archiver setObject:[NSNumber numberWithInteger:self.selectedIndex] forKey:@"selectedIndex"];
+- (void)encodeToResurrector:(DTResurrector *)resurrector {
+	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
+	[resurrector setObject:[NSNumber numberWithInteger:self.selectedIndex] forKey:@"selectedIndex"];
 	
 	if (self.modalViewController) {
 		if ([self isEqual:self.modalViewController.parentViewController])
-			[archiver setObject:self.modalViewController forKey:@"modalViewController"];
+			[resurrector setObject:self.modalViewController forKey:@"modalViewController"];
 	}
 }
 

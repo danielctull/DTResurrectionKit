@@ -11,27 +11,27 @@
 
 @implementation UINavigationController (DTSpringBack)
 
-- (id)initWithArchiver:(DTResurrector *)archiver {
+- (id)initWithResurrector:(DTResurrector *)resurrector {
 	
-	NSArray *vcs = [archiver objectForKey:@"viewControllers"];
+	NSArray *vcs = [resurrector objectForKey:@"viewControllers"];
 	
 	if (!(self = [self initWithRootViewController:[vcs objectAtIndex:0]])) return nil;
 	
 	for (NSInteger i = 1; i < [vcs count]; i++)
 		[self pushViewController:[vcs objectAtIndex:i] animated:NO];
 	
-	UIViewController *mvc = [archiver objectForKey:@"modalViewController"];
-	if (mvc) [archiver viewController:self.topViewController unpackedModalViewController:mvc];
+	UIViewController *mvc = [resurrector objectForKey:@"modalViewController"];
+	if (mvc) [resurrector viewController:self.topViewController unpackedModalViewController:mvc];
 	
 	return self;
 }
 
-- (void)encodeToArchiver:(DTResurrector *)archiver {
-	[archiver setObject:self.viewControllers forKey:@"viewControllers"];
+- (void)encodeToResurrector:(DTResurrector *)resurrector {
+	[resurrector setObject:self.viewControllers forKey:@"viewControllers"];
 	
 	if (self.modalViewController) {
 		if ([self isEqual:self.modalViewController.parentViewController])
-			[archiver setObject:self.modalViewController forKey:@"modalViewController"];
+			[resurrector setObject:self.modalViewController forKey:@"modalViewController"];
 	}
 }
 

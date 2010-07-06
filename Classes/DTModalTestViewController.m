@@ -18,18 +18,18 @@
 	return [self initWithNibName:@"DTTestView" bundle:nil];
 }
 
-- (id)initWithArchiver:(DTResurrector *)archiver {
+- (id)initWithResurrector:(DTResurrector *)resurrector {
 	
-	if (!(self = [super initWithArchiver:archiver])) return nil;
+	if (!(self = [super initWithResurrector:resurrector])) return nil;
 	
-	count = [[archiver objectForKey:@"count"] integerValue];
+	count = [[resurrector objectForKey:@"count"] integerValue];
 	
 	return self;
 }
 
-- (void)encodeToArchiver:(DTResurrector *)archiver {
-	[super encodeToArchiver:archiver];
-	[archiver setObject:[NSNumber numberWithInteger:self.count] forKey:@"count"];
+- (void)encodeToResurrector:(DTResurrector *)resurrector {
+	[super encodeToResurrector:resurrector];
+	[resurrector setObject:[NSNumber numberWithInteger:self.count] forKey:@"count"];
 }
 
 - (void)setCount:(NSInteger)anInteger {
