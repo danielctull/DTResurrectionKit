@@ -43,7 +43,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* DTSpringBackAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBackAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* DTSpringBackAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSpringBackAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* DTSpringBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTSpringBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* DTResurrectionKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTResurrectionKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		241E298F10F69EFC0076D698 /* DTResurrectionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionKit.h; sourceTree = "<group>"; };
 		241E299010F69EFC0076D698 /* DTResurrector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrector.h; sourceTree = "<group>"; };
@@ -86,8 +86,8 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* DTSpringBack_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSpringBack_Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* DTSpringBack-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DTSpringBack-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* DTResurrectionKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionKit_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* DTResurrectionKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DTResurrectionKit-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* DTSpringBack.app */,
+				1D6058910D05DD3D006BFB54 /* DTResurrectionKit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,7 +214,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* DTSpringBack_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* DTResurrectionKit_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -224,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* DTSpringBack-Info.plist */,
+				8D1107310486CEB800E47090 /* DTResurrectionKit-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -242,9 +242,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* DTSpringBackApp */ = {
+		1D6058900D05DD3D006BFB54 /* DTResurrectionKitApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DTSpringBackApp" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DTResurrectionKitApp" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -254,9 +254,9 @@
 			);
 			dependencies = (
 			);
-			name = DTSpringBackApp;
+			name = DTResurrectionKitApp;
 			productName = DTSpringBack;
-			productReference = 1D6058910D05DD3D006BFB54 /* DTSpringBack.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* DTResurrectionKit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -264,14 +264,14 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DTSpringBack" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DTResurrectionKit" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* DTSpringBackApp */,
+				1D6058900D05DD3D006BFB54 /* DTResurrectionKitApp */,
 			);
 		};
 /* End PBXProject section */
@@ -332,14 +332,14 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DTSpringBack_Prefix.pch;
-				INFOPLIST_FILE = "DTSpringBack-Info.plist";
+				GCC_PREFIX_HEADER = DTResurrectionKit_Prefix.pch;
+				INFOPLIST_FILE = "DTResurrectionKit-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/DTFoundation\"",
 					"\"$(SRCROOT)/DTUIKit\"",
 				);
-				PRODUCT_NAME = DTSpringBack;
+				PRODUCT_NAME = DTResurrectionKit;
 			};
 			name = Debug;
 		};
@@ -349,14 +349,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DTSpringBack_Prefix.pch;
-				INFOPLIST_FILE = "DTSpringBack-Info.plist";
+				GCC_PREFIX_HEADER = DTResurrectionKit_Prefix.pch;
+				INFOPLIST_FILE = "DTResurrectionKit-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/DTFoundation\"",
 					"\"$(SRCROOT)/DTUIKit\"",
 				);
-				PRODUCT_NAME = DTSpringBack;
+				PRODUCT_NAME = DTResurrectionKit;
 			};
 			name = Release;
 		};
@@ -389,7 +389,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DTSpringBackApp" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "DTResurrectionKitApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -398,7 +398,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DTSpringBack" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DTResurrectionKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
