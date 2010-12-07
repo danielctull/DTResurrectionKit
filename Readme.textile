@@ -2,7 +2,7 @@ h1. DTResurrectionKit
 
 DTResurrectionKit is a small cocoa framework for resurrecting an object graph, specifically designed with a view controller structure on the iPhone.
 
-*WARNING* DTResurrectionKit 1.0 (the release given this formal tag) moves the location of all of the classes.
+*WARNING* DTResurrectionKit 1.1 moves the location of all of the classes in the project to the root. It also removes the debug mode which is now in a separate branch called debug. This should only be used to debug and not to put into production apps. I have split it into a separate branch to make this distinction and because it also includes images that won't be used for release.
 
 h2. Branch Structure
 
