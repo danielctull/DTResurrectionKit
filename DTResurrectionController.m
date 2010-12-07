@@ -35,7 +35,7 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 	
 	if (!(self = [super init])) return nil;
 	
-	self.position = DCTContentBarPositionTop;
+	self.position = DCTContentBarPositionNone;
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillGoAway:) name:UIApplicationWillTerminateNotification object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillGoAway:) name:UIApplicationDidEnterBackgroundNotification object:nil];
