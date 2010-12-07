@@ -1,0 +1,6 @@
+[submodule "DCTUIKit"]
+	path = DCTUIKit
+	url = git://github.com/danielctull/DCTUIKit.git
+[submodule "DCTFoundation"]
+	path = DCTFoundation
+	url = git://github.com/danielctull/DCTFoundation.git

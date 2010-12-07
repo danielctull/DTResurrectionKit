@@ -51,7 +51,7 @@ NSString *const DTResurrectionKitPropertyClass = @"class";
 - (NSDictionary *)deconstructWithRootObject:(NSObject<DTResurrection> *)object {
 	
 	mainDictionary = [[NSMutableDictionary alloc] init];
-	encodingStack = [[DTStack alloc] init];
+	encodingStack = [[DCTStack alloc] init];
 	objectDictionary = [[NSMutableDictionary alloc] init];
 	
 	NSString *token = [self generateToken];
@@ -135,7 +135,7 @@ NSString *const DTResurrectionKitPropertyClass = @"class";
 	if (!token) return nil;	
 	
 	mainDictionary = [aDictionary retain];
-	encodingStack = [[DTStack alloc] init];
+	encodingStack = [[DCTStack alloc] init];
 	objectDictionary = [[NSMutableDictionary alloc] init];
 	
 	NSMutableDictionary *objectDict = [mainDictionary objectForKey:token];
