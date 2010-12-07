@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DTResurrectionKit.h"
-#import "DTContentController.h"
+#import "DCTContentViewController.h"
 
 extern NSString *const DTResurrectionKitPathBase;
 extern NSString *const DTResurrectionKitPathVersion;
@@ -17,8 +17,7 @@ extern NSString *const DTResurrectionKitPathDebug;
 /** The resurrection controller is a view controller subclass that easily enables
  resurrection behaviour in your application.
  */
-@interface DTResurrectionController : DTContentController {
-	//UIViewController<DTResurrection> *viewController;
+@interface DTResurrectionController : DCTContentViewController {
 	NSString *archivePath;
 	BOOL hasResurrected;
 	BOOL debugMode;
@@ -31,10 +30,9 @@ extern NSString *const DTResurrectionKitPathDebug;
 
 @property (nonatomic, assign) BOOL hasResurrected;
 @property (nonatomic, assign) BOOL debugMode;
-//@property (nonatomic, retain) UIViewController<DTResurrection> *viewController;
 
-- (IBAction)loadResurrection:(id)sender;
-- (IBAction)saveResurrection:(id)sender;
+//- (IBAction)loadResurrection:(id)sender;
+//- (IBAction)saveResurrection:(id)sender;
 - (void)resurrectWithArchivePath:(NSString *)path;
 
 @end

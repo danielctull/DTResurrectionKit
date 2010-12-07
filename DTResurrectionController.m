@@ -7,8 +7,8 @@
 //
 
 #import "DTResurrectionKit.h"
-#import "DTResurrectionKitLoadViewController.h"
-#import "DTResurrectionKitSaveViewController.h"
+//#import "DTResurrectionKitLoadViewController.h"
+//#import "DTResurrectionKitSaveViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -35,7 +35,7 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 	
 	if (!(self = [super init])) return nil;
 	
-	self.position = DTBarPositionTop;
+	self.position = DCTContentBarPositionTop;
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillGoAway:) name:UIApplicationWillTerminateNotification object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillGoAway:) name:UIApplicationDidEnterBackgroundNotification object:nil];
@@ -65,7 +65,6 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	[modalViewControllerParents release];
 	[modalViewControllerChildren release];
-	[viewController release];
 	[archivePath release];
 	[super dealloc];
 }
@@ -217,7 +216,7 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 	//[self saveCurrentImage];
 }
 
-
+/*
 - (IBAction)loadResurrection:(id)sender {
 	DTResurrectionKitLoadViewController *lvc = [[DTResurrectionKitLoadViewController alloc] initWithresurrectionController:self];
 	[self swizzledPresentModalViewController:lvc animated:YES];
@@ -228,6 +227,6 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 	DTResurrectionKitSaveViewController *lvc = [[DTResurrectionKitSaveViewController alloc] initWithViewController:self.viewController];
 	[self swizzledPresentModalViewController:lvc animated:YES];
 	[lvc release];
-}
+}*/
 
 @end

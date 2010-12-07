@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DTStack.h"
+#import "DCTStack.h"
 
 @protocol DTResurrection;
 
@@ -31,7 +31,7 @@
 	
 	NSMutableDictionary *currentDict;
 	
-	DTStack *encodingStack;
+	DCTStack *encodingStack;
 	NSDictionary *currentlyEncodingObject;
 	NSString *currentlyEncodingObjectsKey;
 	NSMutableDictionary *objectDictionary;
