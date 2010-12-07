@@ -52,6 +52,19 @@
 		24285D4112AEE36800357539 /* UITabBarController+DTResurrection.m in Sources */ = {isa = PBXBuildFile; fileRef = 24285C9012AEE36800357539 /* UITabBarController+DTResurrection.m */; };
 		24285D4212AEE36800357539 /* UIViewController+DTResurrection.m in Sources */ = {isa = PBXBuildFile; fileRef = 24285C9212AEE36800357539 /* UIViewController+DTResurrection.m */; };
 		24285D4412AEE47000357539 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24285D4312AEE47000357539 /* QuartzCore.framework */; };
+		242B2A3912AEED4D0029F46D /* DTResurrectionController+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 242B2A2912AEED4D0029F46D /* DTResurrectionController+Debug.m */; };
+		242B2A3A12AEED4D0029F46D /* DTResurrectionKitDebugView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242B2A2A12AEED4D0029F46D /* DTResurrectionKitDebugView.xib */; };
+		242B2A3B12AEED4D0029F46D /* DTResurrectionKitLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242B2A2B12AEED4D0029F46D /* DTResurrectionKitLoadView.xib */; };
+		242B2A3C12AEED4D0029F46D /* DTResurrectionKitLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242B2A2D12AEED4D0029F46D /* DTResurrectionKitLoadViewController.m */; };
+		242B2A3D12AEED4D0029F46D /* DTResurrectionKitSaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242B2A2E12AEED4D0029F46D /* DTResurrectionKitSaveView.xib */; };
+		242B2A3E12AEED4D0029F46D /* DTResurrectionKitSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242B2A3012AEED4D0029F46D /* DTResurrectionKitSaveViewController.m */; };
+		242B2A3F12AEED4D0029F46D /* DTResurrectionKitBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 242B2A3212AEED4D0029F46D /* DTResurrectionKitBarBackground.png */; };
+		242B2A4012AEED4D0029F46D /* DTResurrectionKitButtonCancelDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 242B2A3312AEED4D0029F46D /* DTResurrectionKitButtonCancelDefault.png */; };
+		242B2A4112AEED4D0029F46D /* DTResurrectionKitButtonCancelSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 242B2A3412AEED4D0029F46D /* DTResurrectionKitButtonCancelSelected.png */; };
+		242B2A4212AEED4D0029F46D /* DTResurrectionKitButtonLoadDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 242B2A3512AEED4D0029F46D /* DTResurrectionKitButtonLoadDefault.png */; };
+		242B2A4312AEED4D0029F46D /* DTResurrectionKitButtonLoadSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 242B2A3612AEED4D0029F46D /* DTResurrectionKitButtonLoadSelected.png */; };
+		242B2A4412AEED4D0029F46D /* DTResurrectionKitButtonSaveDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 242B2A3712AEED4D0029F46D /* DTResurrectionKitButtonSaveDefault.png */; };
+		242B2A4512AEED4D0029F46D /* DTResurrectionKitButtonSaveSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 242B2A3812AEED4D0029F46D /* DTResurrectionKitButtonSaveSelected.png */; };
 		2461780C11E3B1AB007EB306 /* DTResurrectionKitAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2461780B11E3B1AB007EB306 /* DTResurrectionKitAppDelegate.m */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
@@ -144,6 +157,22 @@
 		24285C9112AEE36800357539 /* UIViewController+DTResurrection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DTResurrection.h"; sourceTree = "<group>"; };
 		24285C9212AEE36800357539 /* UIViewController+DTResurrection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DTResurrection.m"; sourceTree = "<group>"; };
 		24285D4312AEE47000357539 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Xcode4/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Xcode4/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Xcode4/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		242B2A2812AEED4D0029F46D /* DTResurrectionController+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTResurrectionController+Debug.h"; sourceTree = "<group>"; };
+		242B2A2912AEED4D0029F46D /* DTResurrectionController+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DTResurrectionController+Debug.m"; sourceTree = "<group>"; };
+		242B2A2A12AEED4D0029F46D /* DTResurrectionKitDebugView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTResurrectionKitDebugView.xib; sourceTree = "<group>"; };
+		242B2A2B12AEED4D0029F46D /* DTResurrectionKitLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTResurrectionKitLoadView.xib; sourceTree = "<group>"; };
+		242B2A2C12AEED4D0029F46D /* DTResurrectionKitLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionKitLoadViewController.h; sourceTree = "<group>"; };
+		242B2A2D12AEED4D0029F46D /* DTResurrectionKitLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrectionKitLoadViewController.m; sourceTree = "<group>"; };
+		242B2A2E12AEED4D0029F46D /* DTResurrectionKitSaveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DTResurrectionKitSaveView.xib; sourceTree = "<group>"; };
+		242B2A2F12AEED4D0029F46D /* DTResurrectionKitSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionKitSaveViewController.h; sourceTree = "<group>"; };
+		242B2A3012AEED4D0029F46D /* DTResurrectionKitSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrectionKitSaveViewController.m; sourceTree = "<group>"; };
+		242B2A3212AEED4D0029F46D /* DTResurrectionKitBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTResurrectionKitBarBackground.png; sourceTree = "<group>"; };
+		242B2A3312AEED4D0029F46D /* DTResurrectionKitButtonCancelDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTResurrectionKitButtonCancelDefault.png; sourceTree = "<group>"; };
+		242B2A3412AEED4D0029F46D /* DTResurrectionKitButtonCancelSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTResurrectionKitButtonCancelSelected.png; sourceTree = "<group>"; };
+		242B2A3512AEED4D0029F46D /* DTResurrectionKitButtonLoadDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTResurrectionKitButtonLoadDefault.png; sourceTree = "<group>"; };
+		242B2A3612AEED4D0029F46D /* DTResurrectionKitButtonLoadSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTResurrectionKitButtonLoadSelected.png; sourceTree = "<group>"; };
+		242B2A3712AEED4D0029F46D /* DTResurrectionKitButtonSaveDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTResurrectionKitButtonSaveDefault.png; sourceTree = "<group>"; };
+		242B2A3812AEED4D0029F46D /* DTResurrectionKitButtonSaveSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DTResurrectionKitButtonSaveSelected.png; sourceTree = "<group>"; };
 		2461780A11E3B1AB007EB306 /* DTResurrectionKitAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTResurrectionKitAppDelegate.h; sourceTree = "<group>"; };
 		2461780B11E3B1AB007EB306 /* DTResurrectionKitAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTResurrectionKitAppDelegate.m; sourceTree = "<group>"; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -316,6 +345,7 @@
 				24285C8512AEE36800357539 /* DTResurrectionKit.h */,
 				24285C8612AEE36800357539 /* DTResurrector.h */,
 				24285C8712AEE36800357539 /* DTResurrector.m */,
+				242B2A2712AEED4D0029F46D /* Resurrection Debugger */,
 				24285C8812AEE36800357539 /* NSArray+DTResurrection.h */,
 				24285C8912AEE36800357539 /* NSArray+DTResurrection.m */,
 				24285C8A12AEE36800357539 /* NSDictionary+DTResurrection.h */,
@@ -330,6 +360,37 @@
 			name = DTResurrectionKit;
 			path = /Users/danielctull/Dropbox/Programs/Cocoa/Frameworks/DTResurrectionKit;
 			sourceTree = "<absolute>";
+		};
+		242B2A2712AEED4D0029F46D /* Resurrection Debugger */ = {
+			isa = PBXGroup;
+			children = (
+				242B2A2812AEED4D0029F46D /* DTResurrectionController+Debug.h */,
+				242B2A2912AEED4D0029F46D /* DTResurrectionController+Debug.m */,
+				242B2A2A12AEED4D0029F46D /* DTResurrectionKitDebugView.xib */,
+				242B2A2B12AEED4D0029F46D /* DTResurrectionKitLoadView.xib */,
+				242B2A2C12AEED4D0029F46D /* DTResurrectionKitLoadViewController.h */,
+				242B2A2D12AEED4D0029F46D /* DTResurrectionKitLoadViewController.m */,
+				242B2A2E12AEED4D0029F46D /* DTResurrectionKitSaveView.xib */,
+				242B2A2F12AEED4D0029F46D /* DTResurrectionKitSaveViewController.h */,
+				242B2A3012AEED4D0029F46D /* DTResurrectionKitSaveViewController.m */,
+				242B2A3112AEED4D0029F46D /* Images */,
+			);
+			path = "Resurrection Debugger";
+			sourceTree = "<group>";
+		};
+		242B2A3112AEED4D0029F46D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				242B2A3212AEED4D0029F46D /* DTResurrectionKitBarBackground.png */,
+				242B2A3312AEED4D0029F46D /* DTResurrectionKitButtonCancelDefault.png */,
+				242B2A3412AEED4D0029F46D /* DTResurrectionKitButtonCancelSelected.png */,
+				242B2A3512AEED4D0029F46D /* DTResurrectionKitButtonLoadDefault.png */,
+				242B2A3612AEED4D0029F46D /* DTResurrectionKitButtonLoadSelected.png */,
+				242B2A3712AEED4D0029F46D /* DTResurrectionKitButtonSaveDefault.png */,
+				242B2A3812AEED4D0029F46D /* DTResurrectionKitButtonSaveSelected.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
@@ -426,6 +487,16 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				241E29DD10F6A0240076D698 /* DTTestView.xib in Resources */,
+				242B2A3A12AEED4D0029F46D /* DTResurrectionKitDebugView.xib in Resources */,
+				242B2A3B12AEED4D0029F46D /* DTResurrectionKitLoadView.xib in Resources */,
+				242B2A3D12AEED4D0029F46D /* DTResurrectionKitSaveView.xib in Resources */,
+				242B2A3F12AEED4D0029F46D /* DTResurrectionKitBarBackground.png in Resources */,
+				242B2A4012AEED4D0029F46D /* DTResurrectionKitButtonCancelDefault.png in Resources */,
+				242B2A4112AEED4D0029F46D /* DTResurrectionKitButtonCancelSelected.png in Resources */,
+				242B2A4212AEED4D0029F46D /* DTResurrectionKitButtonLoadDefault.png in Resources */,
+				242B2A4312AEED4D0029F46D /* DTResurrectionKitButtonLoadSelected.png in Resources */,
+				242B2A4412AEED4D0029F46D /* DTResurrectionKitButtonSaveDefault.png in Resources */,
+				242B2A4512AEED4D0029F46D /* DTResurrectionKitButtonSaveSelected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +549,9 @@
 				24285D4012AEE36800357539 /* UINavigationController+DTResurrection.m in Sources */,
 				24285D4112AEE36800357539 /* UITabBarController+DTResurrection.m in Sources */,
 				24285D4212AEE36800357539 /* UIViewController+DTResurrection.m in Sources */,
+				242B2A3912AEED4D0029F46D /* DTResurrectionController+Debug.m in Sources */,
+				242B2A3C12AEED4D0029F46D /* DTResurrectionKitLoadViewController.m in Sources */,
+				242B2A3E12AEED4D0029F46D /* DTResurrectionKitSaveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
