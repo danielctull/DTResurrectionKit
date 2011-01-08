@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>DTResurrector Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc" />
+	</head>
+	<body>
+		<article>
+			<div class="main-navigation navigation-top">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="header">
+				<div class="section-header">
+					<h1 class="title title-header">DTResurrector Class Reference</h1>
+				</div>		
+			</div>
+			<div id="container">	
+				
+				<div class="section section-specification"><table cellspacing="0"><tbody>
+					<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">DTResurrector.h</td>
+</tr>
+					</tbody></table></div>
+				
+				
+				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p> When DTResurrectionKit is prompted to save it will ask every object in the object graph to save neccessary data using the -encodeToResurrector method defined in the DTResurrectionKit protocol. When asked, objects can store any object they wish, as long as it itself adheres to the DTResurrectionKit protocol or is one of the core objects: NSString, NSData, NSDate or NSNumber. </p>
+
+<p> Once passed to the encoder, it will then ask any non-core-object to save its data. In this reccursive fashion, the whole object graph will be included and can be restored later on. </p>
+
+<p> The encoder stores objects as a flat structure, linking objects by an internal reference. In this way objects will only be asked to save themselves once. This means not only is the resulting file on disk is small because objects are not duplicated, but all the original connections are preserved, so that two objects referencing another will both still be referencing the same object after restoration. </p>
+
+				</div>
+				
+				
+				
+				
+				<div class="section section-tasks">
+					<h2 class="subtitle subtitle-tasks">Tasks</h2>
+					
+					<h3 class="subsubtitle task-title">Convert graph hierarchy @{</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deconstructWithRootObject:">- deconstructWithRootObject:</a></code>
+		<span class="tooltip"> @brief Encodes the graph hierarchy starting at the given object. </span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resurrect:">- resurrect:</a></code>
+		<span class="tooltip"> @brief Restores a graph hierarchy using a dictionary representation. </span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Storing values @{</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setObject:forKey:">- setObject:forKey:</a></code>
+		<span class="tooltip"> @brief Use to save metadata about the object. </span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectForKey:">- objectForKey:</a></code>
+		<span class="tooltip"> @brief Use to retrive metadata about the object. </span>
+	</span>
+	
+</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/deconstructWithRootObject:" title="deconstructWithRootObject:"></a>
+	<h3 class="subsubtitle method-title">deconstructWithRootObject:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p> @brief Encodes the graph hierarchy starting at the given object. </p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)deconstructWithRootObject:(NSObject&lt;DTResurrection&gt; *)<em>object</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd> The root object of the graph. return A dictionary representing the object graph. </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTResurrector.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/objectForKey:" title="objectForKey:"></a>
+	<h3 class="subsubtitle method-title">objectForKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p> @brief Use to retrive metadata about the object. </p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)objectForKey:(NSString *)<em>key</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd> The key to identify the object. </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTResurrector.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/resurrect:" title="resurrect:"></a>
+	<h3 class="subsubtitle method-title">resurrect:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p> @brief Restores a graph hierarchy using a dictionary representation. </p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)resurrect:(NSDictionary *)<em>dictionary</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>dictionary</em></dt>
+			<dd> A dictionary representing the object graph. return The root object of the graph. </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTResurrector.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setObject:forKey:" title="setObject:forKey:"></a>
+	<h3 class="subsubtitle method-title">setObject:forKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p> @brief Use to save metadata about the object. </p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setObject:(id)<em>object</em> forKey:(NSString *)<em>key</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd> The object to be saved. </dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd> The key to identify the object. </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTResurrector.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+				
+				
+			</div>
+			<div class="main-navigation navigation-bottom">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="footer">
+				<hr />
+				<div class="footer-copyright">
+					<p><span class="copyright">&copy; 2011 Daniel Tull. All rights reserved. (Last updated: 2011-01-08)</span><br />
+					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc</a>.</span></p>
+				</div>
+			</div>
+		</article>
+	</body>
+</html>
