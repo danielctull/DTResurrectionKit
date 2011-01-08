@@ -41,7 +41,7 @@ extern NSString *const DTResurrectionKitPathDebug;
 //- (IBAction)saveResurrection:(id)sender;
 
 /**
- @param path 
+ 
  
  */
 - (void)resurrectWithArchivePath:(NSString *)path;
