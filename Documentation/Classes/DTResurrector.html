@@ -50,13 +50,25 @@
 				<div class="section section-tasks">
 					<h2 class="subtitle subtitle-tasks">Tasks</h2>
 					
-					<h3 class="subsubtitle task-title">Convert graph hierarchy @{</h3>
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectIsCoreObject:">- objectIsCoreObject:</a></code>
+		<span class="tooltip"> Used to test if an the given object is a core object within resurrection kit. </span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Convert graph hierarchy</h3>
 
 					<ul class="task-list">
 						<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/deconstructWithRootObject:">- deconstructWithRootObject:</a></code>
-		<span class="tooltip"> @brief Encodes the graph hierarchy starting at the given object. </span>
+		<span class="tooltip"> Encodes the graph hierarchy starting at the given object. </span>
 	</span>
 	
 </li><li>
@@ -68,19 +80,19 @@
 </li>
 					</ul>
 					
-					<h3 class="subsubtitle task-title">Storing values @{</h3>
+					<h3 class="subsubtitle task-title">Storing values</h3>
 
 					<ul class="task-list">
 						<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setObject:forKey:">- setObject:forKey:</a></code>
-		<span class="tooltip"> @brief Use to save metadata about the object. </span>
+		<span class="tooltip"> Use to save metadata about the object. </span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/objectForKey:">- objectForKey:</a></code>
-		<span class="tooltip"> @brief Use to retrive metadata about the object. </span>
+		<span class="tooltip"> Use to retrive metadata about the object. </span>
 	</span>
 	
 </li>
@@ -104,7 +116,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p> @brief Encodes the graph hierarchy starting at the given object. </p>
+		<p> Encodes the graph hierarchy starting at the given object. </p>
 	</div>		
 	
 	
@@ -116,12 +128,17 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>object</em></dt>
-			<dd> The root object of the graph. return A dictionary representing the object graph. </dd>
+			<dd> The root object of the graph. </dd>
 		</dl>
 		
 	</div>
 	
 	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p> A dictionary representing the object graph. </p>
+	</div>
 	
 	
 	
@@ -146,7 +163,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p> @brief Use to retrive metadata about the object. </p>
+		<p> Use to retrive metadata about the object. </p>
 	</div>		
 	
 	
@@ -182,6 +199,64 @@
 </div>
 					
 					<div class="section-method">
+	<a name="//api/name/objectIsCoreObject:" title="objectIsCoreObject:"></a>
+	<h3 class="subsubtitle method-title">objectIsCoreObject:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p> Used to test if an the given object is a core object within resurrection kit. </p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)objectIsCoreObject:(id)<em>object</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd> The object to test. </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p> YES if the object is a core object, NO if not. </p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p> Used to test if an the given object is a core object within resurrection kit. </p>
+		
+		<p> Core objects in the system are currently members of the classes NSNumber, NSString, NSData and NSDate. If you want to store any other type of object, you will need to implement the initWithResurrector: and encodeToResurrector: methods from the <a href="../Protocols/DTResurrection.html">DTResurrection</a> protocol. </p>
+		
+		<p> The reason the list of core objects is not the same as any object that conforms to NSCoding is that the resurrection system keeps a reference of the objects it is saving, and if it comes across the same object again, it won&apos;t need to query it again, and instead will use the existing refernce. </p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DTResurrector.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
 	<a name="//api/name/resurrect:" title="resurrect:"></a>
 	<h3 class="subsubtitle method-title">resurrect:</h3>
 	
@@ -200,12 +275,17 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>dictionary</em></dt>
-			<dd> A dictionary representing the object graph. return The root object of the graph. </dd>
+			<dd> A dictionary representing the object graph. </dd>
 		</dl>
 		
 	</div>
 	
 	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p> The root object of the graph. </p>
+	</div>
 	
 	
 	
@@ -230,7 +310,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p> @brief Use to save metadata about the object. </p>
+		<p> Use to save metadata about the object. </p>
 	</div>		
 	
 	
