@@ -188,7 +188,7 @@ NSString *const DTResurrectionKitPathDebug = @"Debug";
 	@try {
 		NSDictionary *dict = [resurrector deconstructWithRootObject:self.viewController];
 		[dict writeToFile:archivePath atomically:YES];
-		NSLog(@"%@:%s Finish: %@", self, _cmd, dict);
+		NSLog(@"%@:%@ Finish: %@", self, NSStringFromSelector(_cmd), dict);
 	}
 	@catch (NSException *exception) {
 		//NSLog(@"Caught %@: %@", [exception name], [exception reason]);

@@ -15,7 +15,7 @@
 	
 	UIResponder *nextResponder = self;
 	
-	while (nextResponder = [nextResponder nextResponder])
+	while ((nextResponder = [nextResponder nextResponder]))
 		if ([nextResponder isKindOfClass:[DTResurrectionController class]])
 			return (DTResurrectionController *)nextResponder;
 	
@@ -24,11 +24,11 @@
 	if ([nextResponder isKindOfClass:[DTResurrectionController class]])
 		return (DTResurrectionController *)nextResponder;
 	
-	while (nextResponder = [nextResponder nextResponder])
+	while ((nextResponder = [nextResponder nextResponder]))
 		if ([nextResponder isKindOfClass:[DTResurrectionController class]])
 			return (DTResurrectionController *)nextResponder;
 	
-	NSLog(@"%@:%s resurrectionController Not Found", self, _cmd);
+	NSLog(@"%@:%@ resurrectionController Not Found", self, NSStringFromSelector(_cmd));
 	
 	return nil;
 }
