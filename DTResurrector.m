@@ -85,7 +85,7 @@ NSString *const DTResurrectionKitPropertyClass = @"class";
 		NSEnumerator *enumerator = [objectDictionary keyEnumerator];
 		NSString *testToken;
 		
-		while (testToken = [enumerator nextObject])
+		while ((testToken = [enumerator nextObject]))
 			if ([[objectDictionary objectForKey:testToken] isEqual:object])
 				break;
 		
@@ -180,7 +180,7 @@ NSString *const DTResurrectionKitPropertyClass = @"class";
 	
 	NSObject<DTResurrection> *returnObject;
 	
-	if (returnObject = [objectDictionary objectForKey:token])
+	if ((returnObject = [objectDictionary objectForKey:token]))
 		return returnObject;
 		
 	NSDictionary *objectDict = [mainDictionary objectForKey:token];

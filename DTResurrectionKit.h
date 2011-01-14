@@ -12,7 +12,10 @@
  from the resurrection system.
  */
 @protocol DTResurrection
-/** @brief Initialiser DTResurrectionKit uses to restore the object.
+
+
+
+/** Initialiser DTResurrectionKit uses to restore the object.
  
  As shown in DTResurrector, you can save 
  
@@ -20,12 +23,15 @@
  */
 - (id)initWithResurrector:(DTResurrector *)resurrector;
 
-/** @brief Method DTResurrectionKit uses to save the object metadata.
+
+
+/** Method DTResurrectionKit uses to save the object metadata.
  
  @param resurrector The resurrector doing the saving.
  */
 - (void)encodeToResurrector:(DTResurrector *)resurrector;
 @end
+
 
 #import "DTResurrector.h"
 #import "DTResurrectionController.h"

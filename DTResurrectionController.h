@@ -28,11 +28,22 @@ extern NSString *const DTResurrectionKitPathDebug;
 	
 }
 
+/**  
+ */
 @property (nonatomic, assign) BOOL hasResurrected;
+
+
+/** 
+ */
 @property (nonatomic, assign) BOOL debugMode;
 
 //- (IBAction)loadResurrection:(id)sender;
 //- (IBAction)saveResurrection:(id)sender;
+
+/**
+ 
+ 
+ */
 - (void)resurrectWithArchivePath:(NSString *)path;
 
 @end
