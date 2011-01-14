@@ -40,54 +40,59 @@
 	NSArray *modalViewControllerParents, *modalViewControllerChildren;
 }
 
-@property (nonatomic, retain, readonly) NSArray *modalViewControllerParents, *modalViewControllerChildren;
+@property (nonatomic, retain, readonly) NSArray *modalViewControllerParents;
+@property (nonatomic, retain, readonly) NSArray *modalViewControllerChildren;
 
 - (void)viewController:(UIViewController *)parentVC unpackedModalViewController:(UIViewController *)childVC;
 
-
+/** Used to test if an the given object is a core object within resurrection kit.
+ 
+ Core objects in the system are currently members of the classes NSNumber, NSString, NSData and NSDate.
+ If you want to store any other type of object, you will need to implement the initWithResurrector: and
+ encodeToResurrector: methods from the DTResurrection protocol.
+ 
+ The reason the list of core objects is not the same as any object that conforms to NSCoding is that the 
+ resurrection system keeps a reference of the objects it is saving, and if it comes across the same object
+ again, it won't need to query it again, and instead will use the existing refernce.
+ 
+ @param object The object to test.
+ @return YES if the object is a core object, NO if not. 
+ */
 - (BOOL)objectIsCoreObject:(id)object;
 
-/** @name Convert graph hierarchy
- @{
- */
-/** @brief Encodes the graph hierarchy starting at the given object.
+/// @name Convert graph hierarchy
+
+/** Encodes the graph hierarchy starting at the given object.
  
  @param object The root object of the graph.
- return A dictionary representing the object graph.
+ 
+ @return A dictionary representing the object graph.
  */
 - (NSDictionary *)deconstructWithRootObject:(NSObject<DTResurrection> *)object;
 
 /** @brief Restores a graph hierarchy using a dictionary representation.
  
  @param dictionary A dictionary representing the object graph.
- return The root object of the graph.
+ @return The root object of the graph.
  */
 - (id)resurrect:(NSDictionary *)dictionary;
 
 
-/**
- @}
- */
+/// @name Storing values
 
-/** @name Storing values
- @{
- */
-
-/** @brief Use to save metadata about the object.
+/** Use to save metadata about the object.
   
  @param object The object to be saved.
  @param key The key to identify the object.
  */
 - (void)setObject:(id)object forKey:(NSString *)key;
 
-/** @brief Use to retrive metadata about the object.
+
+
+/** Use to retrive metadata about the object.
  
  @param key The key to identify the object.
  */
 - (id)objectForKey:(NSString *)key;
-
-/**
- @}
- */
 
 @end
