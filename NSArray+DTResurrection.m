@@ -31,7 +31,7 @@
 	
 	[resurrector setObject:[NSNumber numberWithInt:[self count]] forKey:@"amount"];
 	
-	for (NSInteger i = 0; i < [self count]; i++)
+	for (NSUInteger i = 0; i < [self count]; i++)
 		[resurrector setObject:[self objectAtIndex:i] forKey:[NSString stringWithFormat:@"%i", i]];	
 }
 

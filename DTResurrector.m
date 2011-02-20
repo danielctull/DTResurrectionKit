@@ -78,7 +78,7 @@ NSString *const DTResurrectionKitPropertyClass = @"class";
 
 - (void)setObject:(id)object forKey:(NSString *)aKey {
 	
-	NSMutableDictionary *parentObject = [encodingStack topObject];
+	NSMutableDictionary *parentObject = [encodingStack top];
 	
 	if ([[objectDictionary allValues] containsObject:object]) { // To prevent infinite loop by two objects referencing each other.
 		
@@ -160,7 +160,7 @@ NSString *const DTResurrectionKitPropertyClass = @"class";
 
 - (id)objectForKey:(NSString *)key {
 	
-	NSMutableDictionary *parentObject = [encodingStack topObject];
+	NSMutableDictionary *parentObject = [encodingStack top];
 	
 	NSObject *object = [parentObject objectForKey:key];
 	

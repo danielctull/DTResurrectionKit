@@ -17,7 +17,7 @@
 	
 	if (!(self = [self initWithRootViewController:[vcs objectAtIndex:0]])) return nil;
 	
-	for (NSInteger i = 1; i < [vcs count]; i++)
+	for (NSUInteger i = 1; i < [vcs count]; i++)
 		[self pushViewController:[vcs objectAtIndex:i] animated:NO];
 	
 	UIViewController *mvc = [resurrector objectForKey:@"modalViewController"];
