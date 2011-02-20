@@ -31,7 +31,7 @@
 	
 	[resurrector setObject:[NSNumber numberWithInt:[self count]] forKey:@"amount"];
 	
-	for (NSInteger i = 0; i < [self count]; i++) {
+	for (NSUInteger i = 0; i < [self count]; i++) {
 		id key = [[self allKeys] objectAtIndex:i];
 		[resurrector setObject:key forKey:[NSString stringWithFormat:@"key%i", i]];
 		[resurrector setObject:[self objectForKey:key] forKey:[NSString stringWithFormat:@"object%i", i]];
